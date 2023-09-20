@@ -24,7 +24,7 @@ http:
         stsSeconds: 63072000
         stsIncludeSubdomains: true
         stsPreload: true
-        forceSTSHeader: true
+        # forceSTSHeader: true # This is a good thing but it can be tricky. Enable after everything works.
         customFrameOptionsValue: SAMEORIGIN # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
         contentTypeNosniff: true
         browserXssFilter: true
