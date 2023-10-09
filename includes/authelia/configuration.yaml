@@ -1,0 +1,76 @@
+###############################################################
+#                   Authelia configuration                    #
+###############################################################
+
+host: 0.0.0.0
+port: 9091
+log_level: warn
+
+# This secret can also be set using the env variables AUTHELIA_JWT_SECRET_FILE
+# I used this site to generate the secret: https://www.grc.com/passwords.htm
+# jwt_secret: use secret file
+
+# https://docs.authelia.com/configuration/miscellaneous.html#default-redirection-url
+default_redirection_url: https://authelia.domain.com
+
+totp:
+  issuer: authelia.com
+  period: 30
+  skew: 1
+
+authentication_backend:
+  file:
+    path: /config/users_database.yml
+    # customize passwords based on https://docs.authelia.com/configuration/authentication/file.html
+    password:
+      algorithm: argon2id
+      iterations: 1
+      salt_length: 16
+      parallelism: 8
+      memory: 128 # blocks this much of the RAM
+
+# https://docs.authelia.com/configuration/access-control.html
+access_control:
+  default_policy: deny
+  rules:
+    # Rules applied to everyone
+    - domain: authelia.pivean.com
+      policy: bypass
+    # - domain:
+    #     - "*.pivean.com"
+    #     - "pivean.com"
+    #   policy: bypass
+    #   networks:
+    #     - 10.0.0.0/8
+    #     - 192.168.0.0/16
+    #     - 172.16.0.0/12
+    - domain:
+        - "*.domain.com"
+        - "domain.com"
+      policy: one_factor
+
+session:
+  name: authelia_session
+  # This secret can also be set using the env variables AUTHELIA_SESSION_SECRET_FILE
+  # Used a different secret, but the same site as jwt_secret above.
+  # secret: use docker secret file instead AUTHELIA_SESSION_SECRET_FILE
+  expiration: 1h
+  inactivity: 5m
+  remember_me_duration: 1M
+  domain: domain.com # Should match whatever your root protected domain is
+
+regulation:
+  max_retries: 3
+  find_time: 300
+  ban_time: 600
+
+storage:
+  # For local storage, uncomment lines below and comment out mysql. https://docs.authelia.com/configuration/storage/sqlite.html
+  local:
+   path: /config/db.sqlite3
+
+notifier:
+  disable_startup_check: false
+  # For testing purpose, notifications can be sent in a file. Be sure map the volume in docker-compose.
+  filesystem:
+    filename: /config/notifications.txt
