@@ -1,4 +1,9 @@
 <h3>Version 1.1</h3>
+<h5>October 14, 2023</h5>
+<ul>
+<li>Added a backup method to check WAN IP. Some IP check sites present Cloudflare challenge, interfering with the process.</li>
+</ul>
+
 <h5>October 9, 2023</h5>
 <ul>
 <li>Added version check. Now the users will see a warning of there is a new version available for download.</li>
