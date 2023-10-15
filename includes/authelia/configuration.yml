@@ -2,16 +2,22 @@
 #                   Authelia configuration                    #
 ###############################################################
 
-host: 0.0.0.0
-port: 9091
-log_level: warn
-
 # This secret can also be set using the env variables AUTHELIA_JWT_SECRET_FILE
-# I used this site to generate the secret: https://www.grc.com/passwords.htm
-# jwt_secret: use secret file
+jwt_secret: AUTHELIA_JWT_SECRET
 
 # https://docs.authelia.com/configuration/miscellaneous.html#default-redirection-url
-default_redirection_url: https://authelia.domain.com
+default_redirection_url: https://authelia.example.com
+
+server:
+  host: 0.0.0.0
+  port: 9091
+
+# Configure logging
+log:
+  level: info
+  format: text
+  file_path: /config/authelia.log
+  keep_stdout: true
 
 totp:
   issuer: authelia.com
@@ -34,30 +40,29 @@ access_control:
   default_policy: deny
   rules:
     # Rules applied to everyone
-    - domain: authelia.pivean.com
+    - domain: authelia.example.com
       policy: bypass
     # - domain:
-    #     - "*.pivean.com"
-    #     - "pivean.com"
+    #     - "*.example.com"
+    #     - "example.com"
     #   policy: bypass
-    #   networks:
+    #   networks: # bypass authentication for local networks
     #     - 10.0.0.0/8
     #     - 192.168.0.0/16
     #     - 172.16.0.0/12
     - domain:
-        - "*.domain.com"
-        - "domain.com"
-      policy: one_factor
+        - "*.example.com"
+        - "example.com"
+      policy: two_factor
 
 session:
   name: authelia_session
   # This secret can also be set using the env variables AUTHELIA_SESSION_SECRET_FILE
-  # Used a different secret, but the same site as jwt_secret above.
-  # secret: use docker secret file instead AUTHELIA_SESSION_SECRET_FILE
+  secret: AUTHELIA_SESSION_SECRET
   expiration: 1h
   inactivity: 5m
   remember_me_duration: 1M
-  domain: domain.com # Should match whatever your root protected domain is
+  domain: example.com # Should match whatever your root protected domain is
 
 regulation:
   max_retries: 3
@@ -66,6 +71,8 @@ regulation:
 
 storage:
   # For local storage, uncomment lines below and comment out mysql. https://docs.authelia.com/configuration/storage/sqlite.html
+  # This is good for the beginning. If you have a busy site then switch to other databases.
+  encryption_key: AUTHELIA_STORAGE_ENCRYPTION_KEY
   local:
    path: /config/db.sqlite3
 

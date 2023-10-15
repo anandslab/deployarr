@@ -78,7 +78,6 @@
       - HTPASSWD_FILE=/shared/.htpasswd 
       - DOMAINNAME # Passing the domain name to traefik container to be able to use the variable in rules. 
     labels:
-      #- "autoheal=true"
       - "traefik.enable=true"
       # HTTP Routers
       - "traefik.http.routers.traefik-rtr.entrypoints=https"
