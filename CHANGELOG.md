@@ -1,4 +1,11 @@
 <h3>Version 1.1</h3>
+
+<h5>October 16, 2023</h5>
+<ul>
+<li>Added auto-traefik output logging to /tmp/auto-traefik/auto-traefik.log to help troubleshoot</li>
+<li>Added failsafe - in case container with same name already exists, script will fail</li>
+</ul>
+
 <h5>October 14, 2023</h5>
 <ul>
 <li>Added a backup method to check WAN IP. Some IP check sites present Cloudflare challenge, interfering with the process.</li>
@@ -14,6 +21,7 @@
 <li>Added backup for acme.json if successful. Can be handy if rate limit is hit.</li>
 </ul>
 
-<h3>Version 1.0</h3>
 <h5>September 23, 2023</h5>
-* Initial Relase
+<ul>
+<li>Initial Relase</li>
+</ul>
