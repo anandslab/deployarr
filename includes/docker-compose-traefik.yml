@@ -1,7 +1,7 @@
   # Traefik 2 - Reverse Proxy
   traefik:
     container_name: traefik
-    image: traefik:2.9
+    image: traefik:2.10
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped

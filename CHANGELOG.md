@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v1.1.3 - October 30, 2023</h5>
+<ul>
+<li>Minor changes to logging - added a few more logging spots</li>
+</ul>
+
 <h5>v1.1.2 - October 16, 2023</h5>
 <ul>
 <li>Added auto-traefik output logging to /tmp/auto-traefik/auto-traefik.log to help troubleshoot</li>
