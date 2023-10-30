@@ -4,6 +4,7 @@
 <ul>
 <li>Minor changes to logging - added a few more logging spots</li>
 <li>Updated Traefik version to 2.10</li>
+<li>Fixed a bug where subdomain resolution check would not exit on error</li>
 </ul>
 
 <h5>v1.1.2 - October 16, 2023</h5>
