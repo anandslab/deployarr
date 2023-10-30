@@ -3,6 +3,7 @@
 <h5>v1.1.3 - October 30, 2023</h5>
 <ul>
 <li>Minor changes to logging - added a few more logging spots</li>
+<li>Updated Traefik version to 2.10</li>
 </ul>
 
 <h5>v1.1.2 - October 16, 2023</h5>
