@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v1.1.4 - October 31, 2023</h5>
+<ul>
+<li>Increased service start check timeout to avoid false positives</li>
+</ul>
+
 <h5>v1.1.3 - October 30, 2023</h5>
 <ul>
 <li>Minor changes to logging - added a few more logging spots</li>
