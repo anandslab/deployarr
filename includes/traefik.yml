@@ -53,7 +53,7 @@
       - --certificatesResolvers.le.acme.dnsChallenge.provider=cloudflare
       - --certificatesResolvers.le.acme.dnsChallenge.resolvers=1.1.1.1:53,1.0.0.1:53
       #- --certificatesResolvers.le.acme.dnsChallenge.delayBeforeCheck=90 # To delay DNS check and reduce LE hitrate
-      #- --certificatesResolvers.le.acme.dnsChallenge.disablepropagationcheck=true # To delay DNS check and reduce LE hitrate
+      - --certificatesResolvers.le.acme.dnsChallenge.disablepropagationcheck=true # To delay DNS check and reduce LE hitrate
     ports:
       - target: 80
         published: 80
