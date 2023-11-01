@@ -1,7 +1,7 @@
   # Traefik 2 - Reverse Proxy
   traefik:
     container_name: traefik
-    image: traefik:2.10
+    image: traefik:2.9
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
@@ -33,27 +33,25 @@
       - --accessLog.filePath=/logs/access.log
       - --accessLog.bufferingSize=100 # Configuring a buffer of 100 lines
       - --accessLog.filters.statusCodes=204-299,400-499,500-599
-      #- --providers.docker=true
+      - --providers.docker=true
       # - --providers.docker.endpoint=unix:///var/run/docker.sock # Use Docker Socket Proxy instead for improved security
       - --providers.docker.endpoint=tcp://socket-proxy:2375
       - --providers.docker.exposedByDefault=false
-      #- --entrypoints.https.http.tls.options=tls-opts@file
-      # Add le as default certresolver for all services. Also enables TLS and no need to specify on individual services
-      - --entrypoints.https.http.tls=true
-      - --entrypoints.https.http.tls.certresolver=le
+      - --entrypoints.https.http.tls.options=tls-opts@file
+      # Add dns-cloudflare as default certresolver for all services. Also enables TLS and no need to specify on individual services
+      - --entrypoints.https.http.tls.certresolver=dns-cloudflare
       - --entrypoints.https.http.tls.domains[0].main=$DOMAINNAME
-      #- --entrypoints.https.http.tls.domains[0].sans=*.$DOMAINNAME
+      - --entrypoints.https.http.tls.domains[0].sans=*.$DOMAINNAME
       - --providers.docker.network=t2_proxy
       - --providers.docker.swarmMode=false
       - --providers.file.directory=/rules # Load dynamic configuration from one or more .toml or .yml files in a directory
       - --providers.file.watch=true # Only works on top level files in the rules folder
-      - --certificatesResolvers.le.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory # LetsEncrypt Staging Server - uncomment when testing
-      - --certificatesResolvers.le.acme.email=$CLOUDFLARE_EMAIL
-      - --certificatesResolvers.le.acme.storage=/acme.json
-      - --certificatesResolvers.le.acme.dnsChallenge.provider=cloudflare
-      - --certificatesResolvers.le.acme.dnsChallenge.resolvers=1.1.1.1:53,1.0.0.1:53
-      #- --certificatesResolvers.le.acme.dnsChallenge.delayBeforeCheck=90 # To delay DNS check and reduce LE hitrate
-      #- --certificatesResolvers.le.acme.dnsChallenge.disablepropagationcheck=true # To delay DNS check and reduce LE hitrate
+      - --certificatesResolvers.dns-cloudflare.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory # LetsEncrypt Staging Server - uncomment when testing
+      - --certificatesResolvers.dns-cloudflare.acme.email=$CLOUDFLARE_EMAIL
+      - --certificatesResolvers.dns-cloudflare.acme.storage=/acme.json
+      - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.provider=cloudflare
+      - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.resolvers=1.1.1.1:53,1.0.0.1:53
+      - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.delayBeforeCheck=90 # To delay DNS check and reduce LE hitrate
     ports:
       - target: 80
         published: 80
