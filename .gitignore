@@ -1,7 +1,7 @@
-archives
-archives/*
-*.sh
-*.sh.x
-*.sh.x.c
-*.shb
-*.log
+*
+*/
+
+!.gitignore
+!README.md
+!CHANGELOG.md
+!LICENSE
