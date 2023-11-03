@@ -1,3 +1,4 @@
 archives
 archives/*
 *.sh
+*.log
