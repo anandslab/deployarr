@@ -3,7 +3,10 @@ services:
   authelia:
     container_name: authelia
     image: authelia/authelia:4.37.5
-    restart: always
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["core", "all"]
     networks:
       - t2_proxy
       - default
