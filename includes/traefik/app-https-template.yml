@@ -1,3 +1,4 @@
+# Replace APPNAME with a name for your app (e.g. unifi), CHAIN_PLACEHOLDER with one of the middleware chains (e.g. chain-no-auth, chain-authelia, chain-basic-auth, etc.), and APP-URL with internal URL of the app (e.g. http://192.168.1.100:8080).
 http:
   routers:
     APPNAME-rtr:
@@ -16,7 +17,7 @@ http:
         passHostHeader: true
         serversTransport: "APPNAME"
         servers:
-          - url: "APP-URL"
+          - url: "APP-URL"  # https://IP-ADDRESS:PORT
   serversTransports:
     APPNAME:
       insecureSkipVerify: true
