@@ -1,0 +1,22 @@
+http:
+  routers:
+    APPNAME-rtr:
+      rule: "Host(`APPNAME.{{env "DOMAINNAME"}}`)" 
+      entryPoints:
+        - https
+      middlewares:
+        - CHAIN_PLACEHOLDER
+      service: APPNAME-svc
+      tls:
+        certResolver: dns-cloudflare
+        options: tls-opts@file
+  services:
+    APPNAME-svc:
+      loadBalancer:
+        passHostHeader: true
+        serversTransport: "APPNAME"
+        servers:
+          - url: "APP-URL"
+  serversTransports:
+    APPNAME:
+      insecureSkipVerify: true

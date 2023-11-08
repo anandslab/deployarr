@@ -1,0 +1,16 @@
+http:
+  routers:
+    APPNAME-rtr:
+      rule: "Host(`APPNAME.{{env "DOMAINNAME"}}`)" 
+      entryPoints:
+        - https
+      middlewares:
+        - CHAIN_PLACEHOLDER
+      service: APPNAME-svc
+      tls:
+        certResolver: dns-cloudflare
+  services:
+    APPNAME-svc:
+      loadBalancer:
+        servers:
+          - url: "APP-URL"

@@ -1,0 +1,7 @@
+  AUTHELIA_USERNAME:
+    disabled: false
+    displayname: "AUTHELIA_USER_DISPLAY_NAME"
+    password: AUTHELIA_HASHED_PASSWORD
+    email: AUTHELIA_USER_EMAIL
+    groups:
+      - users
