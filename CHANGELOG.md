@@ -1,5 +1,19 @@
 <h3>Releases</h3>
 
+
+<h5>v2.0 - November 15, 2023</h5>
+<ul>
+<li>Free options for everyone - The system, docker, and port checks are available for anyone to use. No purchase necessary. This is great for anyone that wants to troubleshoot or to ensure that you system passes all checks to setup a Docker/Traefik stack.</li>
+<li>Auto-Traefik now has 3 levels of licensing: Free/Unregistered, Auto-Traefik, and Auto-Traefik+ to fit the needs of most people.</li>
+<li>Most of the navigation is now through a commandline GUI. This will continue to evolve.</li>
+<li>Added ability to complete the whole process in steps, instead of one-go as in v1.</li>
+<li>Expanded Auto-Traefik Options - reset, view key information, license checks, and build a sanitized troubleshooting log without any sensitive information.</li>
+<li>Modified main docker compose file to now be more modular. All the individual services are available as individual yml files in a separate folder.</li>
+<li>Added Authelia for multifactor authentication, with ability to change authentication mechanisms for apps from the UI.</li>
+<li>Added Portainer. This is just the start. Many more apps will be added. </li>
+<li>More to come.</li>
+</ul>
+
 <h5>v1.1.4 - October 31, 2023</h5>
 <ul>
 <li>Increased service start check timeout to avoid false positives</li>
