@@ -23,5 +23,5 @@ networks:
 
 ########################### SERVICES
 include:
-  # - SERVICE-PLACEHOLDER
+  # - SERVICE-PLACEHOLDER-DO-NOT-DELETE
   # - compose/custom.yml
