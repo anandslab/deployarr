@@ -7,6 +7,7 @@
 !LICENSE
 !latest-version
 !auto-traefik_v2.0.shb
+!auto-traefik_v2.0-arm.shb
 
 !compose
 compose/*
