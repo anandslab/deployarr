@@ -1,5 +1,11 @@
 <h3>Releases</h3>
 
+<h5>v2.1 - November 28, 2023</h5>
+<ul>
+<li>Several improvements and bug fixes. Potential fix for "Could not read certificate" error.</li>
+<li>Added Dozzle, Homepage, and Uptime Kuma.</li>
+<li>
+</ul>
 
 <h5>v2.0 - November 15, 2023</h5>
 <ul>
