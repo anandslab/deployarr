@@ -1,7 +1,7 @@
 services:
   # Homepage - Application Dashboard
   homepage:
-    image: ghcr.io/benphelps/homepage:latest
+    image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     security_opt:
       - no-new-privileges:true
