@@ -7,6 +7,8 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["core", "all"]
+    depends_on:
+      - socket-proxy
     networks:
       t2_proxy:
         ipv4_address: 192.168.90.254 # You can specify a static IP

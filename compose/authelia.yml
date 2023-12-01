@@ -7,6 +7,8 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["core", "all"]
+    depends_on:
+      - traefik
     networks:
       - t2_proxy
       - default

@@ -1,9 +1,9 @@
 <h3>Releases</h3>
 
-<h5>v2.1.1 - November 29, 2023</h5>
+<h5>v2.2 - November 30, 2023</h5>
 <ul>
 <li>Potential fix for "Could not read certificate" error. Replaced openssl certificate check with acme.json file checks.</li>
-<li>
+<li>Removed unnecessary stoppage and restart of containers - only services being worked on will restart instead of the whole stack.</li>
 </ul>
 
 <h5>v2.1 - November 28, 2023</h5>
