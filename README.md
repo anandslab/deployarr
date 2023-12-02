@@ -4,8 +4,8 @@ Automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia,
 # Tested On
 <ul>
 <li>Ubuntu</li>
-<ul>Debian</li>
-<ul>Open Media Vault</li>
+<li>Debian</li>
+<li>Open Media Vault</li>
 </ul>
 
 # More Details
