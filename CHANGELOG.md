@@ -4,6 +4,7 @@
 <ul>
 <li>Potential fix for "Could not read certificate" error. Replaced openssl certificate check with acme.json file checks.</li>
 <li>Removed unnecessary stoppage and restart of containers - only services being worked on will restart instead of the whole stack.</li>
+<li>Improved the UI/UX for collecting required information and license check. </li>
 </ul>
 
 <h5>v2.1 - November 28, 2023</h5>
