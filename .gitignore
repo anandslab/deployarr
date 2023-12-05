@@ -13,6 +13,8 @@
 compose/*
 !compose/*.yml
 
+!archives
+archives/*.shb
 !includes
 includes/*
 !includes/*.yml

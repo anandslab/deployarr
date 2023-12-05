@@ -1,5 +1,11 @@
 <h3>Releases</h3>
 
+<h5>v2.3 - WIP</h5>
+Form for Authelia
+Add dockge
+dialog for disclaimers
+authelia full process
+
 <h5>v2.2 - December 2, 2023</h5>
 <ul>
 <li>Potential fix for "Could not read certificate" error. Replaced openssl certificate check with acme.json file checks.</li>
