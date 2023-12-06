@@ -1,10 +1,10 @@
 <h3>Releases</h3>
 
-<h5>v2.3 - WIP</h5>
-Form for Authelia
-Add dockge
-dialog for disclaimers
-authelia full process
+<h5>v2.2.1 - December 6, 2023</h5>
+<ul>
+<li>Fix for the script not creating docker folders when they do not already exist.</li>
+<li>Added comment on how to find Authelia verification email.</li>
+</ul>
 
 <h5>v2.2 - December 2, 2023</h5>
 <ul>
