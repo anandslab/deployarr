@@ -11,11 +11,15 @@ Automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia,
 # More Details
 https://www.smarthomebeginner.com/auto-traefik/
 
-# Video Demo
-## Playlist:
+# How to Use Auto Traefik? - Guides
+## Text Guide 
+https://www.smarthomebeginner.com/course/how-to-use-auto-traefik/
+
+## Video Guide
+### Playlist:
 https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD
 
-## Individual Videos:<br/>
+### Individual Videos:<br/>
 1️⃣: Introduction, Verion 2 Overview, and New Features: https://youtu.be/ePBLJTyRgdQ<br/>
 2️⃣-3️⃣: Must Read Info and Checks: https://youtu.be/hF-Ip18Y4kc<br/>
 4️⃣: Docker and Socket Proxy Setup: https://youtu.be/TWsLUzK6DbM<br/>
