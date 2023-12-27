@@ -1,5 +1,16 @@
 <h3>Releases</h3>
 
+<h5>v2.3 - December 28, 2023</h5>
+<ul>
+<li>Simplified data entry forms.</li>
+<li>Broke down and reassigned "Required Information" collection to their relevant section/steps instead of collecting all info at the beginning.</li>
+<li>Added UI, instead of commandline for certain steps (e.g. Must Read Info, Authelia, etc.)
+<li>Added Docker data size on disk and option to prune unused data/volumes/images.</li>
+<li>Added option to uninstall/remove Auto-Traefik.</li>
+<li>Added "Expert Mode" - will allow overriding certain steps (e.g. IP checks). Mode can be changed from Auto-Traefik Options.</li>
+<li>Added Docker and Docker Compose version info to Docker menu.</li>
+</ul>
+
 <h5>v2.2.1 - December 6, 2023</h5>
 <ul>
 <li>Fix for the script not creating docker folders when they do not already exist.</li>
