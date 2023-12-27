@@ -20,7 +20,7 @@ https://www.smarthomebeginner.com/course/how-to-use-auto-traefik/
 https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD
 
 ### Individual Videos:<br/>
-1️⃣: Introduction, Verion 2 Overview, and New Features: https://youtu.be/ePBLJTyRgdQ<br/>
+1️⃣: Introduction, Version 2 Overview, and New Features: https://youtu.be/ePBLJTyRgdQ<br/>
 2️⃣-3️⃣: Must Read Info and Checks: https://youtu.be/hF-Ip18Y4kc<br/>
 4️⃣: Docker and Socket Proxy Setup: https://youtu.be/TWsLUzK6DbM<br/>
 5️⃣: Traefik Staging and Production Setup: https://youtu.be/SBv-9LD1S5k<br/>
