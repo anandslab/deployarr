@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v2.3.1 - January 5, 2024</h5>
+<ul>
+<li>Added override for port checks.</li>
+</ul>
+
 <h5>v2.3 - December 28, 2023</h5>
 <ul>
 <li>Simplified data entry forms.</li>
