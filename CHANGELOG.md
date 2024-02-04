@@ -1,6 +1,10 @@
 <h3>Releases</h3>
 
-<h5>v2.4</h5>
+<h5>v2.4.1 - February 4, 2024</h5>
+<ul>
+<li>Bug fixes.</li>
+
+<h5>v2.4 - February 4, 2024</h5>
 <ul>
 <li>Unfortunately, many breaking changes, which make it incompatible with setup done with previous versions of the script.</li>
 <li>Replace Cloudflare Email + Global API Key with Scoped API Token (CF_DNS_API_TOKEN)</li>
