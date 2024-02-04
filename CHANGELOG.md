@@ -3,6 +3,7 @@
 <h5>v2.4.1 - February 4, 2024</h5>
 <ul>
 <li>Bug fixes.</li>
+</ul>
 
 <h5>v2.4 - February 4, 2024</h5>
 <ul>
