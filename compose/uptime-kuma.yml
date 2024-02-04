@@ -17,10 +17,10 @@ services:
     labels:
       - "traefik.enable=true"
       ## HTTP Routers
-      - "traefik.http.routers.uptime-kuma-rtr.entrypoints=https"
-      - "traefik.http.routers.uptime-kuma-rtr.rule=Host(`uptime.$DOMAINNAME`)"
+      - "traefik.http.routers.uptime-kuma-rtr.entrypoints=websecure"
+      - "traefik.http.routers.uptime-kuma-rtr.rule=Host(`uptime.$DOMAINNAME_1`)"
       ## Middlewares
-      - "traefik.http.routers.uptime-kuma-rtr.middlewares=chain-no-auth@file"
+      - "traefik.http.routers.uptime-kuma-rtr.middlewares=chain-basic-auth@file"
       ## HTTP Services
       - "traefik.http.routers.uptime-kuma-rtr.service=uptime-kuma-svc"
       - "traefik.http.services.uptime-kuma-svc.loadbalancer.server.port=3001"

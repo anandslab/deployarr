@@ -42,12 +42,12 @@ entryPoints:
     http:
       redirections:
         entryPoint:
-          to: web-secure
+          to: websecure
           scheme: https
           permanent: true
 
   # HTTPS endpoint, with domain wildcard
-  web-secure:
+  websecure:
     address: ":443"
     forwardedHeaders:
       # Reuse list of Cloudflare Trusted IP's above for HTTPS requests

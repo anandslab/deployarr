@@ -1,5 +1,20 @@
 <h3>Releases</h3>
 
+<h5>v2.4</h5>
+<ul>
+<li>Unfortunately, many breaking changes, which make it incompatible with setup done with previous versions of the script.</li>
+<li>Replace Cloudflare Email + Global API Key with Scoped API Token (CF_DNS_API_TOKEN)</li>
+<li>Added Secrets for Basic HTTP Auth and CF_DNS_API_TOKEN</li>
+<li>Additional Traefik checks - dangling TXT records, DNS error.</li>
+<li>Improved port checks and added override option. </li>
+<li>Changed DOMAINNAME variable to DOMAINNAME_1.</li>
+<li>Docker Compose File now has the server's hostname as suffix.</li>
+<li>Changed Traefi entrypoint names form http and https to web and websecure as in some online documentation.</li>
+<li>Broke up middlewares to individual file providers instead of one middlewares.yml and middlewares-chain.yml</li>
+<li>Added ability to put external apps behind Traefik.</li>
+<li>Added MariaDB and phpMyAdmin.</li>
+</ul>
+
 <h5>v2.3.1 - January 5, 2024</h5>
 <ul>
 <li>Added override for port checks.</li>
