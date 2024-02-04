@@ -8,7 +8,7 @@ Automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia,
 <li>Open Media Vault</li>
 </ul>
 
-GLIBC version 2.35 needed (use the command below to check your system). Older versions above the above OSes tend to have older version of GLIBC. 
+GLIBC version 2.35 needed (use the command below to check your system). Older versions of the above OSes tend to have older version of GLIBC. 
 
 ```
 ldd --version
