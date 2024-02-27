@@ -1,5 +1,16 @@
 <h3>Releases</h3>
 
+<h5>v2.4.2 - February 27, 2024</h5>
+<ul>
+<li>Improved Traefik port 80 and 443 check for Traefik.</li>
+<li>Implemented <a href="https://github.com/chaifeng/ufw-docker">UFW-Docker</a>. All though this appears to work, at this point it is an Experimental feature.</li>
+<li>Implemented Docker secrets. At this point, this only applies to Traefik, Authelia, and MariaDB. This will be the default moving forward.</li>
+<li>Improved the reliability of creating Docker secrets.</li>
+<li>Added the ability to change authentication method for external/non-docker apps.</li>
+<li>UI improvements for changing authentication methods for apps.</li>
+<li>Changed Authelia users_database.yml to users.yml to align with Docs and <a href="https://www.smarthomebeginner.com/authelia-docker-compose-guide-2024/">Authelia guide</a> on SmartHomeBeginner.com</li>
+</ul>
+
 <h5>v2.4.1 - February 4, 2024</h5>
 <ul>
 <li>Bug fixes.</li>
@@ -14,7 +25,7 @@
 <li>Improved port checks and added override option. </li>
 <li>Changed DOMAINNAME variable to DOMAINNAME_1.</li>
 <li>Docker Compose File now has the server's hostname as suffix.</li>
-<li>Changed Traefi entrypoint names form http and https to web and websecure as in some online documentation.</li>
+<li>Changed Traefik entrypoint names form http and https to web and websecure as in some online documentation.</li>
 <li>Broke up middlewares to individual file providers instead of one middlewares.yml and middlewares-chain.yml</li>
 <li>Added ability to put external apps behind Traefik.</li>
 <li>Added MariaDB and phpMyAdmin.</li>

@@ -2,32 +2,30 @@
 #                   Authelia configuration                    #
 ###############################################################
 
-# This secret can also be set using the env variables AUTHELIA_JWT_SECRET_FILE
-jwt_secret: AUTHELIA_JWT_SECRET
-
-# https://docs.authelia.com/configuration/miscellaneous.html#default-redirection-url
+# https://www.authelia.com/configuration/miscellaneous/introduction/#default_redirection_url
 default_redirection_url: https://authelia.example.com
 
 server:
   host: 0.0.0.0
   port: 9091
 
-# Configure logging
+# https://www.authelia.com/configuration/miscellaneous/logging/
 log:
   level: info
   format: text
   file_path: /config/authelia.log
   keep_stdout: true
 
+# https://www.authelia.com/configuration/second-factor/time-based-one-time-password/
 totp:
   issuer: authelia.com
   period: 30
   skew: 1
 
+# https://www.authelia.com/reference/guides/passwords/
 authentication_backend:
   file:
-    path: /config/users_database.yml
-    # customize passwords based on https://docs.authelia.com/configuration/authentication/file.html
+    path: /config/users.yml
     password:
       algorithm: argon2id
       iterations: 1
@@ -35,11 +33,10 @@ authentication_backend:
       parallelism: 8
       memory: 128 # blocks this much of the RAM
 
-# https://docs.authelia.com/configuration/access-control.html
+# https://www.authelia.com/overview/authorization/access-control/
 access_control:
   default_policy: deny
   rules:
-    # Rules applied to everyone
     - domain: authelia.example.com
       policy: bypass
     # - domain:
@@ -55,29 +52,30 @@ access_control:
         - "example.com"
       policy: two_factor
 
+# https://www.authelia.com/configuration/session/introduction/
 session:
   name: authelia_session
-  # This secret can also be set using the env variables AUTHELIA_SESSION_SECRET_FILE
-  secret: AUTHELIA_SESSION_SECRET
   expiration: 1h
   inactivity: 5m
   remember_me_duration: 1M
   domain: example.com # Should match whatever your root protected domain is
 
+# https://www.authelia.com/configuration/security/regulation/
 regulation:
   max_retries: 3
   find_time: 300
   ban_time: 600
 
+# https://www.authelia.com/configuration/storage/introduction/
 storage:
   # For local storage, uncomment lines below and comment out mysql. https://docs.authelia.com/configuration/storage/sqlite.html
   # This is good for the beginning. If you have a busy site then switch to other databases.
-  encryption_key: AUTHELIA_STORAGE_ENCRYPTION_KEY
   local:
    path: /config/db.sqlite3
 
+# https://www.authelia.com/configuration/notifications/introduction/
 notifier:
   disable_startup_check: false
-  # For testing purpose, notifications can be sent in a file. Be sure map the volume in docker-compose.
+  # For testing purposes, notifications can be sent in a file. Be sure to map the volume in docker-compose.
   filesystem:
     filename: /config/notifications.txt
