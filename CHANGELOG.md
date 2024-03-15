@@ -1,6 +1,7 @@
 <h3>Releases</h3>
 
 <h5>v3.0 - March 15, 2024</h5>
+<ul>
 <li>NEW: Added Guacamole for Remote Admin</li>
 <li>NEW: Backups (create, view, restore, and delete)</li>
 <li>NEW: Additional ability (Docker Environment Setup, Socket Proxy Setup, etc.) for registered free-membership tier.</li>
@@ -14,7 +15,7 @@
 <li>FIX: Bug fix for Docker Aliases</li>
 </ul>
 <br/>
-Over 1000 lines of code changed
+Over 1000 lines of code changed. 
 
 <h5>v2.4.2 - February 27, 2024</h5>
 <ul>
