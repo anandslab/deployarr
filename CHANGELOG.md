@@ -80,7 +80,6 @@ Over 1000 lines of code changed
 <ul>
 <li>Several improvements and bug fixes. Potential fix for "Could not read certificate" error.</li>
 <li>Added Dozzle, Homepage, and Uptime Kuma.</li>
-<li>
 </ul>
 
 <h5>v2.0 - November 15, 2023</h5>
