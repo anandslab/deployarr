@@ -1,5 +1,20 @@
 <h3>Releases</h3>
 
+<h5>v3.0 - March 15, 2024</h5>
+<li>NEW: Added Guacamole for Remote Admin</li>
+<li>NEW: Backups (create, view, restore, and delete)</li>
+<li>NEW: Additional ability (Docker Environment Setup, Socket Proxy Setup, etc.) for registered free-membership tier.</li>
+<li>ENHANCEMENT: Added ability to set subdomain name during app setup</li>
+<li>ENHANCEMENT: Added ability to set authentication type during app setup</li>
+<li>ENHANCEMENT: Added feedback message when requirements are not met for a specific </li>
+<li>ENHANCEMENT: Authelia middlewares change align with developer's recommendation</li>
+<li>ENHANCEMENT: UI Improvements</li>
+<li>ENHANCEMENT: Added password suggestions wherever password needs to be set</li>
+<li>ENHANCEMENT: Added expert override for certain DNS issues</li>
+<li>FIX: Bug fix for Docker Aliases</li>
+</ul>
+Over 1000 lines of code changed
+
 <h5>v2.4.2 - February 27, 2024</h5>
 <ul>
 <li>Improved Traefik port 80 and 443 check for Traefik.</li>

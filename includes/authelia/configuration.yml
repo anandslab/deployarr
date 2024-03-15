@@ -37,8 +37,6 @@ authentication_backend:
 access_control:
   default_policy: deny
   rules:
-    - domain: authelia.example.com
-      policy: bypass
     # - domain:
     #     - "*.example.com"
     #     - "example.com"

@@ -23,9 +23,9 @@ services:
       - "traefik.enable=true"
       ## HTTP Routers
       - "traefik.http.routers.portainer-rtr.entrypoints=websecure"
-      - "traefik.http.routers.portainer-rtr.rule=Host(`portainer.$DOMAINNAME_1`)"
+      - "traefik.http.routers.portainer-rtr.rule=Host(`SUBDOMAIN_PLACEHOLDER.$DOMAINNAME_1`)"
       ## Middlewares
-      - "traefik.http.routers.portainer-rtr.middlewares=chain-no-auth@file"
+      - "traefik.http.routers.portainer-rtr.middlewares=CHAIN_PLACEHOLDER@file"
       ## HTTP Services
       - "traefik.http.routers.portainer-rtr.service=portainer-svc"
       - "traefik.http.services.portainer-svc.loadbalancer.server.port=9000"

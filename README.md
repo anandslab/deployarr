@@ -38,13 +38,13 @@ https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD
 
 # Download Auto-Traefik
 ```
-wget https://raw.githubusercontent.com/htpcBeginner/auto-traefik/main/auto-traefik_v2.4.2.shb
+wget https://raw.githubusercontent.com/htpcBeginner/auto-traefik/main/auto-traefik_v3.0.shb
 ```
 # Run the Bash Script
 Once you have the script on the server, run it using the following commands:
 ```
-sudo chmod +x auto-traefik_v2.4.2.shb
-./auto-traefik_v2.4.2.shb
+sudo chmod +x auto-traefik_v3.0.shb
+./auto-traefik_v3.0.shb
 ```
 
 Use the <strong>-arm.shb</strong> version of the file for Raspberry Pi. 
