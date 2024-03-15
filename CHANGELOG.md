@@ -8,7 +8,7 @@
 <li>ENHANCEMENT: Added ability to set subdomain name during app setup</li>
 <li>ENHANCEMENT: Added ability to set authentication type during app setup</li>
 <li>ENHANCEMENT: Added feedback message when requirements are not met for a specific step</li>
-<li>ENHANCEMENT: Authelia middlewares change align with developer's recommendation</li>
+<li>ENHANCEMENT: Authelia middlewares and configuration change to align with developer's recommendation</li>
 <li>ENHANCEMENT: UI Improvements</li>
 <li>ENHANCEMENT: Added password suggestions wherever password needs to be set</li>
 <li>ENHANCEMENT: Added expert override for certain DNS issues</li>
