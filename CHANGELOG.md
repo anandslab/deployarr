@@ -14,7 +14,6 @@
 <li>ENHANCEMENT: Added expert override for certain DNS issues</li>
 <li>FIX: Bug fix for Docker Aliases</li>
 </ul>
-<br/>
 Over 1000 lines of code changed. 
 
 <h5>v2.4.2 - February 27, 2024</h5>
