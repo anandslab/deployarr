@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v3.0.1 - March 18, 2024</h5>
+<ul>
+<li>FIX: Traefik dashboard 404.</li>
+</ul>
+
 <h5>v3.0 - March 15, 2024</h5>
 <ul>
 <li>NEW: Added Guacamole for Remote Admin</li>
