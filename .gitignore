@@ -6,8 +6,8 @@
 !CHANGELOG.md
 !LICENSE
 !latest-version
-!auto-traefik_v3.0.1.shb
-!auto-traefik_v3.0.1-arm.shb
+!auto-traefik_v3.0.2.shb
+!auto-traefik_v3.0.2-arm.shb
 
 !compose
 compose/*

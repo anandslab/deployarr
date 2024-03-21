@@ -1,5 +1,13 @@
 <h3>Releases</h3>
 
+<h5>v3.0.2 - March 21, 2024</h5>
+<ul>
+<li>FIX: Guacamole secrets error.</li>
+<li>NEW: Automatic script updates - bye bye manual downloads!.</li>
+<li>NEW: Ability to submit your rating/feedback.</li>
+</ul>
+
+
 <h5>v3.0.1 - March 18, 2024</h5>
 <ul>
 <li>FIX: Traefik dashboard 404.</li>
