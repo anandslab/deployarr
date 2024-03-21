@@ -31,3 +31,6 @@ includes/authelia/*
 !includes/traefik
 includes/traefik/*
 !includes/traefik/*.yml
+!includes/guacamole
+includes/guacamole/*
+!includes/guacamole/*.sql
