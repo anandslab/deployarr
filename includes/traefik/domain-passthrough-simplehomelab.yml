@@ -1,0 +1,14 @@
+tcp:
+  routers:
+    HOST-PLACEHOLDER-rtr:
+      entryPoints:
+        - websecure
+      rule: "HostSNIRegexp(`{{env "DOMAINNAME-VARIABLE-PLACEHOLDER"}}`, `{subdomain:[a-z]+}.{{env "DOMAINNAME-VARIABLE-PLACEHOLDER"}}`)"
+      service: HOST-PLACEHOLDER-svc
+      tls:
+        passthrough: true
+  services:
+    HOST-PLACEHOLDER-svc:
+      loadBalancer:
+        servers:
+          - address: "HOST-IP-PLACEHOLDER:443"

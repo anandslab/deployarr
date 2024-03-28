@@ -1,5 +1,12 @@
 <h3>Releases</h3>
 
+<h5>v3.0.3 - March 28, 2024</h5>
+<ul>
+<li>FIX: Removed compres middleware. Probably not important for homelab/low-traffic environment. Plus, this was causing "mine: no media type" error in Traefik logs.</li>
+<li>ENHANCEMENT: Improved reliability of Docker Root Folder backups.</li>
+<li>ENHANCEMENT: Added UDM/OPNsense specific troubleshooting tips.</li>
+</ul>
+
 <h5>v3.0.2 - March 21, 2024</h5>
 <ul>
 <li>FIX: Guacamole secrets error.</li>

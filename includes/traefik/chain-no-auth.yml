@@ -5,4 +5,4 @@ http:
         middlewares:
           - middlewares-rate-limit
           - middlewares-secure-headers
-          - middlewares-compress
+          # - middlewares-compress
