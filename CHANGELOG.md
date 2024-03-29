@@ -1,5 +1,12 @@
 <h3>Releases</h3>
 
+<h5>v3.0.4 - March 29, 2024</h5>
+<ul>
+<li>ENHANCEMENT: Improved reliability of status/completion checks for various steps.</li>
+<li>ENHANCEMENT: Reorganized menu to allow for future additions.</li>
+<li>NEW: Added changelog view: Settings->View Changelog.</li>
+</ul>
+
 <h5>v3.0.3 - March 28, 2024</h5>
 <ul>
 <li>FIX: Removed compres middleware. Probably not important for homelab/low-traffic environment. Plus, this was causing "mine: no media type" error in Traefik logs.</li>
