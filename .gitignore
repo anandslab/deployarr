@@ -17,20 +17,6 @@ compose/*
 scripts/*
 !scripts/*.sh
 
-
 !archives
 archives/*
 !archives/*.shb
-
-!includes
-includes/*
-!includes/*.yml
-!includes/authelia
-includes/authelia/*
-!includes/authelia/*.yml
-!includes/traefik
-includes/traefik/*
-!includes/traefik/*.yml
-!includes/guacamole
-includes/guacamole/*
-!includes/guacamole/*.sql
