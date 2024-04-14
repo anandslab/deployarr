@@ -1,0 +1,28 @@
+# DOCKER - All Docker commands start with "d" AND Docker Compose commands start with "dc"
+alias dstop='sudo docker stop $(sudo docker ps -a -q)' # usage: dstop container_name
+alias dstopall='sudo docker stop $(sudo docker ps -aq)' # stop all containers
+alias drm='sudo docker rm $(sudo docker ps -a -q)' # usage: drm container_name
+alias dprunevol='sudo docker volume prune' # remove unused volumes
+alias dprunesys='sudo docker system prune -a' # remove unsed docker data
+alias ddelimages='sudo docker rmi $(sudo docker images -q)' # remove unused docker images
+alias derase='dstopcont ; drmcont ; ddelimages ; dvolprune ; dsysprune' # WARNING: removes everything! 
+alias dprune='ddelimages ; dprunevol ; dprunesys' # remove unused data, volumes, and images (perfect for safe clean up)
+alias dexec='sudo docker exec -ti' # usage: dexec container_name (to access container terminal)
+alias dps='sudo docker ps -a' # running docker processes
+alias dpss='sudo docker ps -a --format "table {{.Names}}\t{{.State}}\t{{.Status}}\t{{.Image}}" | (sed -u 1q; sort)' # running docker processes as nicer table
+alias ddf='sudo docker system df' # docker data usage (/var/lib/docker)
+alias dlogs='sudo docker logs -tf --tail="50" ' # usage: dlogs container_name
+alias dlogsize='sudo du -ch $(sudo docker inspect --format='{{.LogPath}}' $(sudo docker ps -qa)) | sort -h' # see the size of docker containers
+alias dips="sudo docker ps -q | xargs -n 1 sudo docker inspect -f '{{.Name}}%tab%{{range .NetworkSettings.Networks}}{{.IPAddress}}%tab%{{end}}' | sed 's#%tab%#\t#g' | sed 's#/##g' | sort | column -t -N NAME,IP\(s\) -o $'\t'"
+
+# DOCKER COMPOSE TRAEFIK 2 - All docker-compose commands start with "dc" 
+alias dcrun='sudo docker compose --profile all -f $HOME/docker/docker-compose-$HOSTNAME.yml'
+alias dclogs='dcrun logs -tf --tail="50" ' # usage: dclogs container_name
+alias dcup='dcrun up -d --build --remove-orphans' # up the stack
+alias dcdown='dcrun down --remove-orphans' # down the stack
+alias dcrec='dcrun up -d --force-recreate --remove-orphans' # usage: dcrec container_name
+alias dcstop='dcrun stop' # usage: dcstop container_name
+alias dcrestart='dcrun restart ' # usage: dcrestart container_name
+alias dcstart='dcrun start ' # usage: dcstart container_name
+alias dcpull='dcrun pull' # usage: dcpull to pull all new images or dcpull container_name
+alias traefiklogs='tail -f $HOME/docker/logs/$HOSTNAME/traefik/traefik.log' # tail traefik logs

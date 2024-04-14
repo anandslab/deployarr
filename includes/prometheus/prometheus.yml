@@ -1,0 +1,2 @@
+global:
+  scrape_interval: 60s # By default, scrape targets every 15 seconds.
