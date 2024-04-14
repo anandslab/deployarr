@@ -18,9 +18,9 @@ services:
       - "traefik.enable=true"
       ## HTTP Routers
       - "traefik.http.routers.uptime-kuma-rtr.entrypoints=websecure"
-      - "traefik.http.routers.uptime-kuma-rtr.rule=Host(`SUBDOMAIN_PLACEHOLDER.$DOMAINNAME_1`)"
+      - "traefik.http.routers.uptime-kuma-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
       ## Middlewares
-      - "traefik.http.routers.uptime-kuma-rtr.middlewares=CHAIN_PLACEHOLDER@file"
+      - "traefik.http.routers.uptime-kuma-rtr.middlewares=CHAIN-PLACEHOLDER@file"
       ## HTTP Services
       - "traefik.http.routers.uptime-kuma-rtr.service=uptime-kuma-svc"
       - "traefik.http.services.uptime-kuma-svc.loadbalancer.server.port=3001"

@@ -22,9 +22,9 @@ services:
       - "traefik.enable=true"
       ## HTTP Routers
       - "traefik.http.routers.homepage-rtr.entrypoints=websecure"
-      - "traefik.http.routers.homepage-rtr.rule=Host(`$DOMAINNAME_1`,`www.$DOMAINNAME_1`,`SUBDOMAIN_PLACEHOLDER.$DOMAINNAME_1`)" # Both domain.com and www.domain.com
+      - "traefik.http.routers.homepage-rtr.rule=Host(`$DOMAINNAME_1`,`www.$DOMAINNAME_1`,`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)" # Both domain.com and www.domain.com
       ## Middlewares
-      - "traefik.http.routers.homepage-rtr.middlewares=CHAIN_PLACEHOLDER@file"
+      - "traefik.http.routers.homepage-rtr.middlewares=CHAIN-PLACEHOLDER@file"
       ## HTTP Services
       - "traefik.http.routers.homepage-rtr.service=homepage-svc"
       - "traefik.http.services.homepage-svc.loadbalancer.server.port=3000"

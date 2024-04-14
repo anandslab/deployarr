@@ -6,22 +6,22 @@ services:
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
-    # profiles: ["core", "all"]
+    profiles: ["apps", "all"]
     networks:
       - t2_proxy
     environment:
-        # This is required to allow vaultwarden to verify the TLS certificate!
-      - DOMAIN=https://vault.$DOMAINNAME_1
+      # This is required to allow vaultwarden to verify the TLS certificate!
+      - DOMAIN=https://SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1
+      # - ADMIN_TOKEN='Token Goes Here'
     volumes:
       - $DOCKERDIR/appdata/vaultwarden/data:/data
     labels:
     - "traefik.enable=true"
     ## HTTP Routers
     - "traefik.http.routers.vaultwarden-rtr.entrypoints=websecure"
-    - "traefik.http.routers.vaultwarden-rtr.rule=Host(`vault.$DOMAINNAME_1`)"
-    - "traefik.http.routers.vaultwarden-rtr.tls=true"
+    - "traefik.http.routers.vaultwarden-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
     ## Middlewares
-    - "traefik.http.routers.vaultwarden-rtr.middlewares=chain-no-auth@file"
+    - "traefik.http.routers.vaultwarden-rtr.middlewares=CHAIN-PLACEHOLDER@file"
     ## HTTP Services
     - "traefik.http.routers.vaultwarden-rtr.service=vaultwarden-svc"
     - "traefik.http.services.vaultwarden-svc.loadbalancer.server.port=80"

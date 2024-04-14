@@ -26,9 +26,9 @@ services:
       - "traefik.enable=true"
       # HTTP Routers
       - "traefik.http.routers.guacamole-rtr.entrypoints=websecure"
-      - "traefik.http.routers.guacamole-rtr.rule=Host(`SUBDOMAIN_PLACEHOLDER.$DOMAINNAME_1`)"
+      - "traefik.http.routers.guacamole-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
       # Middlewares
-      - "traefik.http.routers.guacamole-rtr.middlewares=CHAIN_PLACEHOLDER@file,add-guacamole"
+      - "traefik.http.routers.guacamole-rtr.middlewares=CHAIN-PLACEHOLDER@file,add-guacamole"
       - "traefik.http.middlewares.add-guacamole.addPrefix.prefix=/guacamole"
       # HTTP Services
       - "traefik.http.routers.guacamole-rtr.service=guacamole-svc"

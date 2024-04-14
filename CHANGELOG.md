@@ -1,5 +1,22 @@
 <h3>Releases</h3>
 
+<h5>v3.1 - April 14, 2024</h5>
+<ul>
+<li>NEW: Sudo will now be required to invoke the script.</li>
+<li>NEW: Stack Manager - Stop/Stop containers, Containers Status, Disable/Enable/Delete Services, and more.</li>
+<li>NEW: Migrate and Restore Auto-Traefik and Docker Environment to a new system.</li>
+<li>NEW: 'About' menu with relevant info on Auto-Traefik.</li>
+<li>NEW: Added Glances.</li>
+<li>NEW: Added Homarr.</li>
+<li>NEW: Added InfluxDB.</li>
+<li>NEW: Added Prometheus.</li>
+<li>NEW: Added Vaultwarden.</li>
+<li>NEW: Second domain passthrough to another Traefik instance on a different host, as explained in https://www.smarthomebeginner.com/multiple-traefik-instances/.</li>
+<li>ENHANCEMENT: Improved compatibility with GLIBC. The script should now work on older version of Ubuntu/Debian/OMV.</li>
+<li>ENHANCEMENT: Code improvements.</li>
+<li>ENHANCEMENT: 'Authentication' Menu is now 'Security'.</li>
+</ul>
+
 <h5>v3.0.4 - March 29, 2024</h5>
 <ul>
 <li>ENHANCEMENT: Improved reliability of status/completion checks for various steps.</li>

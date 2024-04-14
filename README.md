@@ -8,11 +8,9 @@ Automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia,
 <li>Open Media Vault</li>
 </ul>
 
-GLIBC version 2.35 needed (use the command below to check your system). Older versions of the above OSes tend to have older version of GLIBC. 
+<del>GLIBC version 2.35 needed (use the command below to check your system). Older versions of the above OSes tend to have older version of GLIBC. </del>
 
-```
-ldd --version
-```
+Since Auto-Traefik v3.1, most recent version of Ubuntu/Debian/OMV with older GLIBC versions should be supported.
 
 # More Details
 https://www.smarthomebeginner.com/auto-traefik/
@@ -38,13 +36,13 @@ https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD
 
 # Download Auto-Traefik
 ```
-wget https://raw.githubusercontent.com/htpcBeginner/auto-traefik/main/auto-traefik_v3.0.4.shb
+wget https://raw.githubusercontent.com/htpcBeginner/auto-traefik/main/auto-traefik_v3.1.shb
 ```
 # Run the Bash Script
 Once you have the script on the server, run it using the following commands:
 ```
-sudo chmod +x auto-traefik_v3.0.4.shb
-./auto-traefik_v3.0.4.shb
+sudo chmod +x auto-traefik_v3.1.shb
+sudo ./auto-traefik_v3.1.shb
 ```
 
 Use the <strong>-arm.shb</strong> version of the file for Raspberry Pi. 
