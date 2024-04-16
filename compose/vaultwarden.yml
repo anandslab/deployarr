@@ -12,7 +12,7 @@ services:
     environment:
       # This is required to allow vaultwarden to verify the TLS certificate!
       - DOMAIN=https://SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1
-      # - ADMIN_TOKEN='Token Goes Here'
+      # - ADMIN_TOKEN=ADMIN-TOKEN-PLACEHOLDER
     volumes:
       - $DOCKERDIR/appdata/vaultwarden/data:/data
     labels:

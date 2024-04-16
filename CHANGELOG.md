@@ -1,5 +1,12 @@
 <h3>Releases</h3>
 
+<h5>v3.1.1 - April 16, 2024</h5>
+<ul>
+<li>NEW: Grafana added.</li>
+<li>FIX: Prometheus permissions error.</li>
+<li>ENHANCEMENT: Automated Vaultwarden Admin Token setup.</li>
+</ul>
+
 <h5>v3.1 - April 14, 2024</h5>
 <ul>
 <li>NEW: Sudo will now be required to invoke the script.</li>
