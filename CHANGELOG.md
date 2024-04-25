@@ -1,5 +1,21 @@
 <h3>Releases</h3>
 
+<h5>v3.2 - April 25, 2024</h5>
+<ul>
+<li>ANNOUNCEMENT: Auto-Traefik will be renamed shortly: "Traefik" is a trademarked word and Auto-Traefik does more than just Traefik.</li>
+<li>ANNOUNCEMENT: Membership plugin that supports license verification will need an upgrade in the coming days. Please expect some down times that might hinder license checks.</li>
+<li>NEW: Reverted a change introduced in 3.1. Sudoing should not be used when calling the script initially. Elevation to root will still be required after the script starts running.</li>
+<li>NEW: Added Google OAuth (Traefik Forward Authentication).</li>
+<li>NeW: Added Visual Studio Code Server (VS Code), DDNS Updater, and IT Tools.</li>
+<li>NEW: Tools menu with Stack Manager, Backups, and Permissions Checks.</li>
+<li>FIX: Improve Docker Folder permissions.</li>
+<li>ENHANCEMENT: Improved service delete option to remove secrets as well.</li>
+<li>ENHANCEMENT: Improved Auto-Traefik reset option.</li>
+<li>ENHANCEMENT: Arranged all apps in alphabetical order in Apps menu.</li>
+<li>ENHANCEMENT: Improved required info section with option to create new Linux users and warnings for certain situations (running as root, user not present, etc.).</li>
+<li>Others: Over 2000 lines of code changed/improved.</li>
+</ul>
+
 <h5>v3.1.1 - April 16, 2024</h5>
 <ul>
 <li>NEW: Grafana added.</li>

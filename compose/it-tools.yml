@@ -1,0 +1,21 @@
+services:
+  # IT-Tools - Status Page & Monitoring Server
+  it-tools:
+    image: corentinth/it-tools
+    container_name: it-tools
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - t2_proxy
+    labels:
+      - "traefik.enable=true"
+      # HTTP Routers
+      - "traefik.http.routers.ut-tools-rtr.entrypoints=websecure"
+      - "traefik.http.routers.ut-tools-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
+      # Middlewares
+      - "traefik.http.routers.ut-tools-rtr.middlewares=CHAIN-PLACEHOLDER@file"
+      # HTTP Services
+      - "traefik.http.routers.ut-tools-rtr.service=ut-tools-svc"
+      - "traefik.http.services.ut-tools-svc.loadbalancer.server.port=80"

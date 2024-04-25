@@ -1,17 +1,18 @@
 services:
   # VSCode - VSCode Editing
-  vscode: 
-    image: lscr.io/linuxserver/code-server:latest 
+  vscode:
+    image: lscr.io/linuxserver/code-server:latest
     container_name: vscode
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["core", "all"]
     networks:
-      - traefik_proxy
+      - t2_proxy
     # ports:
-    #   - "8443:8443"
+      # - "8443:8443"
     volumes:
+      - $DOCKERDIR/appdata/vscode:/config
       - $USERDIR:/data/docker
     environment:
       TZ: $TZ
@@ -33,4 +34,4 @@ services:
     - "traefik.http.routers.vscode-rtr.middlewares=CHAIN-PLACEHOLDER@file"
     ## HTTP Services
     - "traefik.http.routers.vscode-rtr.service=vscode-svc"
-    - "traefik.http.services.vscode-svc.loadbalancer.server.port=80"
+    - "traefik.http.services.vscode-svc.loadbalancer.server.port=8443"
