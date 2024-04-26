@@ -1,0 +1,35 @@
+services:
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - t2_proxy
+    # ports:
+    #   - "80:80"
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      DB_CONNECTION: sqlite
+      # APP_KEY: #optional
+      # DB_HOST: #optional
+      # DB_PORT: #optional
+      # DB_DATABASE: #optional
+      # DB_USERNAME: #optional
+      # DB_PASSWORD: #optional
+    volumes:
+      - $DOCKERDIR/appdata/speedtest-tracker:/app/config
+    labels:
+      - "traefik.enable=true"
+      ## HTTP Routers
+      - "traefik.http.routers.speedtest-tracker-rtr.entrypoints=websecure"
+      - "traefik.http.routers.speedtest-tracker-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
+      ## Middlewares
+      - "traefik.http.routers.speedtest-tracker-rtr.middlewares=CHAIN-PLACEHOLDER@file"
+      ## HTTP Services
+      - "traefik.http.routers.speedtest-tracker-rtr.service=speedtest-tracker-svc"
+      - "traefik.http.services.speedtest-tracker-svc.loadbalancer.server.port=80"

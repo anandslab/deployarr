@@ -1,5 +1,12 @@
 <h3>Releases</h3>
 
+<h5>v3.2.1 - April 26, 2024</h5>
+<ul>
+<li>NEW: Speedtest-Tracker added.</li>
+<li>FIX: Enabling authentication during app install was not working as expected.</li>
+<li>OTHER: Additional minor bug fixes.</li>
+</ul>
+
 <h5>v3.2 - April 25, 2024</h5>
 <ul>
 <li>ANNOUNCEMENT: Auto-Traefik will be renamed shortly: "Traefik" is a trademarked word and Auto-Traefik does more than just Traefik.</li>
