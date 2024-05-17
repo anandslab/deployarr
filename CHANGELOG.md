@@ -3,7 +3,7 @@
 <h5>v3.3 - May 18, 2024</h5>
 <ul>
 <li>ENHANCEMENT: Colors galore! Color coding of menu and status texts for better UX.</li>
-<li>NEW: Traefik v2 now default.</li>
+<li>NEW: Traefik v3 now default.</li>
 <li>NEW: Traefik v2 to v3 migration assistant (EXPERIMENTAL).</li>
 <li>NEW: Traefik Access and Errors now available via Dozzle.</li>
 <li>FIX: With no Authelia and with OAuth, setting authentication system during app install wasn't working properly.</li>
