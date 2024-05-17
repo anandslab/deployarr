@@ -1,0 +1,13 @@
+services:
+  # Traefik Error Log (traefik.log) for Dozzle
+  traefik-error-log:
+    container_name: traefik-error-log
+    image: alpine
+    volumes:
+      - $DOCKERDIR/logs/$HOSTNAME/traefik/traefik.log:/var/log/stream.log
+    command:
+      - tail
+      - -f
+      - /var/log/stream.log     
+    network_mode: none
+    restart: unless-stopped

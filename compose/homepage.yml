@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t2_proxy
+      - t3_proxy
       - socket_proxy
     # ports:
     #  - "3000:3000" 
@@ -22,7 +22,7 @@ services:
       - "traefik.enable=true"
       ## HTTP Routers
       - "traefik.http.routers.homepage-rtr.entrypoints=websecure"
-      - "traefik.http.routers.homepage-rtr.rule=Host(`$DOMAINNAME_1`,`www.$DOMAINNAME_1`,`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)" # Both domain.com and www.domain.com
+      - "traefik.http.routers.homepage-rtr.rule=Host(`$DOMAINNAME_1`) || Host(`www.$DOMAINNAME_1`) || Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)" # Both domain.com and www.domain.com
       ## Middlewares
       - "traefik.http.routers.homepage-rtr.middlewares=CHAIN-PLACEHOLDER@file"
       ## HTTP Services

@@ -9,7 +9,7 @@ services:
     profiles: ["monitoring", "all"]
     # privileged: true # Only for VM
     networks:
-      - t2_proxy
+      - t3_proxy
       - socket_proxy
       - default
     # ports:

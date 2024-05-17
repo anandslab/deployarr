@@ -1,8 +1,8 @@
 services:
-  # Traefik 3 - Reverse Proxy
+  # Traefik 2 - Reverse Proxy
   traefik:
     container_name: traefik
-    image: traefik:3.0
+    image: traefik:2.11
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
@@ -10,17 +10,17 @@ services:
     depends_on:
       - socket-proxy
     networks:
-      t3_proxy:
+      t2_proxy:
         ipv4_address: 192.168.90.254 # You can specify a static IP
       socket_proxy:
     command: # CLI arguments
       - --global.checkNewVersion=true
-      - --global.sendAnonymousUsage=false
+      - --global.sendAnonymousUsage=true
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
-      - --entrypoints.traefik.address=:8080
-      - --entrypoints.web.http.redirections.entrypoint.to=websecure
-      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      - --entryPoints.traefik.address=:8080
+      - --entrypoints.web.http.redirections.entryPoint.to=websecure
+      - --entrypoints.web.http.redirections.entryPoint.scheme=https
       - --entrypoints.web.http.redirections.entrypoint.permanent=true
       - --api=true
       - --api.dashboard=true
@@ -39,7 +39,7 @@ services:
       # - --providers.docker.endpoint=unix:///var/run/docker.sock # Disable for Socket Proxy. Enable otherwise.
       - --providers.docker.endpoint=tcp://socket-proxy:2375 # Enable for Socket Proxy. Disable otherwise.
       - --providers.docker.exposedByDefault=false
-      - --providers.docker.network=t3_proxy 
+      - --providers.docker.network=t2_proxy 
       # - --providers.docker.swarmMode=false # Traefik v2 Swarm
       # - --providers.swarm.endpoint=tcp://127.0.0.1:2377 # Traefik v3 Swarm
       - --entrypoints.websecure.http.tls=true
@@ -57,7 +57,6 @@ services:
       - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.resolvers=1.1.1.1:53,1.0.0.1:53
       - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.delayBeforeCheck=120 # To delay DNS check and reduce LE hitrate
       #- --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.disablePropagationCheck=true
-      # - METRICS-PLACEHOLDER-DO-NOT-DELETE
     ports:
       - target: 80
         published: 80
@@ -72,9 +71,9 @@ services:
       #   protocol: tcp
       #   mode: host
     volumes:
-      - $DOCKERDIR/appdata/traefik3/rules/$HOSTNAME:/rules 
+      - $DOCKERDIR/appdata/traefik2/rules/$HOSTNAME:/rules 
       # - /var/run/docker.sock:/var/run/docker.sock:ro # Use Docker Socket Proxy instead for improved security
-      - $DOCKERDIR/appdata/traefik3/acme/acme.json:/acme.json 
+      - $DOCKERDIR/appdata/traefik2/acme/acme.json:/acme.json 
       - $DOCKERDIR/logs/$HOSTNAME/traefik:/logs
     environment:
       - TZ=$TZ

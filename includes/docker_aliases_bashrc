@@ -1,5 +1,5 @@
 
 # Anand's Docker Bash Aliases add by Auto-Traefik
-if [ -f "$HOME/docker/shared/config/docker_aliases" ]; then
-    . $HOME/docker/shared/config/docker_aliases
+if [ -f ~/docker/shared/config/docker_aliases ]; then
+    . ~/docker/shared/config/docker_aliases
 fi

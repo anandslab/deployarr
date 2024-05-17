@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t2_proxy
+      - t3_proxy
     # ports:
     #   - "80:80"
     environment:

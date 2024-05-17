@@ -4,7 +4,7 @@ services:
     image: prom/prometheus:latest
     container_name: prometheus
     networks:
-      - t2_proxy
+      - t3_proxy
       - default
     security_opt:
       - no-new-privileges:true

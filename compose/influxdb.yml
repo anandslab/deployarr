@@ -4,7 +4,7 @@ services:
     image: influxdb:latest
     container_name: influxdb
     networks:
-      - t2_proxy
+      - t3_proxy
       - default
     security_opt:
       - no-new-privileges:true

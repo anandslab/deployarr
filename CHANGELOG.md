@@ -1,5 +1,22 @@
 <h3>Releases</h3>
 
+<h5>v3.3 - May 18, 2024</h5>
+<ul>
+<li>ENHANCEMENT: Colors galore! Color coding of menu and status texts for better UX.</li>
+<li>NEW: Traefik v2 now default.</li>
+<li>NEW: Traefik v2 to v3 migration assistant (EXPERIMENTAL).</li>
+<li>NEW: Traefik Access and Errors now available via Dozzle.</li>
+<li>FIX: With no Authelia and with OAuth, setting authentication system during app install wasn't working properly.</li>
+<li>FIX: Rules syntax changes for Traefik v3 compliance.</li>
+<li>FIX: Bash Aliases Fix - was erroring out previously.</li>
+<li>Several other minor fixes and improvements.</li>
+</ul>
+
+<h5>v3.2.2 - April 26, 2024</h5>
+<ul>
+<li>NEW: New Name for Auto-Traefik: Deployarr (coming soon).</li>
+</ul>
+
 <h5>v3.2.1 - April 26, 2024</h5>
 <ul>
 <li>NEW: Speedtest-Tracker added.</li>

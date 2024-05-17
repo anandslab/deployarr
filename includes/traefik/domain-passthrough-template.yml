@@ -3,7 +3,7 @@ tcp:
     HOST-PLACEHOLDER-rtr:
       entryPoints:
         - websecure
-      rule: "HostSNIRegexp(`DOMAINNAME-VARIABLE-PLACEHOLDER`, `{subdomain:[a-z]+}.DOMAINNAME-VARIABLE-PLACEHOLDER`)"
+      rule: "HostSNIRegexp(`DOMAINNAME-VARIABLE-PLACEHOLDER`) || HostSNIRegexp(`{subdomain:[a-z]+}.DOMAINNAME-VARIABLE-PLACEHOLDER`)"
       service: HOST-PLACEHOLDER-svc
       tls:
         passthrough: true

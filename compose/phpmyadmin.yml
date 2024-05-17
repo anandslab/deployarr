@@ -9,7 +9,7 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t2_proxy
+      - t3_proxy
       - default
     environment:
       - PMA_HOST=mariadb

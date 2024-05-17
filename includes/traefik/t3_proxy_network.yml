@@ -3,6 +3,6 @@
     driver: bridge
     ipam:
       config:
-        - subnet: 192.168.93.0/24
+        - subnet: 192.168.90.0/24
   # NETWORKS-PLACEHOLDER-DO-NOT-DELETE
   
