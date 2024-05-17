@@ -17,10 +17,6 @@ compose/*
 scripts/*
 !scripts/*.sh
 
-!archives
-archives/*
-!archives/*.shb
-
 !includes
 !includes/*
 !includes/*/*
