@@ -1,5 +1,20 @@
 <h3>Releases</h3>
 
+<h5>v3.3.1 - May 23, 2024</h5>
+<ul>
+<li>NEW: Adminer, PostgreSQL, and Redis</li>
+<li>NEW: Ability to create MariaDB database using the script (from Tools menu).</li>
+<li>NEW: System Prep menu expanded with additional settings in preparation for future apps. Many of these are optional for now: SMTP Details, Downloads Folder, Media Folders, Server LAN IP, etc.</li>
+<li>NEW: Ability to set a Traefik Auth Bypass Key - in preparation for future apps.</li>
+<li>ENHANCEMENT: Reverse Proxy menu improved with more context based information (e.g. Number of external apps behind Traefik).</li>
+<li>ENHANCEMENT: All sensitive info use by the script are now more securely stored as docker secrets.</li>
+<li>ENHANCEMENT: Apps menu now shows status (Running), image version if available, and authentication mode beside their name.</li>
+<li>ENHANCEMENT: Backups menu now shows the Backup Folder, Number of Backups, and Size of Backups Folder.</li>
+<li>FIX: Ability to set authentication mode while added external apps behind Traefik was broken.</li>
+<li>Several other minor fixes and improvements.</li>
+</ul>
+
+
 <h5>v3.3 - May 18, 2024</h5>
 <ul>
 <li>ENHANCEMENT: Colors galore! Color coding of menu and status texts for better UX.</li>
