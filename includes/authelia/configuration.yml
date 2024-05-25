@@ -2,12 +2,18 @@
 #                   Authelia configuration                    #
 ###############################################################
 
-# https://www.authelia.com/configuration/miscellaneous/introduction/#default_redirection_url
-default_redirection_url: https://authelia.example.com
-
 server:
-  host: 0.0.0.0
-  port: 9091
+  address: tcp://0.0.0.0:9091/
+  buffers:
+    read: 4096
+    write: 4096
+  endpoints:
+    enable_pprof: false
+    enable_expvars: false
+  disable_healthcheck: false
+  tls:
+    key: ""
+    certificate: ""
 
 # https://www.authelia.com/configuration/miscellaneous/logging/
 log:
@@ -18,12 +24,17 @@ log:
 
 # https://www.authelia.com/configuration/second-factor/time-based-one-time-password/
 totp:
-  issuer: authelia.com
+  issuer: example.com
   period: 30
   skew: 1
 
+# AUTHELIA_DUO_PLACEHOLDER
+
 # https://www.authelia.com/reference/guides/passwords/
 authentication_backend:
+  password_reset:
+    disable: false
+  refresh_interval: 5m
   file:
     path: /config/users.yml
     password:
@@ -31,7 +42,7 @@ authentication_backend:
       iterations: 1
       salt_length: 16
       parallelism: 8
-      memory: 128 # blocks this much of the RAM
+      memory: 256 # blocks this much of the RAM
 
 # https://www.authelia.com/overview/authorization/access-control/
 access_control:
@@ -53,17 +64,22 @@ access_control:
 # https://www.authelia.com/configuration/session/introduction/
 session:
   name: authelia_session
-  expiration: 1h
+  same_site: lax
+  expiration: 7h
   inactivity: 5m
-  remember_me_duration: 1M
-  domain: example.com # Should match whatever your root protected domain is
+  remember_me: 1M
+  cookies:
+    - domain: 'example.com'
+      authelia_url: 'https://authelia.example.com'
+      default_redirection_url: 'https://example.com'
+  # AUTHELIA_REDIS_PLACEHOLDER
 
 # https://www.authelia.com/configuration/security/regulation/
 regulation:
   max_retries: 3
-  find_time: 300
-  ban_time: 600
-
+  find_time: 10m
+  ban_time: 12h
+  
 # https://www.authelia.com/configuration/storage/introduction/
 storage:
   # For local storage, uncomment lines below and comment out mysql. https://docs.authelia.com/configuration/storage/sqlite.html
@@ -77,3 +93,4 @@ notifier:
   # For testing purposes, notifications can be sent in a file. Be sure to map the volume in docker-compose.
   filesystem:
     filename: /config/notifications.txt
+  # AUTHELIA_REDIS_PLACEHOLDER

@@ -1,5 +1,14 @@
 <h3>Releases</h3>
 
+<h5>v3.3.2 - May 25, 2024</h5>
+<ul>
+<li>NEW: ShellInaBox added (web-based terminal).</li>
+<li>NEW: Authelia upgraded to v4.38.8.</li>
+<li>NEW: Ability to set custom Docker folder and Backup folder.</li>
+<li>ENHANCEMENT: UI/UX improvements throughout, including a new Apps menu.</li>
+<li>ENHANCEMENT: More clarity on which steps are required and which ones are not.</li>
+</ul>
+
 <h5>v3.3.1 - May 23, 2024</h5>
 <ul>
 <li>NEW: Adminer, PostgreSQL, and Redis</li>
@@ -13,7 +22,6 @@
 <li>FIX: Ability to set authentication mode while added external apps behind Traefik was broken.</li>
 <li>Several other minor fixes and improvements.</li>
 </ul>
-
 
 <h5>v3.3 - May 18, 2024</h5>
 <ul>
