@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v3.3.2.1 - May 27, 2024</h5>
+<ul>
+<li>FIX: Adding external app behind Traefik was broken.</li>
+</ul>
+
 <h5>v3.3.2 - May 25, 2024</h5>
 <ul>
 <li>NEW: ShellInaBox added (web-based terminal).</li>
