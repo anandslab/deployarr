@@ -1,5 +1,13 @@
 <h3>Releases</h3>
 
+<h5>v3.3.3 - June 6, 2024</h5>
+<ul>
+<li>NEW APPS: Nextcloud (not AIO version; uses existing Redis and MariaDB services), SABnzbd.</li>
+<li>NEW: Graphics card detection (EXPERIMENTAL).</li>
+<li>FIX: Traefik staging was failing while checking for staging certificates.</li>
+<li>Other minor bug fixes.</li>
+</ul>
+
 <h5>v3.3.2.1 - May 27, 2024</h5>
 <ul>
 <li>FIX: Adding external app behind Traefik was broken.</li>

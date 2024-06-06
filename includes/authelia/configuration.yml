@@ -93,4 +93,3 @@ notifier:
   # For testing purposes, notifications can be sent in a file. Be sure to map the volume in docker-compose.
   filesystem:
     filename: /config/notifications.txt
-  # AUTHELIA_REDIS_PLACEHOLDER

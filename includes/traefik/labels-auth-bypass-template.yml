@@ -1,0 +1,6 @@
+      # Auth Bypass
+      - "traefik.http.routers.APAPPNAME-PLACEHOLDER-rtr-bypass.entrypoints=websecure"
+      - "traefik.http.routers.APAPPNAME-PLACEHOLDER-rtr-bypass.rule=Host(`APAPPNAME-PLACEHOLDER.$DOMAINNAME_1`) && Header(`traefik-auth-bypass-key`, `$TRAEFIK_AUTH_BYPASS_KEY`)" # Bypass Auth for LunaSea on iOS
+      - "traefik.http.routers.APAPPNAME-PLACEHOLDER-rtr-bypass.priority=100"
+      - "traefik.http.routers.APAPPNAME-PLACEHOLDER-rtr-bypass.middlewares=chain-no-auth@file"
+      - "traefik.http.routers.APAPPNAME-PLACEHOLDER-rtr-bypass.service=APAPPNAME-PLACEHOLDER-svc"
