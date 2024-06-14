@@ -6,14 +6,18 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 # Downloading and Running Deployarr
 ```
 wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v4.0.app
+```
+```
 chmod +x deployarr_v4.0.app
+```
+```
 ./deployarr_v4.0.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
 
 # References
-More information on Deployarr and how to use it. 
+More information on Deployarr and how to use it:
 
 <ul>
 <li>Description: https://www.smarthomebeginner.com/auto-traefik/</li>
@@ -27,21 +31,21 @@ Please do not open issues on GitHub. There is a dedicated Auto-Traefik/Deployarr
 # Licenses Types
 ### Free License
 <ul>
-<li>No registration required. Anyone can download and run the script as described below. Free to explore all the available options.</li>
-<li>Perform system, port, and Docker checks to ensure your system is ready for Traefik. Get your system ready to follow [Traefik v3 Setup](https://www.smarthomebeginner.com/traefik-v3-docker-compose-guide-2024/)</li>
+<li>No registration required. Anyone can download and run the script as described above. Free to explore all the available options.</li>
+<li>Perform system, port, and Docker checks to ensure your system is ready for Traefik. Get your system ready to follow <a href="https://www.smarthomebeginner.com/traefik-v3-docker-compose-guide-2024/" target="_blank">Traefik v3 Setup</a> guide.</li>
 </ul>
 
 ### Basic License (Free)
 <ul>
-<li>Register for a free account on SmartHomebeginner.com and activate the ability to automatically setup Docker Environment with proper files, folders, and permissions, as described in the Ultimate [Docker Media Server guide](https://www.smarthomebeginner.com/docker-media-server-2024/)</li>
+<li>Register for a free account on SmartHomebeginner.com and activate the ability to automatically setup Docker Environment with proper files, folders, and permissions, as described in the <a href="https://www.smarthomebeginner.com/docker-media-server-2024/" target="_blank">Ultimate Docker Media Server</a> guide.</li>
 </ul>
 
 ### Plus License
 <ul>
 <li>Ensure prerequisites and setup the basic Docker-Traefik stack.</li>
 <li>Add authentication and additional apps manually.</li>
+<li>Expert Mode to override checks for advanced setups.</li>
 <li>Perfect for anyone that wants to setup the basic Docker environment with Traefik reverse proxy.</li>
-<li>Expert Mode override checks in advanced setups.</li>
 </ul>
 
 ### Pro License
