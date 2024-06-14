@@ -5,6 +5,7 @@
 <li>Deployarr now supports 40 Apps!!!</li>
 <li>NEW: Licence naming: Free (previously Unregistered), Basic (previously Starter Free), Plus (previously Auto-Traefik), and Pro (previously Auto-Traefik+).</li>
 <li>NEW: Auto-Traefik to Deployarr auto migration.</li>
+<li>NEW: Ability register a free account from within Deployarr to gain free Basic license.</li>
 <li>NEW: Added Bazarr, DeUnhealth, Gluetun VPN, Lidarr, Plex, Prowlarr, Jellyfin, qBittorrent, Radarr, Readarr, and Sonarr.</li>
 <li>NEW: Starter config for qBittorrent with pre-configured folders to eliminate permissions issues. Also includes a fix for not being able to login using the default username and password. qBittorrent used Gluetun VPN Kill switch by default.</li>
 <li>NEW: Gluetun VPN supports both Wireguard and OpenVPN.</li>

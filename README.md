@@ -38,6 +38,7 @@ Please do not open issues on GitHub. There is a dedicated Auto-Traefik/Deployarr
 ### Basic License (Free)
 <ul>
 <li>Register for a free account on SmartHomebeginner.com and activate the ability to automatically setup Docker Environment with proper files, folders, and permissions, as described in the <a href="https://www.smarthomebeginner.com/docker-media-server-2024/" target="_blank">Ultimate Docker Media Server</a> guide.</li>
+<li>Ability to view Docker disk usage and clean up.</li>
 </ul>
 
 ### Plus License
