@@ -12,10 +12,10 @@ services:
     labels:
       - "traefik.enable=true"
       # HTTP Routers
-      - "traefik.http.routers.ut-tools-rtr.entrypoints=websecure"
-      - "traefik.http.routers.ut-tools-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
+      - "traefik.http.routers.it-tools-rtr.entrypoints=websecure"
+      - "traefik.http.routers.it-tools-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
       # Middlewares
-      - "traefik.http.routers.ut-tools-rtr.middlewares=CHAIN-PLACEHOLDER@file"
+      - "traefik.http.routers.it-tools-rtr.middlewares=CHAIN-PLACEHOLDER@file"
       # HTTP Services
-      - "traefik.http.routers.ut-tools-rtr.service=ut-tools-svc"
-      - "traefik.http.services.ut-tools-svc.loadbalancer.server.port=80"
+      - "traefik.http.routers.it-tools-rtr.service=it-tools-svc"
+      - "traefik.http.services.it-tools-svc.loadbalancer.server.port=80"

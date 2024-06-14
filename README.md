@@ -1,53 +1,69 @@
-# What is Auto-traefik?
-Automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Dozzle, Uptime-Kuma, Homepage, and other apps. 
+# What is Deployarr?
+Automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Plex, Jellyfin, Starr Apps, Gluetun, Dozzle, Uptime-Kuma, Homepage, and other apps (40 in total!!!). 
 
-<div class="announcement"><h5>Name Change Coming</h5><strong>Auto-Traefik</strong> will soon be renamed to <strong>Deployarr</strong> to accurately reflect what it does - simplify deployment of several Homelab apps, on top of Traefik.</div>
+As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.
 
-# Tested On
+# Downloading and Running Deployarr
+```
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v4.0.app
+chmod +x deployarr_v4.0.app
+./deployarr_v4.0.app
+```
+
+Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
+
+# References
+More information on Deployarr and how to use it. 
+
 <ul>
-<li>Ubuntu</li>
-<li>Debian</li>
-<li>May also work on OMV but not fully tested</li>
+<li>Description: https://www.smarthomebeginner.com/auto-traefik/</li>
+<li>Text Guide: https://www.smarthomebeginner.com/course/how-to-use-auto-traefik/</li>
+<li>Video Guide: https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD</li>
 </ul>
 
-<del>GLIBC version 2.35 needed (use the command below to check your system). Older versions of the above OSes tend to have older version of GLIBC. </del>
-
-Since Auto-Traefik v3.1, most recent version of Ubuntu/Debian/OMV with older GLIBC versions should be supported.
-
-# More Details
-https://www.smarthomebeginner.com/auto-traefik/
-
-# How to Use Auto Traefik? - Guides
-## Text Guide 
-https://www.smarthomebeginner.com/course/how-to-use-auto-traefik/
-
-## Video Guide
-### Playlist:
-https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD
-
-### Individual Videos:<br/>
-1️⃣: Introduction, Version 2 Overview, and New Features: https://youtu.be/ePBLJTyRgdQ<br/>
-2️⃣-3️⃣: Must Read Info and Checks: https://youtu.be/hF-Ip18Y4kc<br/>
-4️⃣: Docker and Socket Proxy Setup: https://youtu.be/TWsLUzK6DbM<br/>
-5️⃣: Traefik Staging and Production Setup: https://youtu.be/SBv-9LD1S5k<br/>
-6️⃣: Authentication, Basic Auth, and Authelia MFA: https://youtu.be/1g9h9P3QYl8<br/>
-7️⃣: Applications: https://youtu.be/RnoFPgwS534<br/>
-8️⃣: Additional Applications: https://youtu.be/GK0YKA5q1XE<br/>
-9️⃣: External Apps Behind Traefik: https://youtu.be/kGaX1pnP_y4<br/>
-1️⃣0️⃣: Removing Auto-Traefik and Closing Thoughts: https://youtu.be/z9Az9MMBHSE<br/>
-
-# Download Auto-Traefik
-```
-wget https://raw.githubusercontent.com/htpcBeginner/auto-traefik/main/auto-traefik_v3.3.3.shb
-```
-# Run the Bash Script
-Once you have the script on the server, run it using the following commands (do not use ```sudo```):
-```
-chmod +x auto-traefik_v3.3.3.shb
-./auto-traefik_v3.3.3.shb
-```
-
-Use the <strong>-arm.shb</strong> version of the file for Raspberry Pi. 
-
 # Support
-Please do not open issues on GitHub. There is a dedicated Auto-Traefik support channel on our [Discord server](https://www.smarthomebeginner.com/discord/) for Supporters.
+Please do not open issues on GitHub. There is a dedicated Auto-Traefik/Deployarr support channel on our [Discord server](https://www.smarthomebeginner.com/discord/) for Supporters.
+
+# Licenses Types
+### Free License
+<ul>
+<li>No registration required. Anyone can download and run the script as described below. Free to explore all the available options.</li>
+<li>Perform system, port, and Docker checks to ensure your system is ready for Traefik. Get your system ready to follow [Traefik v3 Setup](https://www.smarthomebeginner.com/traefik-v3-docker-compose-guide-2024/)</li>
+</ul>
+
+### Basic License (Free)
+<ul>
+<li>Register for a free account on SmartHomebeginner.com and activate the ability to automatically setup Docker Environment with proper files, folders, and permissions, as described in the Ultimate [Docker Media Server guide](https://www.smarthomebeginner.com/docker-media-server-2024/)</li>
+</ul>
+
+### Plus License
+<ul>
+<li>Ensure prerequisites and setup the basic Docker-Traefik stack.</li>
+<li>Add authentication and additional apps manually.</li>
+<li>Perfect for anyone that wants to setup the basic Docker environment with Traefik reverse proxy.</li>
+<li>Expert Mode override checks in advanced setups.</li>
+</ul>
+
+### Pro License
+<ul>
+<li>Everything above, plus automated setup of 40 total apps, including Authelia, Google OAuth, Starr Apps, and more.</li>
+<li>Backup and Migration features.</li>
+<li>Stack Manager to manage the environment.</li>
+</ul>
+
+# FAQ
+### What OSes are supported?
+Deployarr is primarily developed and tested on Ubuntu. But it should work on other Debian environments. 
+
+### What hardware are supported?
+At this point, Deployarr only works on Linux in Barebones, VM, and LXC environments. I do plan to include support Synology devices in future. Just waiting for Synology to update their Docker Package, which is several years old. 
+
+### Why not Free?
+Deployarr is meant to be a perk for followers and supporters of SmartHomeBeginner.com. But keep in mind that everything that the script does can be learned using the guides on SmartHomeBeginner.com.
+
+Parts of the script are free to use without registration (see License Types).
+
+Any support received via the purchase of the script goes towards publishing more videos guides on my [Youtube Channel](https://www.youtube.com/@anandslab). At this point, I spend 15x more on editing costs compared to Youtube Ad income. This also does not include 1000s of hours spent on writing guides, making videos, maintaining the community, and developing the script.
+
+### Why not Open-Source?
+Paid supporters receive full access to the script's functionalities. Implementing this requires license checks with some sensitive information. Unfortunately, this requires compiling the source. 

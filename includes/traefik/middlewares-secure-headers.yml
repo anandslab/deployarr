@@ -12,7 +12,7 @@ http:
         stsSeconds: 63072000
         stsIncludeSubdomains: true
         stsPreload: true
-        # forceSTSHeader: true # This is a good thing but it can be tricky. Enable after everything works.
+        forceSTSHeader: true # This is a good thing but it can be tricky. Enable after everything works.
         customFrameOptionsValue: SAMEORIGIN # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
         contentTypeNosniff: true
         browserXssFilter: true
@@ -21,3 +21,5 @@ http:
         customResponseHeaders:
           X-Robots-Tag: "none,noarchive,nosnippet,notranslate,noimageindex," # disable search engines from indexing home server
           server: "" # hide server info from visitors
+        customRequestHeaders:
+          X-Forwarded-Proto: https

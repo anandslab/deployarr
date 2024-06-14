@@ -14,6 +14,7 @@ services:
     #   - "8085:80"
     volumes:
       - $DOCKERDIR/appdata/nextcloud:/var/www/html
+      - $NEXTCLOUD_FOLDER:/var/www/html/data
     environment:
       MYSQL_PASSWORD_FILE: /run/secrets/nextcloud_mariadb_password
       MYSQL_DATABASE: nextcloud

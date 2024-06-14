@@ -1,5 +1,33 @@
 <h3>Releases</h3>
 
+<h5>June 15, 2024</h5>
+<ul>
+<li>Deployarr now supports 40 Apps!!!</li>
+<li>NEW: Licence naming: Free (previously Unregistered), Basic (previously Starter Free), Plus (previously Auto-Traefik), and Pro (previously Auto-Traefik+).</li>
+<li>NEW: Auto-Traefik to Deployarr auto migration.</li>
+<li>NEW: Added Bazarr, DeUnhealth, Gluetun VPN, Lidarr, Plex, Prowlarr, Jellyfin, qBittorrent, Radarr, Readarr, and Sonarr.</li>
+<li>NEW: Starter config for qBittorrent with pre-configured folders to eliminate permissions issues. Also includes a fix for not being able to login using the default username and password. qBittorrent used Gluetun VPN Kill switch by default.</li>
+<li>NEW: Gluetun VPN supports both Wireguard and OpenVPN.</li>
+<li>NEW: Ability to get customized discount codes right from the About menu.</li>
+<li>NEW: Ability to toggle Intro Messages on/off on the menus.</li>
+<li>NEW: Key announcements right on the menu without needing update the script.</li>
+<li>ENHANCEMENT: Ability to set custom data folder for Nextcloud.</li>
+<li>ENHANCEMENT: customRequestHeaders and forceSTSHeader enabled by default (needed for Nextcloud).</li>
+<li>ENHANCEMENT: SABnzbd now exposed to host machine via port 8090. qBittorrent via 8091.</li>
+<li>ENHANCEMENT: Out of the 3 media folders, only one needs to be set (anyone). Previously, Media Folder 1 was required.</li>
+<li>ENHANCEMENT: All menus updated with descriptive options.</li>
+<li>ENHANCEMENT: System prep menu now display all configuration info for quick verification.</li>
+<li>FIX: Minor fix in IT-Tools docker labels.</li>
+<li>Updated README.md</li>
+<li>Too many other minor changes to list</li>
+</ul>
+
+<h5>June 14, 2024</h5>
+<ul>
+<li>NEW: Goodbye Auto-Traefik. Hello Deployarr - https://github.com/anandslab/deployarr</li>
+<li>v3.3.3 will be the last version of Auto-Traefik.</li>
+</ul>
+
 <h5>v3.3.3 - June 6, 2024</h5>
 <ul>
 <li>NEW APPS: Nextcloud (not AIO version; uses existing Redis and MariaDB services), SABnzbd.</li>
