@@ -60,7 +60,7 @@ Please do not open issues on GitHub. There is a dedicated Auto-Traefik/Deployarr
 Deployarr is primarily developed and tested on Ubuntu. But it should work on other Debian environments. 
 
 ### What hardware are supported?
-At this point, Deployarr only works on Linux in Barebones, VM, and LXC environments. I do plan to include support Synology devices in future. Just waiting for Synology to update their Docker Package, which is several years old. 
+At this point, Deployarr only works on Linux in Barebones, VM, and LXC environments. I do plan to include Synology devices in future. I am just waiting for Synology to update their Docker Package, which is several years old. 
 
 ### Why not Free?
 Deployarr is meant to be a perk for followers and supporters of SmartHomeBeginner.com. But keep in mind that everything that the script does can be learned using the guides on SmartHomeBeginner.com.
