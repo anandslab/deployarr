@@ -1,6 +1,6 @@
 <h3>Releases</h3>
 
-<h5>June 15, 2024</h5>
+<h5>June 16, 2024</h5>
 <ul>
 <li>Deployarr now supports 40 Apps!!!</li>
 <li>NEW: Licence naming: Free (previously Unregistered), Basic (previously Starter Free), Plus (previously Auto-Traefik), and Pro (previously Auto-Traefik+).</li>
