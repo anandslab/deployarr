@@ -6,6 +6,7 @@
 <li>FIX: Re-registering an existing account caused account downgrade to Deployarr Basic.</li>
 <li>FIX: Installing MariaDB/PostgreSQL before Traefik caused errors due to improper secrets addition.</li>
 <li>FIX: Non-critical error messages were displayed if docker folder was not set.</li>
+<li>FIX: Update process was failing due to incorrect extension.</li>
 </ul>
 
 <h5>June 16, 2024</h5>
