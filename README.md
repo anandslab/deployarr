@@ -19,8 +19,10 @@ Use the <strong>-arm.app</strong> version of the file for Raspberry Pi.
 # References
 More information on Deployarr and how to use it:
 
+<strong>Official Website:</strong> https://www.smarthomebeginner.com/deployarr/
+
+<strong>Guides:</strong>
 <ul>
-<li>Description: https://www.smarthomebeginner.com/auto-traefik/</li>
 <li>Text Guide: https://www.smarthomebeginner.com/course/how-to-use-auto-traefik/</li>
 <li>Video Guide: https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD</li>
 </ul>
