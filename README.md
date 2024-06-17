@@ -5,13 +5,13 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v4.0.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v4.0.1.app
 ```
 ```
-chmod +x deployarr_v4.0.app
+chmod +x deployarr_v4.0.1.app
 ```
 ```
-./deployarr_v4.0.app
+./deployarr_v4.0.1.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
