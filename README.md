@@ -79,6 +79,7 @@ Any support received via the purchase of the script goes towards publishing more
 Paid supporters receive full access to the script's functionalities. Implementing this requires license checks with some sensitive information. Unfortunately, this requires compiling the source. 
 
 # Screenshots
+#### Splash Screen
 ![Splash Screen](screenshots/v4/01%20Deployarr%204%20-%20Spash.png)
 ![Main Menu](screenshots/v4/02%20Deployarr%204%20-%20Main%20Menu.png)
 ![Disclaimers](screenshots/v4/03%20Deployarr%204%20-%20Disclaimers.png)
