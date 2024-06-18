@@ -77,3 +77,6 @@ Any support received via the purchase of the script goes towards publishing more
 
 ### Why not Open-Source?
 Paid supporters receive full access to the script's functionalities. Implementing this requires license checks with some sensitive information. Unfortunately, this requires compiling the source. 
+
+# Screenshots
+![Splash Screen](screenshots/v4/01%20Deployarr%204%20-%20Spash.png)
