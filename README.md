@@ -81,22 +81,41 @@ Paid supporters receive full access to the script's functionalities. Implementin
 # Screenshots
 #### Splash Screen
 ![Splash Screen](screenshots/v4/01%20Deployarr%204%20-%20Spash.png)
+#### Main Menu
 ![Main Menu](screenshots/v4/02%20Deployarr%204%20-%20Main%20Menu.png)
+#### Disclaimers
 ![Disclaimers](screenshots/v4/03%20Deployarr%204%20-%20Disclaimers.png)
+#### System Prep Menu
 ![System Prep Menu](screenshots/v4/04%20Deployarr%204%20-%20System%20Prep%20Menu.png)
+#### Setting Folders
 ![Setting Folders](screenshots/v4/05%20Deployarr%204%20-%20Set%20Folders.png)
+#### Docker Menu
 ![Docker Menu](screenshots/v4/06%20Deployarr%204%20-%20Docker%20Sub%20Menu.png)
+#### Reverse Proxy Menu
 ![Reverse Proxy Menu](screenshots/v4/07%20Deployarr%204%20-%20Reverse%20Proxy%20Sub%20Menu.png)
+#### Security Menu
 ![Security Menu](screenshots/v4/08%20Deployarr%204%20-%20Security%20Sub%20Menu.png)
+#### Apps List
 ![Apps List](screenshots/v4/09%20Deployarr%204%20-%20Apps%20Sub%20Menu.png)
+#### App Install
 ![App Install](screenshots/v4/10%20Deployarr%204%20-%20App%20Install.png)
+#### App Uninstall
 ![App Uninstall](screenshots/v4/11%20Deployarr%204%20-%20App%20Uninstall.png)
+#### Tools Menu
 ![Tools Menu](screenshots/v4/12%20Deployarr%204%20-%20Tools%20Sub%20Menu.png)
+#### Stack Manager
 ![Stack Manager](screenshots/v4/13%20Deployarr%204%20-%20Stack%20Manager.png)
+#### Containers Status
 ![Containers Status](screenshots/v4/14%20Deployarr%204%20-%20Containers%20Status.png)
+#### Services Status
 ![Services Status](screenshots/v4/15%20Deployarr%204%20-%20Services%20Status.png)
+#### Backups Menu
 ![Backups Menu](screenshots/v4/16%20Deployarr%204%20-%20Backups%20Sub%20Menu.png)
+#### Restore Backups
 ![Restore Backups](screenshots/v4/17%20Deployarr%204%20-%20Restore%20Backups.png)
+#### Deployarr Settings
 ![Deployarr Settings](screenshots/v4/18%20Deployarr%204%20-%20Deployarr%20Settings%20Menu.png)
+#### About Menu
 ![About Menu](screenshots/v4/19%20Deployarr%204%20-%20About%20Sub%20Menu.png)
+#### Getting Support
 ![Getting Support](screenshots/v4/21%20Deployarr%204%20-%20Getting%20Support.png)
