@@ -18,6 +18,10 @@ compose/*
 scripts/*
 !scripts/*.sh
 
+!screenshots
+!screenshots/*
+!screenshots/*/*
+
 !includes
 !includes/*
 !includes/*/*
