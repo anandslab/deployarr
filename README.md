@@ -1,6 +1,8 @@
 # What is Deployarr?
 Automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Plex, Jellyfin, Starr Apps, Gluetun, Dozzle, Uptime-Kuma, Homepage, and other apps (40 in total!!!). 
 
+![Deployarr 4](screenshots/v4/Deployarr%204%20-%2040%20plus%20Docker%20Apps.png)
+
 As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.
 
 # Downloading and Running Deployarr
