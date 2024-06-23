@@ -102,7 +102,7 @@ Paid supporters receive full access to the script's functionalities. Implementin
 #### Security Menu
 ![Security Menu](screenshots/v4/08%20Deployarr%204%20-%20Security%20Sub%20Menu.png)
 #### Apps List
-![Apps List](screenshots/v4/09%20Deployarr%204%20-%20Apps%20Sub%20Menu.png)
+![Apps List](screenshots/v4/09%20Deployarr%204%20-%20Apps%20Sub%20Menu%201.png)
 #### App Install
 ![App Install](screenshots/v4/10%20Deployarr%204%20-%20App%20Install.png)
 #### App Uninstall
