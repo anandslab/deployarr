@@ -21,5 +21,5 @@ services:
       interval: 1m
       timeout: 10s
       retries: 1
-    labels: # Traefik labels added via gluetun
+    labels: # Traefik labels added via file provider app-qbittorrent.yml in rules folder
       - "deunhealth.restart.on.unhealthy=true"

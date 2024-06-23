@@ -7,8 +7,8 @@
 !LICENSE
 !announcement
 !latest-version
-!deployarr_v4.0.1.app
-!deployarr_v4.0.1-arm.app
+!deployarr_v4.1.app
+!deployarr_v4.1-arm.app
 
 !compose
 compose/*

@@ -1,5 +1,13 @@
 <h3>Releases</h3>
 
+<h5>June 23, 2024</h5>
+<ul>
+<li>NEW: Added Airsonic-Advanced, Change-Detection, FreshRSS, Grocy, Heimdall, Jellyseerr, NZBGet, Ombi, Overseerr, Smokeping, and Tautulli.</li>
+<li>ENHANCEMENT: Changed qBittorrent from Docker Labels to File Provider for Traefik.</li>
+<li>FIX: Speedtest-Tracker latest version was not working without an API Key. Added API Key feature.</li>
+<li>FIX: Minor bug fixes.</li>
+</ul>
+
 <h5>June 17, 2024</h5>
 <ul>
 <li>FIX: Switching Authentication method was working.</li>

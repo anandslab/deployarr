@@ -15,7 +15,7 @@ services:
       PUID: $PUID
       PGID: $PGID
       DB_CONNECTION: sqlite
-      # APP_KEY: #optional
+      APP_KEY: $SPEEDTEST_TRACKER_APP_KEY #optional
       # DB_HOST: #optional
       # DB_PORT: #optional
       # DB_DATABASE: #optional

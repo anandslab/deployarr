@@ -30,7 +30,3 @@ services:
       # WIREGUARD_ADDRESSES: $GLUETUN_WIREGUARD_ADDRESSES
       # OPENVPN_USER: $GLUETUN_OPENVPN_USERNAME
       # OPENVPN_PASSWORD: $GLUETUN_OPENVPN_PASSWORD 
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.gluetun-qbittorrent-rtr.entrypoints=websecure"
