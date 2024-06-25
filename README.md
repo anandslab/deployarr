@@ -1,4 +1,4 @@
-Deployarr automates Homelab setup using Docker and Docker Compose.
+Deployarr automates Homelab setup using Docker and Docker Compose. Below you will find more information its features and what it can/cannot do.
 
 ![Deployarr 4](screenshots/v4/Deployarr%204%20-%2050%20plus%20Docker%20Apps.png)
 
