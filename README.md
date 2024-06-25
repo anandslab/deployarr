@@ -84,6 +84,30 @@ Any support received via the purchase of the script goes towards publishing more
 ### Why not Open-Source?
 Paid supporters receive full access to the script's functionalities. Implementing this requires license checks with some sensitive information. Unfortunately, this requires compiling the source. 
 
+### What are the limitations of Deployarr?
+
+With a bit of knowledge, the basic framework created by Deployarr can be adapted to any situation. With that said, here is what Deployarr can cannot do today. 
+
+#### Current Situation
+Today, Deployarr works best for the most common scenario with the assumption that the user wants to expose all services safely to the internet to be accessed using a fully qualified domain name and strong authentication on top (e.g. Authelia/Google OAuth). Requirements for this are:
+
+<ul>
+<li>DNS Challenge Provider: Cloudflare (only supported provider at this point)</li>
+<li>Port Forwarding (80/443)</li>
+<li>Domain name</li>
+</ul>
+
+#### What is planned?
+
+Here is what is planned for the future (not an exhaustive list): 
+
+<ul>
+<li>Support other ACME DNS Challenge providers supported by Traefik</li>
+<li>Ability to set services as internal (not exposed to internet) or external</li>
+<li>Option to use Cloudflared, instead of port forwarding. </li>
+<li>Ability to deploy in full internal-only mode (no resverse proxy).</li>
+</ul>
+
 # Screenshots
 #### Splash Screen
 ![Splash Screen](screenshots/v4/01%20Deployarr%204%20-%20Spash.png)
