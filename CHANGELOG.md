@@ -1,5 +1,17 @@
 <h3>Releases</h3>
 
+<h5>June 26, 2024</h5>
+Total Supported Apps: 57
+<ul>
+<li>NEW: Added Wireguard + WebUI with WG-Easy, cAdvisor, Dashy, Docker Garbage Colleciton, and Traefik Certs Dumper.</li>
+<li>ENHANCEMENT: Revamped license checks and new user creation.</li>
+<li>ENHANCEMENT: If MariaDB is running Speedtest-Tracker will now offer to use MariaDB instead of SQLite.</li>
+<li>ENHANCEMENT: If Plex is installed and Logs are found, they will be passed automatically to Tautulli.</li>
+<li>FIX: Feedbacks were not being registered. Please submit or re-submit feedback (especially if you did since v4.0).</li>
+<li>FIX: Minor bug fixes.</li>
+<li>NOTICE: Traefik v2 remnants will be removed in next version (automatic migration won't be possible).</li>
+</ul>
+
 <h5>June 23, 2024</h5>
 <ul>
 <li>NEW: Added Airsonic-Advanced, Change-Detection, FreshRSS, Grocy, Heimdall, Jellyseerr, NZBGet, Ombi, Overseerr, Smokeping, and Tautulli.</li>
