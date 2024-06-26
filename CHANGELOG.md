@@ -1,6 +1,6 @@
 <h3>Releases</h3>
 
-<h5>June 26, 2024</h5>
+<h5>v4.2 - June 26, 2024</h5>
 Total Supported Apps: 57
 <ul>
 <li>NEW: Added Wireguard + WebUI with WG-Easy, cAdvisor, Dashy, Docker Garbage Colleciton, and Traefik Certs Dumper.</li>
@@ -12,7 +12,7 @@ Total Supported Apps: 57
 <li>NOTICE: Traefik v2 remnants will be removed in next version (automatic migration won't be possible).</li>
 </ul>
 
-<h5>June 23, 2024</h5>
+<h5>v4.1 - June 23, 2024</h5>
 <ul>
 <li>NEW: Added Airsonic-Advanced, Change-Detection, FreshRSS, Grocy, Heimdall, Jellyseerr, NZBGet, Ombi, Overseerr, Smokeping, and Tautulli.</li>
 <li>ENHANCEMENT: Changed qBittorrent from Docker Labels to File Provider for Traefik.</li>
@@ -20,7 +20,7 @@ Total Supported Apps: 57
 <li>FIX: Minor bug fixes.</li>
 </ul>
 
-<h5>June 17, 2024</h5>
+<h5>v4.0.1 - June 17, 2024</h5>
 <ul>
 <li>FIX: Switching Authentication method was working.</li>
 <li>FIX: Re-registering an existing account caused account downgrade to Deployarr Basic.</li>
@@ -29,7 +29,7 @@ Total Supported Apps: 57
 <li>FIX: Update process was failing due to incorrect extension.</li>
 </ul>
 
-<h5>June 16, 2024</h5>
+<h5>v4.0 - June 16, 2024</h5>
 <ul>
 <li>Deployarr now supports 40 Apps!!!</li>
 <li>NEW: Licence naming: Free (previously Unregistered), Basic (previously Starter Free), Plus (previously Auto-Traefik), and Pro (previously Auto-Traefik+).</li>
