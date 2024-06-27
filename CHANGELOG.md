@@ -1,5 +1,11 @@
 <h3>Releases</h3>
 
+<h5>v4.2.1 - June 27, 2024</h5>
+<ul>
+<li>NEW: Ability to clear Deployarr cache.</li>
+<li>FIX: License check was not working.</li>
+</ul>
+
 <h5>v4.2 - June 26, 2024</h5>
 Total Supported Apps: 57
 <ul>
