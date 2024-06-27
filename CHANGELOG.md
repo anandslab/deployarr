@@ -1,5 +1,13 @@
 <h3>Releases</h3>
 
+<h5>v4.3 - June 27, 2024</h5>
+Total Supported Apps: 60
+<ul>
+<li>NEW: Added Maintainerr, CyberChef, The Lounge.</li>
+<li>FIX: Feedback/Review was not working.</li>
+<li>FIX: Some premature error messages.</li>
+</ul>
+
 <h5>v4.2.1 - June 27, 2024</h5>
 <ul>
 <li>NEW: Ability to clear Deployarr cache.</li>
