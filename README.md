@@ -65,7 +65,7 @@ Please do not open issues on GitHub. There is a dedicated Auto-Traefik/Deployarr
 </ul>
 
 # FAQ
-### What is the purpoes of Deployarr?
+### What is the purpose of Deployarr?
 The reason I created Deployarr was to enable people to automatically replicate the setup from my guides (and my own setup follows this). It is not a blackbox solution that one has no control over. My vision is for people to use it to setup their homelab for quick setup, testing, and customization. And if things break, learn from it, and quickly re-setup everything. Although Deployarr has some management tools it is not intended to be a homelab manager. 
 
 ### What OSes are supported?
