@@ -3,7 +3,7 @@
 <h5>v4.4 - July 4, 2024</h5>
 Total Supported Apps: 64
 <ul>
-<li>NEW: Added Flame, Kaivta, Netdata, and pgAdmin.</li>
+<li>NEW: Added Flame, Kavita, Netdata, and pgAdmin.</li>
 <li>NEW: Installing required packages is now a separate step in System Prep menu.</li>
 <li>FIX: Some users downgraded from Pro to Basic.</li>
 <li>FIX: Bash aliases was not installing properly.</li>
