@@ -1,5 +1,5 @@
 
-# Anand's Docker Bash Aliases add by Auto-Traefik
+# Anand's Docker Bash Aliases added by Deployarr
 if [ -f ~/docker/shared/config/docker_aliases ]; then
     . ~/docker/shared/config/docker_aliases
 fi

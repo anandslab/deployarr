@@ -1,5 +1,17 @@
 <h3>Releases</h3>
 
+<h5>v4.4 - July 4, 2024</h5>
+Total Supported Apps: 64
+<ul>
+<li>NEW: Added Flame, Kaivta, Netdata, and pgAdmin.</li>
+<li>NEW: Installing required packages is now a separate step in System Prep menu.</li>
+<li>FIX: Some users downgraded from Pro to Basic.</li>
+<li>FIX: Bash aliases was not installing properly.</li>
+<li>FIX: Some premature/harmless error messages.</li>
+<li>ENHANCEMENT: Improved compatibility with Debian.</li>
+<li>ENHANCEMENT: Improved compatibility with older Ubuntu (>=20.04) / Debian (>=11).</li>
+</ul>
+
 <h5>v4.3 - June 27, 2024</h5>
 Total Supported Apps: 60
 <ul>

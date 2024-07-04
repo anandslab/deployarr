@@ -1,8 +1,8 @@
 services:
   # Docker Socket Proxy - Security Enchanced Proxy for Docker Socket
   socket-proxy:
+    image: lscr.io/linuxserver/socket-proxy:latest
     container_name: socket-proxy
-    image: tecnativa/docker-socket-proxy
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
@@ -15,11 +15,14 @@ services:
       #- "2375:2375"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
+    read_only: true
+    tmpfs:
+      - /run
     environment:
-      - LOG_LEVEL=info # debug,info,notice,warning,err,crit,alert,emerg
-      ## Variables match the URL prefix (i.e. AUTH blocks access to /auth/* parts of the API, etc.).
-      # 0 to revoke access.
-      # 1 to grant access.
+      - LOG_LEVEL=warning # debug,info,notice,warning,err,crit,alert,emerg
+      - ALLOW_START=0 #optional
+      - ALLOW_STOP=0 #optional
+      - ALLOW_RESTARTS=0 #optional
       ## Granted by Default
       - EVENTS=1
       - PING=1
@@ -47,3 +50,4 @@ services:
       - SYSTEM=0
       - TASKS=1 # Portainer
       - VOLUMES=1 # Portainer
+      - DISABLE_IPV6=0 #optional

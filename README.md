@@ -3,7 +3,7 @@ Deployarr automates Homelab setup using Docker and Docker Compose. Below you wil
 ![Deployarr 4](screenshots/v4/Deployarr%204%20-%2060%20plus%20Docker%20Apps.png)
 
 # What Apps are Supported by Deployarr?
-Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Plex, Jellyfin, Starr Apps, Gluetun, Dozzle, Uptime-Kuma, Homepage, and other apps (60 in total and increasing!!!). 
+Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Plex, Jellyfin, Starr Apps, Gluetun, Dozzle, Uptime-Kuma, Homepage, and other apps (64 in total and increasing!!!). 
 
 ![Apps Supported by Deployarr](screenshots/v4/Deployarr%20App%20Logos%2050.png)
 
@@ -11,13 +11,13 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v4.3.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v4.4.app
 ```
 ```
-chmod +x deployarr_v4.3.app
+chmod +x deployarr_v4.4.app
 ```
 ```
-./deployarr_v4.3.app
+./deployarr_v4.4.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 

@@ -23,6 +23,7 @@ services:
       - AUTHELIA_STORAGE_ENCRYPTION_KEY_FILE=/run/secrets/authelia_storage_encryption_key
       # - AUTHELIA_STORAGE_MYSQL_PASSWORD_FILE=/run/secrets/authelia_storage_mysql_password
       # - AUTHELIA_SESSION_REDIS_PASSWORD_FILE=/run/secrets/authelia_session_redis_password
+      # - AUTHELIA_DUO_API_INTEGRATION_KEY_FILE=/run/secrets/authelia_duo_api_integration_key
       # - AUTHELIA_DUO_API_SECRET_KEY_FILE=/run/secrets/authelia_duo_api_secret_key
     secrets:
       - authelia_jwt_secret
