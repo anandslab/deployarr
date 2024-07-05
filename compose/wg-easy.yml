@@ -1,7 +1,7 @@
 services:
   # WG-EASY - WireGuard Easy
   wg-easy:
-    image: weejewel/wg-easy
+    image: ghcr.io/wg-easy/wg-easy
     container_name: wg-easy
     security_opt:
       - no-new-privileges:true
