@@ -15,7 +15,7 @@ alias dlogs='sudo docker logs -tf --tail="50" ' # usage: dlogs container_name
 alias dlogsize='sudo du -ch $(sudo docker inspect --format='{{.LogPath}}' $(sudo docker ps -qa)) | sort -h' # see the size of docker containers
 alias dips="sudo docker ps -q | xargs -n 1 sudo docker inspect -f '{{.Name}}%tab%{{range .NetworkSettings.Networks}}{{.IPAddress}}%tab%{{end}}' | sed 's#%tab%#\t#g' | sed 's#/##g' | sort | column -t -N NAME,IP\(s\) -o $'\t'"
 
-# DOCKER COMPOSE TRAEFIK 2 - All docker-compose commands start with "dc" 
+# DOCKER COMPOSE TRAEFIK - All docker-compose commands start with "dc" 
 alias dcrun='sudo docker compose --profile all -f $HOME/docker/docker-compose-$HOSTNAME.yml'
 alias dclogs='dcrun logs -tf --tail="50" ' # usage: dclogs container_name
 alias dcup='dcrun up -d --build --remove-orphans' # up the stack
