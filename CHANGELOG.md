@@ -1,5 +1,11 @@
 <h3>Releases</h3>
 
+<h5>v4.4.1 - July 5, 2024</h5>
+<ul>
+<li>FIX: Bug fixes.</li>
+<li>KNOWN ISSUE: Authelia not working as expected. Password does not work.</li>
+</ul>
+
 <h5>v4.4 - July 4, 2024</h5>
 Total Supported Apps: 64
 <ul>
