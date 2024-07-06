@@ -3,6 +3,7 @@
 <h5>v4.4.1 - July 5, 2024</h5>
 <ul>
 <li>FIX: Bug fixes.</li>
+<li>ENHANCEMENT: Improved handling of passwords/strings with special characters.</li>
 <li><s>KNOWN ISSUE: Authelia not working as expected. Password does not work</s>.</li>
 </ul>
 
