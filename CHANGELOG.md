@@ -3,7 +3,7 @@
 <h5>v4.4.1 - July 5, 2024</h5>
 <ul>
 <li>FIX: Bug fixes.</li>
-<li>KNOWN ISSUE: Authelia not working as expected. Password does not work.</li>
+<li><s>KNOWN ISSUE: Authelia not working as expected. Password does not work</s>.</li>
 </ul>
 
 <h5>v4.4 - July 4, 2024</h5>
