@@ -7,7 +7,7 @@ services:
       - t3_proxy
     security_opt:
       - no-new-privileges:true
-    restart: unless-stopped
+    restart: "no"
     profiles: ["media", "all"]
     volumes:
       - $DOCKERDIR/appdata/airsonic/podcasts:/data/podcasts

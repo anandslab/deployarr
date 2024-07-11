@@ -1,5 +1,13 @@
 <h3>Releases</h3>
 
+<h5>v4.5 Beta - July 11, 2024</h5>
+<ul>
+<li>NEW: Rclone Remote SMB mount, Automount, Delay Media Apps, and Refresh Cache.</li>
+<li>NEW: Reorganized menu. All prerequisite steps are now in one place.</li>
+<li>FIX: Removed Plex requirement for Tautulli - would not work if Plex is in a different server.</li>
+<li>Other minor improvements and fixes.</li>
+</ul>
+
 <h5>v4.4.1 - July 5, 2024</h5>
 <ul>
 <li>FIX: Bug fixes.</li>

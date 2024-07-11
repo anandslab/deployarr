@@ -5,7 +5,7 @@ services:
     container_name: bazarr
     security_opt:
       - no-new-privileges:true
-    restart: unless-stopped
+    restart: "no"
     profiles: ["media", "starr", "all"]
     networks:
       - t3_proxy
