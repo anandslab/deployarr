@@ -1,7 +1,9 @@
 <h3>Releases</h3>
 
-<h5>v4.5 Beta - July 11, 2024</h5>
+<h5>v4.5 - July 13, 2024</h5>
+Total Supported Apps: 65
 <ul>
+<li>NEW: Added Kometa.</li>
 <li>NEW: Rclone Remote SMB mount, Automount, Delay Media Apps, and Refresh Cache.</li>
 <li>NEW: Reorganized menu. All prerequisite steps are now in one place.</li>
 <li>FIX: Removed Plex requirement for Tautulli - would not work if Plex is in a different server.</li>
