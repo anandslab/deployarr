@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v4.5.1 - July 14, 2024</h5>
+<ul>
+<li>Minor bug fixes.</li>
+</ul>
+
 <h5>v4.5 - July 13, 2024</h5>
 Total Supported Apps: 65
 <ul>
