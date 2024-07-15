@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v4.5.4 - July 15, 2024</h5>
+<ul>
+<li>FIX: User creation was not working. Final fix (hopefully).</li>
+</ul>
+
 <h5>v4.5.3 - July 15, 2024</h5>
 <ul>
 <li>FIX: User creation was not working.</li>
