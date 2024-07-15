@@ -1,5 +1,13 @@
 <h3>Releases</h3>
 
+<h5>v4.5.2 - July 15, 2024</h5>
+<ul>
+<li>NEW: Optin to Share Usage Stats.</li>
+<li>NEW: 6-digit numerical pin to protect from unauthorized use of email.</li>
+<li>NEW: Stack Manager: Option to pull image updates and ugprade containers.</li>
+<li>Other minor improvements</li>
+</ul>
+
 <h5>v4.5.1 - July 14, 2024</h5>
 <ul>
 <li>Minor bug fixes.</li>
