@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v4.5.3 - July 15, 2024</h5>
+<ul>
+<li>FIX: User creation was not working.</li>
+</ul>
+
 <h5>v4.5.2 - July 15, 2024</h5>
 <ul>
 <li>NEW: Optin to Share Usage Stats.</li>
