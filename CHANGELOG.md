@@ -4,7 +4,7 @@
 <ul>
 <li>NEW: Optin to Share Usage Stats.</li>
 <li>NEW: 6-digit numerical pin to protect from unauthorized use of email.</li>
-<li>NEW: Stack Manager: Option to pull image updates and ugprade containers.</li>
+<li>NEW: Stack Manager: Option to pull image updates and upgrade containers.</li>
 <li>FIX: 4.5.1 was complaining about upgrading to 4.5.1 when it was already the latest.</li>
 <li>Other minor improvements</li>
 </ul>
