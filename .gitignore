@@ -9,6 +9,8 @@
 !latest-version
 !deployarr_v4.5.4.app
 !deployarr_v4.5.4-arm.app
+!deployarr_v4.6-beta.app
+!deployarr_v4.6-beta-arm.app
 
 !compose
 compose/*

@@ -12,7 +12,7 @@ services:
     # ports:
     #  - "$FRESHRSS_PORT:80"
     volumes:
-      - $DOCKERDIR/freshrss/config:/config
+      - $DOCKERDIR/appdata/freshrss:/config
     environment:
       PUID: $PUID
       PGID: $PGID

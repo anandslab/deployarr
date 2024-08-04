@@ -1,0 +1,26 @@
+services:
+  # Mosquitto - MQTT Broker
+  # Create mosquitto.conf, passwd, mosquitto.log files  and set permissions to 775 user:docker
+  # dexec mosquitto /bin/sh -> mosquitto_passwd -b /mosquitto/config/passwd username passwd
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto:latest
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "1833:1883" #http
+      - "9001:9001" #websockets
+    volumes:
+      - $DOCKERDIR/appdata/mosquitto/config:/mosquitto/config
+      - $DOCKERDIR/appdata/mosquitto/data:/mosquitto/data
+      - $DOCKERDIR/appdata/mosquitto/log:/mosquitto/log
+      - $DOCKERDIR/appdata/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - $DOCKERDIR/appdata/mosquitto/config/passwd:/mosquitto/config/passwd
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ

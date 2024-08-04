@@ -12,8 +12,8 @@ services:
     # ports:
     #  - "$SMOKEPING_PORT:80"
     volumes:
-      - $DOCKERDIR/smokeping/config:/config
-      - $DOCKERDIR/smokeping/data:/data
+      - $DOCKERDIR/appdata/smokeping/config:/config
+      - $DOCKERDIR/appdata/smokeping/data:/data
     environment:
       PUID: $PUID
       PGID: $PGID

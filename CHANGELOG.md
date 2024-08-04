@@ -1,5 +1,13 @@
 <h3>Releases</h3>
 
+<h5>v4.6 - August 1, 2024</h5>
+Total Supported Apps: 75
+<ul>
+<li>NEW: Added Baikal, Piwigo, Resilio Sync, Node-RED, Homebridge, Mosquitto, Jackett, MQTTX Web, Scrutiny, Kasm, and Chromium.</li>
+<li>FIX: Smokeping and FreshRSS appdata folder was wrongly mapped.</li>
+<li>FIX: Plex was calling SERVER_IP instead of SERVER_LAN_IP env.</li>
+</ul>
+
 <h5>v4.5.4 - July 15, 2024</h5>
 <ul>
 <li>FIX: User creation was not working. Final fix (hopefully).</li>
