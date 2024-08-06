@@ -1,11 +1,13 @@
 <h3>Releases</h3>
 
-<h5>v4.6 - August 1, 2024</h5>
+<h5>v4.6 - August 6, 2024</h5>
 Total Supported Apps: 75
 <ul>
-<li>NEW: Added Baikal, Piwigo, Resilio Sync, Node-RED, Homebridge, Mosquitto, Jackett, MQTTX Web, Scrutiny, Kasm, and Chromium.</li>
+<li>NEW: Added Baikal, Piwigo, Resilio Sync, Node-RED, Homebridge, Mosquitto, Jackett, MQTTX Web, Scrutiny, and Chromium.</li>
 <li>FIX: Smokeping and FreshRSS appdata folder was wrongly mapped.</li>
 <li>FIX: Plex was calling SERVER_IP instead of SERVER_LAN_IP env.</li>
+<li>KNOWN ISSUES: If the hostname changes Deployarr can break until the new hostname are manually changed in various location. This isssue is not specific to just v4.6 and applies to previous versions as well.</li>
+<li>NOTE: Auto-Traefik to Deployarr migration and Traefik v2 to v3 migration support will be removed in the next release.</li>
 </ul>
 
 <h5>v4.5.4 - July 15, 2024</h5>
