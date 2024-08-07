@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v4.6.1 - August 7, 2024</h5>
+<ul>
+<li>FIX: Pin creation was broken.</li>
+</ul>
+
 <h5>v4.6 - August 6, 2024</h5>
 Total Supported Apps: 75
 <ul>
