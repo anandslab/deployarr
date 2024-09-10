@@ -16,7 +16,7 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/v5/deployarr_v5.app
 ```
 ```
 chmod +x deployarr_v5.app
