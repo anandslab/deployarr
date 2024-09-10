@@ -7,10 +7,11 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - 7000:3000
-      - 7443:443
+      - "3000:3000"
+      - "$KASM_PORT:443"
     volumes:
       - $DOCKERDIR/appdata/kasm/data:/opt
       - $DOCKERDIR/appdata/kasm/profiles:/profiles #optional
@@ -23,13 +24,4 @@ services:
       # DOCKER_HUB_PASSWORD: PASS #optional
       # DOCKER_MTU: 1500 #optional
       UMASK: 022
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.kasm-rtr.entrypoints=websecure"
-      - "traefik.http.routers.kasm-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.kasm-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.kasm-rtr.service=kasm-svc"
-      - "traefik.http.services.kasm-svc.loadbalancer.server.port=3000"
+    # DOCKER-LABELS-PLACEHOLDER

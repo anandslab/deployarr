@@ -8,10 +8,11 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
       - socket_proxy
-    # ports:
-    #   - "8080:8080"
+    ports:
+      - "$DOZZLE_PORT:8080"
     environment:
       DOZZLE_LEVEL: info
       DOZZLE_TAILSIZE: 300
@@ -20,13 +21,4 @@ services:
       DOCKER_HOST: tcp://socket-proxy:2375
     # volumes:
     #  - /var/run/docker.sock:/var/run/docker.sock # Use Docker Socket Proxy instead for improved security
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.dozzle-rtr.entrypoints=websecure"
-      - "traefik.http.routers.dozzle-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.dozzle-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.dozzle-rtr.service=dozzle-svc"
-      - "traefik.http.services.dozzle-svc.loadbalancer.server.port=8080"
+    # DOCKER-LABELS-PLACEHOLDER

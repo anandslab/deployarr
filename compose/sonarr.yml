@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "starr", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - "8989:8989"
+      - "$SONARR_PORT:8989"
     volumes:
       - $DOCKERDIR/appdata/sonarr:/config
       # - $MEDIADIR1:/data/media1
@@ -22,15 +23,4 @@ services:
       TZ: $TZ
       PUID: $PUID
       PGID: $PGID
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers Auth
-      - "traefik.http.routers.sonarr-rtr.entrypoints=websecure"
-      - "traefik.http.routers.sonarr-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      - "traefik.http.routers.sonarr-rtr.priority=99"
-      # Middlewares
-      - "traefik.http.routers.sonarr-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.sonarr-rtr.service=sonarr-svc"
-      - "traefik.http.services.sonarr-svc.loadbalancer.server.port=8989"
-      # AUTH-BYPASS-PLACEHOLDER-DO-NOT-DELETE
+    # DOCKER-LABELS-PLACEHOLDER

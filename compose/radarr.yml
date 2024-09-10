@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "starr", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - "7878:7878"
+      - "$RADARR_PORT:7878"
     volumes:
       - $DOCKERDIR/appdata/radarr:/config
       # - $MEDIADIR1:/data/media1
@@ -22,15 +23,4 @@ services:
       TZ: $TZ
       PUID: $PUID
       PGID: $PGID
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers Auth
-      - "traefik.http.routers.radarr-rtr.entrypoints=websecure"
-      - "traefik.http.routers.radarr-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      - "traefik.http.routers.radarr-rtr.priority=99"
-      # Middlewares
-      - "traefik.http.routers.radarr-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.radarr-rtr.service=radarr-svc"
-      - "traefik.http.services.radarr-svc.loadbalancer.server.port=7878"
-      # AUTH-BYPASS-PLACEHOLDER-DO-NOT-DELETE
+    # DOCKER-LABELS-PLACEHOLDER

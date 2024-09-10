@@ -8,19 +8,10 @@ services:
     restart: unless-stopped
     profiles: ["core", "all"]
     networks:
-      - t3_proxy
       - default
-    # ports:
-    #   - 8080:8080
+      # - t3_proxy
+    ports:
+      - $SCRUTINY_PORT:8080
     volumes:
       - $DOCKERDIR/appdata/scrutiny:/opt/scrutiny/config
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.scrutiny-rtr.entrypoints=websecure"
-      - "traefik.http.routers.scrutiny-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.scrutiny-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.scrutiny-rtr.service=scrutiny-svc"
-      - "traefik.http.services.scrutiny-svc.loadbalancer.server.port=8080"
+    # DOCKER-LABELS-PLACEHOLDER

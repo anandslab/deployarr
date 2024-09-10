@@ -1,0 +1,20 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service-widgets
+
+- logo:
+    icon: /images/deployarr_icon.png
+
+- greeting:
+    text_size: xl
+    text: Deployarr Dashboard
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+
+- search:
+    provider: duckduckgo
+    target: _blank
+

@@ -1,0 +1,12 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Web Apps (Local):
+# WEB-APPS-LOCAL-PLACEHOLDER
+
+- Web Apps (Remote):
+# WEB-APPS-REMOTE-PLACEHOLDER
+
+- Core/Non-Web Apps:
+# CORE-APPS-PLACEHOLDER

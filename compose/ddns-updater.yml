@@ -8,9 +8,10 @@ services:
     restart: unless-stopped
     profiles: ["core", "all"]
     networks:
-      - t3_proxy
-    # ports:
-    #   - 8000:8000/tcp
+      - default
+      # - t3_proxy
+    ports:
+      - "$DDNSUPDATER_PORT:8000"
     volumes:
       - $DOCKERDIR/appdata/ddns-updater:/updater/data # Owned by UID 1000
     environment:
@@ -29,13 +30,4 @@ services:
       # Other
       LOG_LEVEL: info
       # SHOUTRRR_ADDRESSES: $DISCORD_SHOUTRRR_ADDRESS
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.ddns-updater-rtr.entrypoints=websecure"
-      - "traefik.http.routers.ddns-updater-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.ddns-updater-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.ddns-updater-rtr.service=ddns-updater-svc"
-      - "traefik.http.services.ddns-updater-svc.loadbalancer.server.port=8000"
+    # DOCKER-LABELS-PLACEHOLDER

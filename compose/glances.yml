@@ -9,11 +9,11 @@ services:
     profiles: ["monitoring", "all"]
     # privileged: true # Only for VM
     networks:
-      - t3_proxy
-      - socket_proxy
       - default
-    # ports:
-    #   - "61208:61208"
+      # - t3_proxy
+      - socket_proxy
+    ports:
+      - "$GLANCES_PORT:61208"
     pid: host
     volumes:
       - $DOCKERDIR/appdata/glances/glances.conf:/glances/conf/glances.conf # Use this if you want to add a glances.conf file
@@ -24,13 +24,4 @@ services:
       # GLANCES_OPT: "--export influxdb"
       GLANCES_OPT: "-w"
       DOCKER_HOST: tcp://socket-proxy:2375
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.glances-rtr.entrypoints=websecure"
-      - "traefik.http.routers.glances-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.glances-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.glances-rtr.service=glances-svc"
-      - "traefik.http.services.glances-svc.loadbalancer.server.port=61208"
+    # DOCKER-LABELS-PLACEHOLDER

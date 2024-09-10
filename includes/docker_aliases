@@ -1,3 +1,5 @@
+export PS1="[\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h\[\e[m\]: \\$\[\e[36m\]\w\[\e[m\]]\\$ "
+
 # DOCKER - All Docker commands start with "d" AND Docker Compose commands start with "dc"
 alias dstop='sudo docker stop $(sudo docker ps -a -q)' # usage: dstop container_name
 alias dstopall='sudo docker stop $(sudo docker ps -aq)' # stop all containers
@@ -36,7 +38,7 @@ alias cshubs='cscli hub list'
 alias csparsers='cscli parsers list'
 alias cscollections='cscli collections list'
 alias cshubupdate='cscli hub update'
-alias cshubupgrade='cscli hub update'
+alias cshubupgrade='cscli hub upgrade'
 alias csmetrics='cscli metrics'
 alias csmachines='cscli machines list'
 alias csbouncers='cscli bouncers list'

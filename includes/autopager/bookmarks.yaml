@@ -1,0 +1,37 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/bookmarks
+
+- Anand's Lab:
+    - Website:
+        - icon: mdi-web
+          href: https://www.smarthomebeginner.com.com/
+    - Youtube Channel:
+        - icon: si-youtube
+          href: https://www.youtube.com/@anandslab
+    - Docker-Traefik GitHub Repo:
+        - icon: si-github
+          href: https://github.com/anandslab/docker-traefik
+    - Discord Server:
+        - icon: si-discord
+          href: https://discord.gg/wtmqgd4GpX
+- Deployarr:
+    - About Deployarr:
+        - icon: mdi-application-brackets
+          href: https://deployarr.app/
+    - Your Account:
+        - icon: mdi-account-box
+          href: https://www.smarthomebeginner.com/membership-account/
+    - Deployarr GitHub:
+        - icon: si-github
+          href: https://github.com/anandslab/deployarr
+- Support My Work:
+    - Become a Member:
+        - icon: mdi-wallet-membership
+          href: https://www.smarthomebeginner.com/membership-account/memberships-products-services/
+    - BuyMeACoffee:
+        - icon: si-buymeacoffee
+          href: https://www.buymeacoffee.com/anandslab
+    - Ko-Fi:
+        - icon: si-kofi
+          href: https://ko-fi.com/anandslab

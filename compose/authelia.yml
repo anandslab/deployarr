@@ -8,10 +8,10 @@ services:
     restart: unless-stopped
     profiles: ["core", "all"]
     networks:
-      - t3_proxy
       - default
+      # - t3_proxy
     # ports:
-    #   - "9091:9091"
+    #   - "$AUTHELIA_PORT:9091"
     volumes:
       - $DOCKERDIR/appdata/authelia:/config
     environment:
@@ -32,7 +32,7 @@ services:
     labels:
       - "traefik.enable=true"
       ## HTTP Routers
-      - "traefik.http.routers.authelia-rtr.entrypoints=websecure"
+      - "traefik.http.routers.authelia-rtr.entrypoints=websecure-internal,websecure-external"
       - "traefik.http.routers.authelia-rtr.rule=Host(`authelia.$DOMAINNAME_1`)"
       ## Middlewares
       - "traefik.http.routers.authelia-rtr.middlewares=chain-no-auth@file" # Should be chain-no-auth and not chain-authelia

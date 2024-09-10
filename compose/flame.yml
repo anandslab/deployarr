@@ -8,22 +8,15 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
-    # ports:
-    #   - $FLAME_PORT:5005
+      - default
+      # - t3_proxy
+      - socket_proxy
+    ports:
+      - $FLAME_PORT:5005
     volumes:
       - $DOCKERDIR/appdata/flame:/app/data
       # - /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
     environment:
       PASSWORD: $FLAME_PASSWORD # optional but required for (1)
       DOCKER_HOST: tcp://socket-proxy:2375
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.flame-rtr.entrypoints=websecure"
-      - "traefik.http.routers.flame-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)" 
-      ## Middlewares
-      - "traefik.http.routers.flame-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.flame-rtr.service=flame-svc"
-      - "traefik.http.services.flame-svc.loadbalancer.server.port=5005"
+    # DOCKER-LABELS-PLACEHOLDER

@@ -1,4 +1,25 @@
 <h3>Releases</h3>
+<h5>v5.0 (BETA) - September 10, 2024</h5>
+Total Supported Apps: 75
+
+Way too many changes to list (over 9000 lines of code rewritten). Here are some major changes.
+<ul>
+<li>NEW: Deploayrr logo and icon.</li>
+<li>NEW: Local mode for installing apps for local access only (no reverse proxy). This should now remove the Traefik requirement and allow multi-server setups.</li>
+<li>NEW: Traefik Exposure Modes. Simple - all apps behind Traefik accessible internally and externally. Advanced - control over exposing apps internally, externally, or both. </li>
+<li>NEW: By default Traefik will use file providers to expose apps via reverse proxy. Previously this was done using Docker labels. Some apps (e.g. Traefik, OAuth, and Authelia), will continue to use labels. </li>
+<li>NEW: Autopager - New Homepage based dashboard that auto-populates as you install new apps. It works but will evolve over time.</li>
+<li>NEW: Recommended order of steps for various setups.</li>
+<li>NEW: License changes. There are now 3 license types: Basic, Plus, and Pro. Basic allows local-only installs. See License Types description in About menu.</li>
+<li>NEW: Deployarr pin reset feature.</li>
+<li>NEW: All apps are now exposed to Docker host using ports. Deployarr will suggest ports during installation.</li>
+<li>ENCHANCEMENT: Description error messages when requirements are not met for a specific step.</li>
+<li>ENCHANCEMENT: Signficant improvement in speed/responsiveness.</li>
+<li>ENHANCEMENT: Menu reorganized based on past feedback. </li>
+<li>REMOVED: Traefik v2 to v3 migration.</li>
+<li>REMOVED: Auto-Traefik to Deployarr migration.</li>
+<li>REMOVED: Account registration directly from the script. Not needed anymore, as all previous "Basic" features are now free for anyone.</li>
+</ul>
 
 <h5>v4.6 - August 6, 2024</h5>
 Total Supported Apps: 75

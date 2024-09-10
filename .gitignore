@@ -9,6 +9,7 @@
 !latest-version
 !deployarr_v4.6.app
 !deployarr_v4.6-arm.app
+!deployarr_v5.0.app 
 
 !compose
 compose/*
@@ -18,9 +19,9 @@ compose/*
 scripts/*
 !scripts/*.sh
 
-!screenshots
-!screenshots/*
-!screenshots/*/*
+!images
+!images/*
+!images/*/*
 
 !includes
 !includes/*

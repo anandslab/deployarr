@@ -1,24 +1,28 @@
+# v5 IS STILL IN BETA - EXPECT BUGS!!!
+
+![Deployarr](images/deployarr_logo.png)
+
 Deployarr automates Homelab setup using Docker and Docker Compose. Below you will find more information its features and what it can/cannot do.
 
-![Deployarr 4](screenshots/v4/Deployarr%204%20-%2075%20plus%20Docker%20Apps.png)
+![Deployarr 4](images/v4/Deployarr%204%20-%2075%20plus%20Docker%20Apps.png)
 
 # What Apps are Supported by Deployarr?
 Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Plex, Jellyfin, Starr Apps, Gluetun, Dozzle, Uptime-Kuma, Homepage, and other apps. 
 
 ## Supported Apps - 75 (and increasing)
-![Apps Supported by Deployarr](screenshots/v4/Deployarr%20App%20Logos%2075.png)
+![Apps Supported by Deployarr](images/v4/Deployarr%20App%20Logos%2075.png)
 
 As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v4.6.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.app
 ```
 ```
-chmod +x deployarr_v4.6.app
+chmod +x deployarr_v5.app
 ```
 ```
-./deployarr_v4.6.app
+./deployarr_v5.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
@@ -111,42 +115,42 @@ Here is what is planned for the future (not an exhaustive list):
 
 # Screenshots
 #### Splash Screen
-![Splash Screen](screenshots/v4/01%20Deployarr%204%20-%20Spash.png)
+![Splash Screen](images/v4/01%20Deployarr%204%20-%20Spash.png)
 #### Main Menu
-![Main Menu](screenshots/v4/02%20Deployarr%204%20-%20Main%20Menu.png)
+![Main Menu](images/v4/02%20Deployarr%204%20-%20Main%20Menu.png)
 #### Disclaimers
-![Disclaimers](screenshots/v4/03%20Deployarr%204%20-%20Disclaimers.png)
+![Disclaimers](images/v4/03%20Deployarr%204%20-%20Disclaimers.png)
 #### System Prep Menu
-![System Prep Menu](screenshots/v4/04%20Deployarr%204%20-%20System%20Prep%20Menu.png)
+![System Prep Menu](images/v4/04%20Deployarr%204%20-%20System%20Prep%20Menu.png)
 #### Setting Folders
-![Setting Folders](screenshots/v4/05%20Deployarr%204%20-%20Set%20Folders.png)
+![Setting Folders](images/v4/05%20Deployarr%204%20-%20Set%20Folders.png)
 #### Docker Menu
-![Docker Menu](screenshots/v4/06%20Deployarr%204%20-%20Docker%20Sub%20Menu.png)
+![Docker Menu](images/v4/06%20Deployarr%204%20-%20Docker%20Sub%20Menu.png)
 #### Reverse Proxy Menu
-![Reverse Proxy Menu](screenshots/v4/07%20Deployarr%204%20-%20Reverse%20Proxy%20Sub%20Menu.png)
+![Reverse Proxy Menu](images/v4/07%20Deployarr%204%20-%20Reverse%20Proxy%20Sub%20Menu.png)
 #### Security Menu
-![Security Menu](screenshots/v4/08%20Deployarr%204%20-%20Security%20Sub%20Menu.png)
+![Security Menu](images/v4/08%20Deployarr%204%20-%20Security%20Sub%20Menu.png)
 #### Apps List
-![Apps List](screenshots/v4/09%20Deployarr%204%20-%20Apps%20Sub%20Menu%201.png)
+![Apps List](images/v4/09%20Deployarr%204%20-%20Apps%20Sub%20Menu%201.png)
 #### App Install
-![App Install](screenshots/v4/10%20Deployarr%204%20-%20App%20Install.png)
+![App Install](images/v4/10%20Deployarr%204%20-%20App%20Install.png)
 #### App Uninstall
-![App Uninstall](screenshots/v4/11%20Deployarr%204%20-%20App%20Uninstall.png)
+![App Uninstall](images/v4/11%20Deployarr%204%20-%20App%20Uninstall.png)
 #### Tools Menu
-![Tools Menu](screenshots/v4/12%20Deployarr%204%20-%20Tools%20Sub%20Menu.png)
+![Tools Menu](images/v4/12%20Deployarr%204%20-%20Tools%20Sub%20Menu.png)
 #### Stack Manager
-![Stack Manager](screenshots/v4/13%20Deployarr%204%20-%20Stack%20Manager.png)
+![Stack Manager](images/v4/13%20Deployarr%204%20-%20Stack%20Manager.png)
 #### Containers Status
-![Containers Status](screenshots/v4/14%20Deployarr%204%20-%20Containers%20Status.png)
+![Containers Status](images/v4/14%20Deployarr%204%20-%20Containers%20Status.png)
 #### Services Status
-![Services Status](screenshots/v4/15%20Deployarr%204%20-%20Services%20Status.png)
+![Services Status](images/v4/15%20Deployarr%204%20-%20Services%20Status.png)
 #### Backups Menu
-![Backups Menu](screenshots/v4/16%20Deployarr%204%20-%20Backups%20Sub%20Menu.png)
+![Backups Menu](images/v4/16%20Deployarr%204%20-%20Backups%20Sub%20Menu.png)
 #### Restore Backups
-![Restore Backups](screenshots/v4/17%20Deployarr%204%20-%20Restore%20Backups.png)
+![Restore Backups](images/v4/17%20Deployarr%204%20-%20Restore%20Backups.png)
 #### Deployarr Settings
-![Deployarr Settings](screenshots/v4/18%20Deployarr%204%20-%20Deployarr%20Settings%20Menu.png)
+![Deployarr Settings](images/v4/18%20Deployarr%204%20-%20Deployarr%20Settings%20Menu.png)
 #### About Menu
-![About Menu](screenshots/v4/19%20Deployarr%204%20-%20About%20Sub%20Menu.png)
+![About Menu](images/v4/19%20Deployarr%204%20-%20About%20Sub%20Menu.png)
 #### Getting Support
-![Getting Support](screenshots/v4/21%20Deployarr%204%20-%20Getting%20Support.png)
+![Getting Support](images/v4/21%20Deployarr%204%20-%20Getting%20Support.png)

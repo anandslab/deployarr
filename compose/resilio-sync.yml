@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - 8888:8888
+      - $RESILIOSYNC_PORT:8888
       - 55555:55555
     volumes:
       - $DOCKERDIR/appdata/resilio-sync/config:/config
@@ -20,13 +21,4 @@ services:
       TZ: $TZ
       PUID: $PUID
       PGID: $PGID
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.resilio-sync-rtr.entrypoints=websecure"
-      - "traefik.http.routers.resilio-sync-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.resilio-sync-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.resilio-sync-rtr.service=resilio-sync-svc"
-      - "traefik.http.services.resilio-sync-svc.loadbalancer.server.port=8888"
+    # DOCKER-LABELS-PLACEHOLDER

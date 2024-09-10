@@ -8,7 +8,8 @@ services:
     restart: unless-stopped
     profiles: ["core", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -17,7 +18,7 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     ports:
       - "51820:51820/udp"
-      - "51821:51821/tcp" # WebUI
+      - "$WGEASY_PORT:51821/tcp" # WebUI
     volumes:
       - $DOCKERDIR/appdata/wireguard:/etc/wireguard
     environment:
@@ -32,13 +33,4 @@ services:
       # - WG_POST_UP=echo "Post Up" > /etc/wireguard/post-up.txt
       # - WG_PRE_DOWN=echo "Pre Down" > /etc/wireguard/pre-down.txt
       # - WG_POST_DOWN=echo "Post Down" > /etc/wireguard/post-down.txt
-    labels:
-    - "traefik.enable=true"
-    ## HTTP Routers
-    - "traefik.http.routers.wg-easy-rtr.entrypoints=websecure"
-    - "traefik.http.routers.wg-easy-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-    ## Middlewares
-    - "traefik.http.routers.wg-easy-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-    ## HTTP Services
-    - "traefik.http.routers.wg-easy-rtr.service=wg-easy-svc"
-    - "traefik.http.services.wg-easy-svc.loadbalancer.server.port=51821"
+    # DOCKER-LABELS-PLACEHOLDER

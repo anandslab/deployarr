@@ -1,9 +1,10 @@
 http:
   routers:
     APPNAME-PLACEHOLDER-rtr:
-      rule: "Host(`APPNAME-PLACEHOLDER.{{env "DOMAINNAME_1"}}`)" 
+      rule: "Host(`APP-SUBDOMAIN-PLACEHOLDER.{{env "DOMAINNAME_1"}}`)" 
       entryPoints:
-        - websecure
+        # - websecure-external
+        # - websecure-internal
       middlewares:
         - CHAIN-PLACEHOLDER
       service: APPNAME-PLACEHOLDER-svc

@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "all"]
     networks:
-      - t3_proxy
-    # ports:
-    #  - "$KAVITA_PORT:5000" 
+      - default
+      # - t3_proxy
+    ports:
+     - "$KAVITA_PORT:5000" 
     volumes:
       - $DOCKERDIR/appdata/kavita:/config
       - $BOOKSDIR:/data
@@ -18,13 +19,4 @@ services:
       PUID: $PUID
       PGID: $PGID
       TZ: $TZ
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.kavita-rtr.entrypoints=websecure"
-      - "traefik.http.routers.kavita-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.kavita-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.kavita-rtr.service=kavita-svc"
-      - "traefik.http.services.kavita-svc.loadbalancer.server.port=5000"
+    # DOCKER-LABELS-PLACEHOLDER

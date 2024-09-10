@@ -8,9 +8,10 @@ services:
     restart: unless-stopped
     profiles: ["apps", "downloads", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - "6789:6789" 
+      - "$NZBGET_PORT:6789" 
     volumes:
       - $DOCKERDIR/appdata/nzbget:/config
       - $DOWNLOADSDIR:/data/downloads
@@ -20,15 +21,4 @@ services:
       TZ: $TZ
       # NZBGET_USER: nzbget     #optional
       # NZBGET_PASS: tegbzn6789 #optional
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers Auth
-      - "traefik.http.routers.nzbget-rtr.entrypoints=websecure"
-      - "traefik.http.routers.nzbget-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      - "traefik.http.routers.nzbget-rtr.priority=99"
-      # Middlewares
-      - "traefik.http.routers.nzbget-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.nzbget-rtr.service=nzbget-svc"
-      - "traefik.http.services.nzbget-svc.loadbalancer.server.port=6789"
-      # AUTH-BYPASS-PLACEHOLDER-DO-NOT-DELETE
+    # DOCKER-LABELS-PLACEHOLDER

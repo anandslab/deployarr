@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "starr", "all"]
     networks:
-      - t3_proxy
-    # ports:
-    #   - "6767:6767"
+      - default
+      # - t3_proxy
+    ports:
+      - "$BAZARR_PORT:6767"
     volumes:
       - $DOCKERDIR/appdata/bazarr:/config
       # - $MEDIADIR1:/data/media1
@@ -20,13 +21,4 @@ services:
       TZ: $TZ
       PUID: $PUID
       PGID: $PGID
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers Auth
-      - "traefik.http.routers.bazarr-rtr.entrypoints=websecure"
-      - "traefik.http.routers.bazarr-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.bazarr-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.bazarr-rtr.service=bazarr-svc"
-      - "traefik.http.services.bazarr-svc.loadbalancer.server.port=6767"
+    # DOCKER-LABELS-PLACEHOLDER

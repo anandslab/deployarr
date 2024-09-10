@@ -8,9 +8,10 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
-    # ports:
-    #   - "$CADVISOR_PORT:8080"
+      - default
+      # - t3_proxy
+    ports:
+      - "$CADVISOR_PORT:8080"
     # privileged: true # Only needed for CentOS, Fedora, Red Hat, etc.
     # devices:
     #   - /dev/kmsg
@@ -20,13 +21,4 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
       - /dev/disk/:/dev/disk:ro
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.cadvisor-rtr.entrypoints=websecure"
-      - "traefik.http.routers.cadvisor-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.cadvisor-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.cadvisor-rtr.service=cadvisor-svc"
-      - "traefik.http.services.cadvisor-svc.loadbalancer.server.port=8080"
+    # DOCKER-LABELS-PLACEHOLDER

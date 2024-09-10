@@ -3,15 +3,15 @@ services:
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
-    networks:
-      - t3_proxy
-      - default
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["dbs", "all"]
-    # ports:
-    #   - "9090:9090"
+    networks:
+      - default
+      # - t3_proxy
+    ports:
+      - "$PROMETHEUS_PORT:9090"
     volumes:
       - $DOCKERDIR/appdata/prometheus/config:/etc/prometheus
       - $DOCKERDIR/appdata/prometheus/data:/prometheus
@@ -23,13 +23,4 @@ services:
       - '--web.console.templates=/usr/share/prometheus/consoles'
       - '--web.enable-lifecycle'
       - '--web.enable-admin-api'
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.prometheus-rtr.entrypoints=websecure"
-      - "traefik.http.routers.prometheus-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.prometheus-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.prometheus-rtr.service=prometheus-svc"
-      - "traefik.http.services.prometheus-svc.loadbalancer.server.port=9090"
+    # DOCKER-LABELS-PLACEHOLDER

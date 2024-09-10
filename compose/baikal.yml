@@ -8,19 +8,11 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
-    # ports:
-    #   - "80:80"
+      - default
+      # - t3_proxy
+    ports:
+      - "$BAIKAL_PORT:80"
     volumes:
       - $DOCKERDIR/appdata/baikal/config:/var/www/baikal/config
       - $DOCKERDIR/appdata/baikal/data:/var/www/baikal/Specific
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.baikal-rtr.entrypoints=websecure"
-      - "traefik.http.routers.baikal-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.baikal-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.baikal-rtr.service=baikal-svc"
-      - "traefik.http.services.baikal-svc.loadbalancer.server.port=80"
+    # DOCKER-LABELS-PLACEHOLDER

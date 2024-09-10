@@ -1,0 +1,36 @@
+http:
+  routers:
+    APPNAME-PLACEHOLDER-rtr:
+      rule: "Host(`APP-SUBDOMAIN-PLACEHOLDER.{{env "DOMAINNAME_1"}}`)" 
+      priority: 99
+      entryPoints:
+        # - websecure-external
+        # - websecure-internal
+      middlewares:
+        - CHAIN-PLACEHOLDER
+      service: APPNAME-PLACEHOLDER-svc
+      tls:
+        certResolver: dns-cloudflare
+        options: tls-opts@file
+    APPNAME-PLACEHOLDER-rtr-bypass:
+      rule: "Host(`APP-SUBDOMAIN-PLACEHOLDER.{{env "DOMAINNAME_1"}}`) && Header(`traefik-auth-bypass-key`, `{{env "TRAEFIK_AUTH_BYPASS_KEY"}}`)" 
+      priority: 100
+      entryPoints:
+        # - websecure
+        # - websecure-internal
+      middlewares:
+        - chain-no-auth
+      service: APPNAME-PLACEHOLDER-svc
+      tls:
+        certResolver: dns-cloudflare
+        options: tls-opts@file
+  services:
+    APPNAME-PLACEHOLDER-svc:
+      loadBalancer:
+        passHostHeader: true
+        serversTransport: "APPNAME-PLACEHOLDER-st"
+        servers:
+          - url: "APP-URL-PLACEHOLDER" # http://IP-ADDRESS:PORT
+  serversTransports:
+    APPNAME-PLACEHOLDER-st:
+      insecureSkipVerify: true

@@ -1,0 +1,10 @@
+    labels:
+      - "traefik.enable=true"
+      ## HTTP Routers
+      - "traefik.http.routers.LABEL-SERVICE-NAME-PLACEHOLDER-rtr.entrypoints=ENTRYPOINT-PLACEHOLDER"
+      - "traefik.http.routers.LABEL-SERVICE-NAME-PLACEHOLDER-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
+      ## Middlewares
+      - "traefik.http.routers.LABEL-SERVICE-NAME-PLACEHOLDER-rtr.middlewares=CHAIN-PLACEHOLDER@file"
+      ## HTTP Services
+      - "traefik.http.routers.LABEL-SERVICE-NAME-PLACEHOLDER-rtr.service=LABEL-SERVICE-NAME-PLACEHOLDER-svc"
+      - "traefik.http.services.LABEL-SERVICE-NAME-PLACEHOLDER-svc.loadbalancer.server.port=LABEL-SERVICE-PORT-PLACEHOLDER"

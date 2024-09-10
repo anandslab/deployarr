@@ -1,9 +1,10 @@
 http:
   routers:
     APPNAME-PLACEHOLDER-rtr:
-      rule: "Host(`APPNAME-PLACEHOLDER.{{env "DOMAINNAME_1"}}`)" 
+      rule: "Host(`APP-SUBDOMAIN-PLACEHOLDER.{{env "DOMAINNAME_1"}}`)" 
       entryPoints:
-        - websecure
+        # - websecure-external
+        # - websecure-internal
       middlewares:
         - CHAIN-PLACEHOLDER
       service: APPNAME-PLACEHOLDER-svc
@@ -14,9 +15,9 @@ http:
     APPNAME-PLACEHOLDER-svc:
       loadBalancer:
         passHostHeader: true
-        serversTransport: "APPNAME-PLACEHOLDER"
+        serversTransport: "APPNAME-PLACEHOLDER-st"
         servers:
           - url: "APP-URL-PLACEHOLDER"  # https://IP-ADDRESS:PORT
   serversTransports:
-    APPNAME-PLACEHOLDER:
+    APPNAME-PLACEHOLDER-st:
       insecureSkipVerify: true

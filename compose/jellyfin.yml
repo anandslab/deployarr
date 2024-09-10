@@ -8,11 +8,12 @@ services:
     restart: "no"
     profiles: ["media", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     user: $PUID:$PGID
     # DEVICES-GPU-PLACEHOLDER-DO-NOT-DELETE
     ports:
-      - "8096:8096"
+      - "$JELLYFIN_PORT:8096"
       # - "8920:8920" # Emby also uses same port if running both
     environment:
       UMASK_SET: 022
@@ -24,13 +25,4 @@ services:
       # - $MEDIADIR2:/data/media2
       # - $MEDIADIR3:/data/media3
       - /dev/shm:/data/transcode # Offload transcoding to RAM if you have enough RAM
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.jellyfin-rtr.entrypoints=websecure"
-      - "traefik.http.routers.jellyfin-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.jellyfin-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.jellyfin-rtr.service=jellyfin-svc"
-      - "traefik.http.services.jellyfin-svc.loadbalancer.server.port=8096"
+    # DOCKER-LABELS-PLACEHOLDER

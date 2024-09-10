@@ -8,20 +8,14 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
+    ports:
+      - "$VAULTWARDEN_PORT:80"
     environment:
       # This is required to allow vaultwarden to verify the TLS certificate!
       - DOMAIN=https://SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1
       # - ADMIN_TOKEN=ADMIN-TOKEN-PLACEHOLDER
     volumes:
       - $DOCKERDIR/appdata/vaultwarden/data:/data
-    labels:
-    - "traefik.enable=true"
-    ## HTTP Routers
-    - "traefik.http.routers.vaultwarden-rtr.entrypoints=websecure"
-    - "traefik.http.routers.vaultwarden-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-    ## Middlewares
-    - "traefik.http.routers.vaultwarden-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-    ## HTTP Services
-    - "traefik.http.routers.vaultwarden-rtr.service=vaultwarden-svc"
-    - "traefik.http.services.vaultwarden-svc.loadbalancer.server.port=80"
+    # DOCKER-LABELS-PLACEHOLDER

@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "all"]
     networks:
-      - t3_proxy
-    # ports:
-    #   - "8181:8181"
+      - default
+      # - t3_proxy
+    ports:
+      - "$TAUTULLI_PORT:8181"
     volumes:
       - $DOCKERDIR/appdata/tautulli/config:/config
       # - $DOCKERDIR/appdata/plex/Library/Application Support/Plex Media Server/Logs:/logs:ro # For tautulli Plex log viewer
@@ -18,13 +19,4 @@ services:
       TZ: $TZ
       PUID: $PUID
       PGID: $PGID
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.tautulli-rtr.entrypoints=websecure"
-      - "traefik.http.routers.tautulli-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.tautulli-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.tautulli-rtr.service=tautulli-svc"
-      - "traefik.http.services.tautulli-svc.loadbalancer.server.port=8181"
+    # DOCKER-LABELS-PLACEHOLDER

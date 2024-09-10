@@ -8,17 +8,8 @@ services:
     restart: "no"
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
       - default
-    # ports:
-    #   - "80:80"
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.mqttx-web-rtr.entrypoints=websecure"
-      - "traefik.http.routers.mqttx-web-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.mqttx-web-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.mqttx-web-rtr.service=mqttx-web-svc"
-      - "traefik.http.services.mqttx-web-svc.loadbalancer.server.port=80"
+      # - t3_proxy
+    ports:
+      - "$MQTTXWEB_PORT:80"
+    # DOCKER-LABELS-PLACEHOLDER

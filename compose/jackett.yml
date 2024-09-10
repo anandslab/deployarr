@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - "9117:9117"
+      - "$JACKETT_PORT:9117"
     volumes:
       - $DOCKERDIR/appdata/jackett:/config
       - $DOWNLOADSDIR:/data/downloads
@@ -18,13 +19,4 @@ services:
       TZ: $TZ
       PUID: $PUID
       PGID: $PGID
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.jackett-rtr.entrypoints=websecure"
-      - "traefik.http.routers.jackett-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.jackett-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.jackett-rtr.service=jackett-svc"
-      - "traefik.http.services.jackett-svc.loadbalancer.server.port=9117"
+    # DOCKER-LABELS-PLACEHOLDER

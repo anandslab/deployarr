@@ -1,0 +1,10 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/docker/
+
+DOCKER-HOSTNAME-PLACEHOLDER:
+  host: socket-proxy
+  port: 2375
+
+# my-docker:
+#   socket: /var/run/docker.sock

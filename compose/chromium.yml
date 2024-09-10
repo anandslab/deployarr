@@ -10,10 +10,11 @@ services:
     profiles: ["apps", "all"]
     shm_size: "1gb"
     networks:
-      - t3_proxy
-    # ports:
-    #   - 3000:3000
-    #   - 3001:3001
+      - default
+      # - t3_proxy
+    ports:
+      - "$CHROMIUM_PORT:3000" # HTTP
+    #   - 3001:3001 # HTTPS
     volumes:
       - $DOCKERDIR/appdata/chromium:/config
     environment:
@@ -21,13 +22,4 @@ services:
       PUID: $PUID
       PGID: $PGID
       # CHROME_CLI: https://www.deployarr.app/ #optional
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.chromium-rtr.entrypoints=websecure"
-      - "traefik.http.routers.chromium-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.chromium-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.chromium-rtr.service=chromium-svc"
-      - "traefik.http.services.chromium-svc.loadbalancer.server.port=3000"
+    # DOCKER-LABELS-PLACEHOLDER

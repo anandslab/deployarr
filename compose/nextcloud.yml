@@ -8,10 +8,10 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
       - default
-    # ports:
-    #   - "8085:80"
+      # - t3_proxy
+    ports:
+      - "$NEXTCLOUD_PORT:80"
     volumes:
       - $DOCKERDIR/appdata/nextcloud:/var/www/html
       - $NEXTCLOUD_FOLDER:/var/www/html/data
@@ -30,13 +30,4 @@ services:
       - nextcloud_mariadb_user
       - nextcloud_admin_user
       - nextcloud_admin_password
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.nextcloud-rtr.entrypoints=websecure"
-      - "traefik.http.routers.nextcloud-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.nextcloud-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.nextcloud-rtr.service=nextcloud-svc"
-      - "traefik.http.services.nextcloud-svc.loadbalancer.server.port=80"
+    # DOCKER-LABELS-PLACEHOLDER

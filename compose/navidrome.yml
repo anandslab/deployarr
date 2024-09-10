@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - "4533:4533"
+      - "$NAVIDROME_PORT:4533"
     user: $PUID:$PGID
     volumes:
       - $DOCKERDIR/appdata/navidrome:/data
@@ -23,13 +24,4 @@ services:
       - ND_LOGLEVEL=info
       - ND_SESSIONTIMEOUT=24h
       - ND_REVERSEPROXYWHITELIST="0.0.0.0/0"
-    labels:
-      - "traefik.enable=true"
-      ## HTTP Routers
-      - "traefik.http.routers.navidrome-rtr.entrypoints=websecure"
-      - "traefik.http.routers.navidrome-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      ## Middlewares
-      - "traefik.http.routers.navidrome-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      ## HTTP Services
-      - "traefik.http.routers.navidrome-rtr.service=navidrome-svc"
-      - "traefik.http.services.navidrome-svc.loadbalancer.server.port=4533"
+    # DOCKER-LABELS-PLACEHOLDER

@@ -8,9 +8,10 @@ services:
     restart: "no"
     profiles: ["media", "starr", "all"]
     networks:
-      - t3_proxy
+      - default
+      # - t3_proxy
     ports:
-      - "8787:8787"
+      - "$READARR_PORT:8787"
     volumes:
       - $DOCKERDIR/appdata/readarr:/config
       # - $MEDIADIR1:/data/media1
@@ -22,15 +23,4 @@ services:
       TZ: $TZ
       PUID: $PUID
       PGID: $PGID
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers Auth
-      - "traefik.http.routers.readarr-rtr.entrypoints=websecure"
-      - "traefik.http.routers.readarr-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      - "traefik.http.routers.readarr-rtr.priority=99"
-      # Middlewares
-      - "traefik.http.routers.readarr-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.readarr-rtr.service=readarr-svc"
-      - "traefik.http.services.readarr-svc.loadbalancer.server.port=8787"
-      # AUTH-BYPASS-PLACEHOLDER-DO-NOT-DELETE
+    # DOCKER-LABELS-PLACEHOLDER

@@ -9,8 +9,10 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
       - default
+      # - t3_proxy
+    ports:
+     - "$PHPMYADMIN_PORT:80" 
     environment:
       - PMA_HOST=mariadb
       - PMA_PORT=3306
@@ -18,13 +20,4 @@ services:
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql_root_password
     secrets:
       - mysql_root_password
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.phpmyadmin-rtr.entrypoints=websecure"
-      - "traefik.http.routers.phpmyadmin-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.phpmyadmin-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.phpmyadmin-rtr.service=phpmyadmin-svc"
-      - "traefik.http.services.phpmyadmin-svc.loadbalancer.server.port=80"
+    # DOCKER-LABELS-PLACEHOLDER

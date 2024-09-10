@@ -1,0 +1,13 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title: Deployarr Dashboard
+theme: dark
+color: slate
+headerStyle: boxed
+hideErrors: true
+favicon: /images/deployarr_icon.ico
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey

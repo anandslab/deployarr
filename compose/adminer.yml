@@ -8,15 +8,8 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - t3_proxy
       - default
-    labels:
-      - "traefik.enable=true"
-      # HTTP Routers
-      - "traefik.http.routers.adminer-rtr.entrypoints=websecure"
-      - "traefik.http.routers.adminer-rtr.rule=Host(`SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1`)"
-      # Middlewares
-      - "traefik.http.routers.adminer-rtr.middlewares=CHAIN-PLACEHOLDER@file"
-      # HTTP Services
-      - "traefik.http.routers.adminer-rtr.service=adminer-svc"
-      - "traefik.http.services.adminer-svc.loadbalancer.server.port=8080"
+      # - t3_proxy
+    ports:
+      - "$ADMINER_PORT:8080"
+    # DOCKER-LABELS-PLACEHOLDER
