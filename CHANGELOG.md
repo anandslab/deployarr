@@ -13,6 +13,7 @@ Way too many changes to list (over 9000 lines of code rewritten). Here are some 
 <li>NEW: License changes. There are now 3 license types: Basic, Plus, and Pro. Basic allows local-only installs. See License Types description in About menu.</li>
 <li>NEW: Deployarr pin reset feature.</li>
 <li>NEW: All apps are now exposed to Docker host using ports. Deployarr will suggest ports during installation.</li>
+<li>NEW: Deployarr will now call Cloudflare API to check the validity of the DNS API token for Traefik.</li>
 <li>ENCHANCEMENT: Description error messages when requirements are not met for a specific step.</li>
 <li>ENCHANCEMENT: Signficant improvement in speed/responsiveness.</li>
 <li>ENHANCEMENT: Menu reorganized based on past feedback. </li>
@@ -416,3 +417,4 @@ Over 1000 lines of code changed.
 <ul>
 <li>Initial Release</li>
 </ul>
+
