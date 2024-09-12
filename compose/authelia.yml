@@ -9,7 +9,7 @@ services:
     profiles: ["core", "all"]
     networks:
       - default
-      # - t3_proxy
+      - t3_proxy
     # ports:
     #   - "$AUTHELIA_PORT:9091"
     volumes:

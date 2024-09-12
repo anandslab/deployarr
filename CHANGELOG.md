@@ -4,7 +4,7 @@ Total Supported Apps: 75
 
 Way too many changes to list (over 9000 lines of code rewritten). Here are some major changes.
 <ul>
-<li>NEW: Deploayrr logo and icon.</li>
+<li>NEW: Deployarr logo and icon.</li>
 <li>NEW: Local mode for installing apps for local access only (no reverse proxy). This should now remove the Traefik requirement and allow multi-server setups.</li>
 <li>NEW: Traefik Exposure Modes. Simple - all apps behind Traefik accessible internally and externally. Advanced - control over exposing apps internally, externally, or both. </li>
 <li>NEW: By default Traefik will use file providers to expose apps via reverse proxy. Previously this was done using Docker labels. Some apps (e.g. Traefik, OAuth, and Authelia), will continue to use labels. </li>

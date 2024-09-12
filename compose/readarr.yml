@@ -14,9 +14,7 @@ services:
       - "$READARR_PORT:8787"
     volumes:
       - $DOCKERDIR/appdata/readarr:/config
-      # - $MEDIADIR1:/data/media1
-      # - $MEDIADIR2:/data/media2
-      # - $MEDIADIR3:/data/media3
+      - $BOOKSDIR:/data
       - $DOWNLOADSDIR:/data/downloads 
       - "/etc/localtime:/etc/localtime:ro"
     environment:
