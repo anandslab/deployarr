@@ -20,9 +20,9 @@ services:
       - /run
     environment:
       - LOG_LEVEL=warning # debug,info,notice,warning,err,crit,alert,emerg
-      - ALLOW_START=0 #optional
-      - ALLOW_STOP=0 #optional
-      - ALLOW_RESTARTS=0 #optional
+      - ALLOW_START=1 # Portainer
+      - ALLOW_STOP=1 # Portainer
+      - ALLOW_RESTARTS=1 # Portainer
       ## Granted by Default
       - EVENTS=1
       - PING=1

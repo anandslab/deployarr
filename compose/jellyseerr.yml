@@ -11,7 +11,7 @@ services:
       - default
       # - t3_proxy
     ports:
-      - "$JELLYSEER_PORT:5055"
+      - "$JELLYSEERR_PORT:5055"
     volumes:
       - $DOCKERDIR/appdata/jellyseerr:/app/config
     environment:

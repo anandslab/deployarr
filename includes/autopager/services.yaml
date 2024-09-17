@@ -2,11 +2,14 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
-- Web Apps (Local):
+- Apps (Local):
+    - Local links to Apps:
 # WEB-APPS-LOCAL-PLACEHOLDER
 
-- Web Apps (Remote):
+- Apps (Remote):
+    - Remote links to Apps:
 # WEB-APPS-REMOTE-PLACEHOLDER
 
-- Core/Non-Web Apps:
+- Apps (Others):
+    - Other Core or Non-Web Apps:
 # CORE-APPS-PLACEHOLDER
