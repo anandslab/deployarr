@@ -16,7 +16,7 @@ services:
     networks:
       - default
     ports:
-      - "5432:5432"
+      - "$POSTGRESQL_PORT:5432"
     volumes:
       - $DOCKERDIR/appdata/postgresql:/var/lib/postgresql/data
     environment:

@@ -2,7 +2,8 @@ tcp:
   routers:
     HOST-PLACEHOLDER-rtr:
       entryPoints:
-        - websecure
+        - websecure-internal
+        - websecure-external
       rule: "HostSNIRegexp(`DOMAINNAME-VARIABLE-PLACEHOLDER`) || HostSNIRegexp(`{subdomain:[a-z]+}.DOMAINNAME-VARIABLE-PLACEHOLDER`)"
       service: HOST-PLACEHOLDER-svc
       tls:

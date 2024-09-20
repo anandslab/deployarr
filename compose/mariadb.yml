@@ -9,7 +9,7 @@ services:
     networks:
       - default
     ports:
-      - "3306:3306"
+      - "$MARIADB_PORT:3306"
     volumes:
       - $DOCKERDIR/appdata/mariadb/data:/var/lib/mysql
       - $DOCKERDIR/appdata/mariadb/config:/etc/mysql

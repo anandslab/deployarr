@@ -17,7 +17,7 @@ services:
       - default
     entrypoint: redis-server --appendonly yes --requirepass $REDIS_PASSWORD --save 60 1 --loglevel warning
     ports:
-      - "6379:6379"
+      - "$REDIS_PORT:6379"
     volumes:
       - $DOCKERDIR/appdata/redis/data:/data
       - /etc/timezone:/etc/timezone:ro

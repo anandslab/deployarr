@@ -1,8 +1,8 @@
 services:
-  # Autopager - Deployarr Dashboard based on Homepage
-  autopager:
+  # Deployarr Dashboard - Homepage based Dashboard for Deployarr
+  deployarr-dashboard:
     image: ghcr.io/gethomepage/homepage:latest
-    container_name: autopager
+    container_name: deployarr-dashboard
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
@@ -12,10 +12,10 @@ services:
       # - t3_proxy
       - socket_proxy
     ports:
-     - "$AUTOPAGER_PORT:3000" 
+     - "$DEPLOYARRDASHBOARD_PORT:3000" 
     volumes:
-      - $DOCKERDIR/appdata/autopager/config:/app/config
-      - $DOCKERDIR/appdata/autopager/images:/app/public/images
+      - $DOCKERDIR/appdata/deployarr-dashboard/config:/app/config
+      - $DOCKERDIR/appdata/deployarr-dashboard/images:/app/public/images
     environment:
       TZ: $TZ
       PUID: $PUID
