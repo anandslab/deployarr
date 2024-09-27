@@ -1,22 +1,42 @@
-# v5 IS STILL IN BETA - EXPECT BUGS!!!
-
 ![Deployarr](images/deployarr_logo.png)
 
 Deployarr automates Homelab setup using Docker and Docker Compose. Below you will find more information its features and what it can/cannot do.
 
-![Deployarr 4](images/v4/Deployarr%204%20-%2075%20plus%20Docker%20Apps.png)
+![Deployarr 5](images/v5/Deployarr%20Version%205%20Intro.png)
 
 # What Apps are Supported by Deployarr?
 Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Plex, Jellyfin, Starr Apps, Gluetun, Dozzle, Uptime-Kuma, Homepage, and other apps. 
 
 ## Supported Apps - 75 (and increasing)
-![Apps Supported by Deployarr](images/v4/Deployarr%20App%20Logos%2075.png)
+![Apps Supported by Deployarr](images/v5/Deployarr%20v5%20with%2075%20Apps.png)
 
 As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.
 
+# Features
+<ul>
+<li>Docker Environment Setup (FREE) - as in my guides</li>
+<li>System Checks (FREE)</li>
+<li>Domain Checks to prepare for Traefik (FREE)</li>
+<li>Full control over all apps and files</li>
+<li>Descriptive error messages for troubleshooting</li>
+<li>Socket-Proxy to protect Docker Socket from compromised apps</li>
+<li>Deployarr Dashboard - Auto-populating Homelab Dashboard</li>
+<li>Bash Aliases for Linux, Docker, and Docker Compose</li>
+<li>Local-only Setup without reverse proxy or port forwarding</li>
+<li>Traefik Reverse Proxy App Exposure Modes: Internal Only, External Only, or Both</li>
+<li>Multi-server Setup</li>
+<li>Domain passthrough for multi-domain multi-Traefik setups</li>
+<li>Google OAuth and Authelia for Authentication layer</li>
+<li>75+ Total Apps</li>
+<li>Stack Manager: Update Apps, Enable Apps, Disable Apps, Delete Apps, Up/Down Stack, Recreate/Start/Stop containers, etc.</li>
+<li>Backups, Restore, and Migration of whole setup</li>
+<li>Expert Mode for advanced users</li>
+<li>PLANNED: Several more apps including Authentik, CrowdSec, etc.</li>
+</ul>
+
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/v5/deployarr_v5.0.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.0.app
 ```
 ```
 chmod +x deployarr_v5.0.app
@@ -27,6 +47,9 @@ chmod +x deployarr_v5.0.app
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
 
+## Deployarr Stats
+![Jan to Sep, 2024](images/v5/deployarr%20stats%20sep%202024.png)
+
 # References
 More information on Deployarr and how to use it:
 
@@ -34,47 +57,25 @@ More information on Deployarr and how to use it:
 
 <strong>Guides:</strong>
 <ul>
-<li>Text Guide: https://www.smarthomebeginner.com/course/how-to-use-auto-traefik/</li>
-<li>Video Guide: https://www.youtube.com/playlist?list=PL1Hno7tIbSWViTyCXl9xNdXXU-1bVxIFD</li>
+<li>20-min Intro: https://www.smarthomebeginner.com/go/deployarr-intro/</li>
+<li>Detailed Guide: https://www.smarthomebeginner.com/go/deployarr-detailed-guide/</li>
 </ul>
 
 # Support
 Please do not open issues on GitHub. There is a dedicated Auto-Traefik/Deployarr support channel on our [Discord server](https://www.smarthomebeginner.com/discord/) for Supporters.
 
 # Licenses Types
-### Free License
-<ul>
-<li>No registration required. Anyone can download and run the script as described above. Free to explore all the available options.</li>
-<li>Perform system, port, and Docker checks to ensure your system is ready for Traefik. Get your system ready to follow <a href="https://www.smarthomebeginner.com/traefik-v3-docker-compose-guide-2024/" target="_blank">Traefik v3 Setup</a> guide.</li>
-</ul>
 
-### Basic License (Free)
-<ul>
-<li>Register for a free account on SmartHomebeginner.com and activate the ability to automatically setup Docker Environment with proper files, folders, and permissions, as described in the <a href="https://www.smarthomebeginner.com/docker-media-server-2024/" target="_blank">Ultimate Docker Media Server</a> guide.</li>
-<li>Ability to view Docker disk usage and clean up.</li>
-</ul>
+Any one can download the use the free features in Deployarr without registration. If you decide to support my work and purchase a license, then there are 3 different options: Basic, Plus, and Pro. 
 
-### Plus License
-<ul>
-<li>Ensure prerequisites and setup the basic Docker-Traefik stack.</li>
-<li>Add authentication and additional apps manually.</li>
-<li>Expert Mode to override checks for advanced setups.</li>
-<li>Perfect for anyone that wants to setup the basic Docker environment with Traefik reverse proxy.</li>
-</ul>
-
-### Pro License
-<ul>
-<li>Everything above, plus automated setup of 40 total apps, including Authelia, Google OAuth, Starr Apps, and more.</li>
-<li>Backup and Migration features.</li>
-<li>Stack Manager to manage the environment.</li>
-</ul>
+More Details: [Detailed Version Comparison](https://www.smarthomebeginner.com/deployarr/#Cost)
 
 # FAQ
 ### What is the purpose of Deployarr?
-The reason I created Deployarr was to enable people to automatically replicate the setup from my guides (and my own setup follows this). It is not a blackbox solution that one has no control over. My vision is for people to use it to setup their homelab for quick setup, testing, and customization. And if things break, learn from it, and quickly re-setup everything. Although Deployarr has some management tools it is not intended to be a homelab manager. 
+The reason I created Deployarr was to enable people to automatically replicate the setup from my guides (and my own setup follows this). It is not a blackbox solution that one has no control over. My vision is for people to use it to setup their homelab for quick setup, testing, and customization. And if things break, learn from it, and quickly re-setup everything. Although Deployarr has some management tools **it is not intended to be a homelab manager**. 
 
 ### What OSes are supported?
-Deployarr is primarily developed and tested on Ubuntu. But it should work on other Debian environments. 
+Deployarr is primarily developed and tested on Ubuntu. But it should work on other Debian environments with little to no tweaking. 
 
 ### What hardware are supported?
 At this point, Deployarr only works on Linux in Barebones, VM, and LXC environments. I do plan to include Synology devices in future. I am just waiting for Synology to update their Docker Package, which is several years old. 
@@ -91,66 +92,68 @@ Paid supporters receive full access to the script's functionalities. Implementin
 
 ### What are the limitations of Deployarr?
 
-With a bit of knowledge, the basic framework created by Deployarr can be adapted to any situation. With that said, here is what Deployarr can cannot do today. 
-
-#### Current Situation
-Today, Deployarr works best for the most common scenario with the assumption that the user wants to expose all services safely to the internet to be accessed using a fully qualified domain name and strong authentication on top (e.g. Authelia/Google OAuth). Requirements for this are:
+With a bit of knowledge, the basic framework created by Deployarr can be adapted to any situation. With that said, here are some limitations and known issues. 
 
 <ul>
-<li>DNS Challenge Provider: Cloudflare (only supported provider at this point)</li>
-<li>Port Forwarding (80/443)</li>
-<li>Domain name</li>
-</ul>
-
-#### What is planned?
-
-Here is what is planned for the future (not an exhaustive list): 
-
-<ul>
-<li>Support other ACME DNS Challenge providers supported by Traefik</li>
-<li>Ability to set services as internal (not exposed to internet) or external</li>
-<li>Option to use Cloudflared, instead of port forwarding. </li>
-<li>Ability to deploy in full internal-only mode (no resverse proxy).</li>
+<li>DNS Challenge Provider: Cloudflare (only supported provider at this point).</li>
+<li>Port Forwarding is required (80/443).</li>
+<li>Some apps (Guacamole, Speedtest-Tracker) that depend on databases may fail upon reinstallation form scratch. This will be fixed at some point. Clean installation should work.</li>
 </ul>
 
 # Screenshots
 #### Splash Screen
-![Splash Screen](images/v4/01%20Deployarr%204%20-%20Spash.png)
+![Splash Screen](images/v5/01%20Deployarr%20v5%20Splash%20Screen.png)
 #### Main Menu
-![Main Menu](images/v4/02%20Deployarr%204%20-%20Main%20Menu.png)
-#### Disclaimers
-![Disclaimers](images/v4/03%20Deployarr%204%20-%20Disclaimers.png)
+![Main Menu](images/v5/02%20Deployarr%20v5%20Main%20Menu.png)
+#### Prerequisites
+![Prerequisites](images/v5/03%20Deployarr%20v5%20Prerequisites.png)
+#### Local Setup
+![Local Setup](images/v5/02a%20local%20only%20setup.png)
+#### Hybrid Setup
+![Hybrid Setup](images/v5/02b%20hybrid%20setup.png)
+#### System Checks
+![System Checks](images/v5/02a%20system%20checks%20output.png)
 #### System Prep Menu
-![System Prep Menu](images/v4/04%20Deployarr%204%20-%20System%20Prep%20Menu.png)
+![System Prep Menu](images/v5/04%20Deployarr%20v5%20System%20Preparation.png)
+#### Rclone Remote Mounts
+![Rclone Remote Mounts](images/v5/05%20Deployarr%20v5%20Rclone%20Options.png)
 #### Setting Folders
-![Setting Folders](images/v4/05%20Deployarr%204%20-%20Set%20Folders.png)
+![Setting Folders](images/v5/06%20Deployarr%20v5%20Set%20Folders.png)
 #### Docker Menu
-![Docker Menu](images/v4/06%20Deployarr%204%20-%20Docker%20Sub%20Menu.png)
+![Docker Menu](images/v5/07%20Deployarr%20v5%20Docker%20Options.png)
 #### Reverse Proxy Menu
-![Reverse Proxy Menu](images/v4/07%20Deployarr%204%20-%20Reverse%20Proxy%20Sub%20Menu.png)
+![Reverse Proxy Menu](images/v5/08%20Deployarr%20v5%20Reverse%20Proxy%20Options.png)
+#### Descriptive Error Messages
+![Descriptive Error Messages](images/v5/08a%20Traefik%20Error.png)
 #### Security Menu
-![Security Menu](images/v4/08%20Deployarr%204%20-%20Security%20Sub%20Menu.png)
+![Security Menu](images/v5/09%20Deployarr%20v5%20Security%20Options.png)
+#### Manage Authentication
+![Manage Authentication](images/v5/10%20Deployarr%20v5%20Manage%20Authentication.png)
 #### Apps List
-![Apps List](images/v4/09%20Deployarr%204%20-%20Apps%20Sub%20Menu%201.png)
+![Apps List](images/v5/11%20Deployarr%20v5%20Apps%20Menu.png)
 #### App Install
-![App Install](images/v4/10%20Deployarr%204%20-%20App%20Install.png)
+![App Install](images/v5/10%20Deployarr%204%20-%20App%20Install.png)
 #### App Uninstall
-![App Uninstall](images/v4/11%20Deployarr%204%20-%20App%20Uninstall.png)
+![App Uninstall](images/v5/11%20Deployarr%204%20-%20App%20Uninstall.png)
+#### Deployarr Dashboard
+![Deployarr Dashboard](images/v5/11a%20Deployarr%20v5%20Deployarr%20Dashboard.png)
 #### Tools Menu
-![Tools Menu](images/v4/12%20Deployarr%204%20-%20Tools%20Sub%20Menu.png)
+![Tools Menu](images/v5/12%20Deployarr%20v5%20Tools%20Menu.png)
 #### Stack Manager
-![Stack Manager](images/v4/13%20Deployarr%204%20-%20Stack%20Manager.png)
+![Stack Manager](images/v5/13%20Deployarr%20v5%20Stack%20Manager.png)
 #### Containers Status
-![Containers Status](images/v4/14%20Deployarr%204%20-%20Containers%20Status.png)
+![Containers Status](images/v5/14%20Deployarr%204%20-%20Containers%20Status.png)
 #### Services Status
-![Services Status](images/v4/15%20Deployarr%204%20-%20Services%20Status.png)
+![Services Status](images/v5/15%20Deployarr%204%20-%20Services%20Status.png)
 #### Backups Menu
-![Backups Menu](images/v4/16%20Deployarr%204%20-%20Backups%20Sub%20Menu.png)
+![Backups Menu](images/v5/14%20Deployarr%20v5%20Backups%20Menu.png)
 #### Restore Backups
-![Restore Backups](images/v4/17%20Deployarr%204%20-%20Restore%20Backups.png)
+![Restore Backups](images/v5/17%20Deployarr%204%20-%20Restore%20Backups.png)
 #### Deployarr Settings
-![Deployarr Settings](images/v4/18%20Deployarr%204%20-%20Deployarr%20Settings%20Menu.png)
-#### About Menu
-![About Menu](images/v4/19%20Deployarr%204%20-%20About%20Sub%20Menu.png)
+![Deployarr Settings](images/v5/15%20Deployarr%20v5%20Settings.png)
+#### License Types
+![License Types](images/v5/16%20Deployarr%20v5%20License%20Types.png)
+#### Setup Options
+![Setup Options](images/v5/18%20setup%20options.png)
 #### Getting Support
 ![Getting Support](images/v4/21%20Deployarr%204%20-%20Getting%20Support.png)
