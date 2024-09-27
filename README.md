@@ -47,7 +47,7 @@ chmod +x deployarr_v5.0.app
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
 
-## Deployarr Stats
+## Deployarr Stats - Jan to Sep 2024
 ![Jan to Sep, 2024](images/v5/deployarr%20stats%20sep%202024.png)
 
 # References
