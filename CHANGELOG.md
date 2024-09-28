@@ -13,6 +13,7 @@ Total Supported Apps: 76
 <li>NEW: Deployarr pin reset feature.</li>
 <li>NEW: All apps are now exposed to Docker host using ports. Deployarr will suggest ports during installation.</li>
 <li>NEW: Deployarr will now call Cloudflare API to check the validity of the DNS API token for Traefik.</li>
+<li>NEW: Included v4 to v5 migration instructions.</li>
 <li>ENCHANCEMENT: Description error messages when requirements are not met for a specific step.</li>
 <li>ENCHANCEMENT: Signficant improvement in speed/responsiveness.</li>
 <li>ENHANCEMENT: Menu reorganized based on past feedback. </li>
@@ -20,15 +21,6 @@ Total Supported Apps: 76
 <li>REMOVED: Auto-Traefik to Deployarr migration.</li>
 <li>REMOVED: Account registration directly from the script. Not needed anymore, as all previous "Basic" features are now free for anyone.</li>
 <li>OTHERS: Eleventy-million minor changes (over 9000 lines of code rewritten). </li>
-</ul>
-
-<h5>v4.6.2 - September 28, 2024</h5>
-This will be the last version of Deployarr v4. Deployarr v5 is not backward compatible and will require manual migration. Check [v4 to v5 Migration Guide](v4-to-v5-migration.md).
-
-<ul>
-<li>Switched Git branch to v4.</li>
-<li>Disabled Free account registration.</li>
-<li>Included v4 to v5 migration instructions.</li>
 </ul>
 
 <h5>v4.6.1 - August 7, 2024</h5>
