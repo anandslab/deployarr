@@ -25,5 +25,6 @@ Here are the recommended migration steps:
 <li>Stop all running containers or down the entire stack.</li>
 <li>Run a cold backup from Deployarr Tools menu.</li>
 <li>Delete everything inside Docker Folder, <u>EXCEPT</u>, <b>.env</b>, <b>secrets</b> folder, and <b>appdata</b> folder.</li>
-<li>Download v5 and reinstall all the apps.</li>
+<li>Download Deployarr v5.</li>
+<li>Reinstall install apps (check known issues above).</li>
 <ol>
