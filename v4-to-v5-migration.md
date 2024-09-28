@@ -14,7 +14,7 @@ The following new features required a rewrite of majority of Deployarr code. Bac
 ## Known Issues
 
 <ul>
-<li>Apps requiring a database (e.g. Guacamole, Speedtest-Tracker, etc.) will fail. Deployarr is not capable of reusing existing databases during re-installation. Possible Fixes: 1) Delete the associated MariaDB database and user using phpMyAdmin or Adminer. Then reinstall the app. New database and user will be created. 2) Reinstall the App and manually change database username and password in Docker Secrets folder to reflect the correct username and password.</li>
+<li>Apps requiring a database (e.g. Guacamole, Speedtest-Tracker, Nextcloud, etc.) will fail. Deployarr is not capable of reusing existing databases during re-installation. Possible Fixes: 1) Delete the associated MariaDB database and user using phpMyAdmin or Adminer. Then reinstall the app. New database and user will be created. 2) Reinstall the App and manually change database username and password in Docker Secrets folder to reflect the correct username and password.</li>
 </ul>
 
 ## Migrating form v4.6.1 to v5.0
