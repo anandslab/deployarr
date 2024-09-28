@@ -57,8 +57,8 @@ More information on Deployarr and how to use it:
 
 <strong>Guides:</strong>
 <ul>
-<li>20-min Intro: https://www.smarthomebeginner.com/go/deployarr-intro/</li>
-<li>Detailed Guide: https://www.smarthomebeginner.com/go/deployarr-detailed-guide/</li>
+<li>20-min Intro: https://www.smarthomebeginner.com/go/deployarr-v5-intro/</li>
+<li>Detailed Guide: https://www.smarthomebeginner.com/go/deployarr-v5-detailed-guide/</li>
 </ul>
 
 # Support
