@@ -1,8 +1,7 @@
 <h3>Releases</h3>
-<h5>v5.0 (BETA) - September 10, 2024</h5>
-Total Supported Apps: 75
+<h5>v5.0 - September 29, 2024</h5>
+Total Supported Apps: 76
 
-Way too many changes to list (over 9000 lines of code rewritten). Here are some major changes.
 <ul>
 <li>NEW: Deployarr logo and icon.</li>
 <li>NEW: Local mode for installing apps for local access only (no reverse proxy). This should now remove the Traefik requirement and allow multi-server setups.</li>
@@ -20,6 +19,21 @@ Way too many changes to list (over 9000 lines of code rewritten). Here are some 
 <li>REMOVED: Traefik v2 to v3 migration.</li>
 <li>REMOVED: Auto-Traefik to Deployarr migration.</li>
 <li>REMOVED: Account registration directly from the script. Not needed anymore, as all previous "Basic" features are now free for anyone.</li>
+<li>OTHERS: Eleventy-million minor changes (over 9000 lines of code rewritten). </li>
+</ul>
+
+<h5>v4.6.2 - September 28, 2024</h5>
+This will be the last version of Deployarr v4. Deployarr v5 is not backward compatible and will require manual migration. Check [v4 to v5 Migration Guide](v4-to-v5-migration.md).
+
+<ul>
+<li>Switched Git branch to v4.</li>
+<li>Disabled Free account registration.</li>
+<li>Included v4 to v5 migration instructions.</li>
+</ul>
+
+<h5>v4.6.1 - August 7, 2024</h5>
+<ul>
+<li>FIX: Pin creation was broken.</li>
 </ul>
 
 <h5>v4.6 - August 6, 2024</h5>
