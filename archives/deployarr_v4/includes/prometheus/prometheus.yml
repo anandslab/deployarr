@@ -1,0 +1,3 @@
+global:
+  scrape_interval: 60s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 60s # Evaluate rules every 15 seconds. The default is every 1 minute.

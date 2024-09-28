@@ -1,0 +1,13 @@
+services:
+  # Traefik Access Log (access.log) for Dozzle
+  traefik-access-log:
+    container_name: traefik-access-log
+    image: alpine
+    volumes:
+      - $DOCKERDIR/logs/$HOSTNAME/traefik/access.log:/var/log/stream.log
+    command:
+      - tail
+      - -f
+      - /var/log/stream.log     
+    network_mode: none
+    restart: unless-stopped
