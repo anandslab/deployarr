@@ -7,8 +7,8 @@
 !LICENSE
 !announcement
 !latest-version
-!deployarr_v4.6.2.app
-!deployarr_v4.6.2-arm.app
+!deployarr_v4.6.1.app
+!deployarr_v4.6.1-arm.app
 !deployarr_v5.0.app 
 !deployarr_v5.0-arm.app 
 !APPS.md
@@ -34,15 +34,12 @@ scripts/*
 archives/*
 !archives/deployarr_v4
 archives/deployarr_v4/*
-
 !archives/deployarr_v4/compose
 archives/deployarr_v4/compose/*
 !archives/deployarr_v4/compose/*.yml
-
 !archives/deployarr_v4/includes
 !archives/deployarr_v4/includes/*
 !archives/deployarr_v4/includes/*/*
-
 !archives/deployarr_v4/scripts
 archives/deployarr_v4/scripts/*
 !archives/deployarr_v4/scripts/*.sh
