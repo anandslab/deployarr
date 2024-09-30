@@ -36,20 +36,20 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.0.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.0.1.app
 ```
 ```
-chmod +x deployarr_v5.0.app
+chmod +x deployarr_v5.0.1.app
 ```
 ```
-./deployarr_v5.0.app
+./deployarr_v5.0.1.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
 
 ## Migrate from v4 to v5
 
-[How to Migrate from v4.6.1 to v5.0?](v4-to-v5-migration.md)
+[How to Migrate from v4.6.1 to v5?](v4-to-v5-migration.md)
 
 ## Deployarr Stats - Jan to Sep 2024
 ![Jan to Sep, 2024](images/v5/deployarr%20stats%20sep%202024.png)

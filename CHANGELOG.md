@@ -1,4 +1,14 @@
 <h3>Releases</h3>
+<h5>v5.0.1 - September 30, 2024</h5>
+<ul>
+<li>FIX: System checks was not being marked as done after completion. Required exiting and relaunching Deployarr.</li>
+<li>FIX: Better Rclone remotes detection.</li>
+<li>FIX: Rclone installation was failing due to unzip requirement.</li>
+<li>FIX: Running the script with sudo failed on Debian due to lack of sudo package by default.</li>
+<li>FIX: All apps required MariaDB databases (Speedtest Tracker, NextCloud, and Gaucamole) failed on migration. Existing databases will not be recognized instead of force creating new ones.</li>
+<li>FIX: Traefik will respect existing acme.json file upon migration/reinstallation.</li>
+</ul>
+
 <h5>v5.0 - September 29, 2024</h5>
 Total Supported Apps: 76
 
