@@ -26,10 +26,13 @@ This will be fixed in the next release.
 Here are the recommended migration steps:
 
 <ol>
-<li>Stop all running containers or down the entire stack.</li>
+<li>Stop all running containers or down the entire stack. Keep the stack down (do not restart it).</li>
 <li>Run a cold backup from Deployarr Tools menu.</li>
+<li>Exit Deployarr v4.6.1</li>
 <li>If you have another layer of backup (e.g. Proxmox VM/LXC backup), run it too.</li>
-<li>Delete everything inside Docker Folder, <u>EXCEPT</u>, <b>.env</b>, <b>secrets</b> folder, and <b>appdata</b> folder.</li>
-<li>Download Deployarr v5.</li>
-<li>Reinstall install apps (check known issues above).</li>
+<li>Delete all Deployarr Status files starting 03_, 04_, 05_, and 06_ in /opt/deployarr/status folder.
+<li>In the Docker folder, delete the compose folder and the master Docker compose file.</li>
+<li>Restart Deployarr v4.6.1 and go through all the steps in sequence. Your appdata should be automatically picked up.</li>
 <ol>
+
+Here is a video walk through with some additional explanation: https://youtu.be/_9C7bDPveMg
