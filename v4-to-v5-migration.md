@@ -1,6 +1,6 @@
 # Deployarr v4.6.1 (and older) to v5.0 Migration 
 
-## Deployarr v5 Has Manu New Features
+## Deployarr v5 Has Many New Features
 
 The following new features required a rewrite of majority of Deployarr code. Backward compatibility could not be maintained. 
 
