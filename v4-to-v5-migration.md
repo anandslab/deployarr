@@ -23,6 +23,13 @@ This will be fixed in the next release.
 
 ## Migrating form v4.6.1 to v5.0
 
-Here is a video guide on how to migrate from v4 to v5
+Here are the recommended migration steps:
 
-https://youtu.be/_9C7bDPveMg
+<ol>
+<li>Stop all running containers or down the entire stack.</li>
+<li>Run a cold backup from Deployarr Tools menu.</li>
+<li>If you have another layer of backup (e.g. Proxmox VM/LXC backup), run it too.</li>
+<li>Delete everything inside Docker Folder, <u>EXCEPT</u>, <b>.env</b>, <b>secrets</b> folder, and <b>appdata</b> folder.</li>
+<li>Download Deployarr v5.</li>
+<li>Reinstall install apps (check known issues above).</li>
+<ol>
