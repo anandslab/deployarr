@@ -30,7 +30,7 @@ Here are the recommended migration steps:
 <li>Run a cold backup from Deployarr Tools menu.</li>
 <li>Exit Deployarr v4.6.1</li>
 <li>If you have another layer of backup (e.g. Proxmox VM/LXC backup), run it too.</li>
-<li>Delete all Deployarr Status files starting 03_, 04_, 05_, and 06_ in /opt/deployarr/status folder.
+<li>Delete all Deployarr Status files starting 03_, 04_, 05_, and 06_ in /opt/deployarr/status folder.</li>
 <li>In the Docker folder, delete the compose folder and the master Docker compose file.</li>
 <li>Restart Deployarr v4.6.1 and go through all the steps in sequence. Your appdata should be automatically picked up.</li>
 <ol>
