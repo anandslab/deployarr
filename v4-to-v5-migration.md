@@ -11,16 +11,6 @@ The following new features required a rewrite of majority of Deployarr code. Bac
 <li>NEW: By default Traefik will use file providers to expose apps via reverse proxy. Previously this was done using Docker labels. Some apps (e.g. Traefik, OAuth, and Authelia), will continue to use labels. </li>
 </ul>
 
-## Known Issues
-
-Apps requiring a database (e.g. Guacamole, Speedtest-Tracker, Nextcloud, etc.) will fail. Deployarr is not capable of reusing existing databases during re-installation. Possible Fixes: 
-<ol>
-<li>Delete the associated MariaDB database and user using phpMyAdmin or Adminer. Then reinstall the app. New database and user will be created.</li>
-<li>Reinstall the App and manually change database username and password in Docker Secrets folder to reflect the correct username and password (can be found in the previous secrets folder).</li>
-</ol>
-
-This will be fixed in the next release.
-
 ## Migrating form v4.6.1 to v5.0
 
 Here are the recommended migration steps:
@@ -33,6 +23,7 @@ Here are the recommended migration steps:
 <li>Delete all Deployarr Status files starting 03_, 04_, 05_, and 06_ in /opt/deployarr/status folder.</li>
 <li>In the Docker folder, delete the compose folder and the master Docker compose file.</li>
 <li>Restart Deployarr v4.6.1 and go through all the steps in sequence. Your appdata should be automatically picked up.</li>
+<li>Choose to overwrite when reinstalling Traefik.</li>
 </ol>
 
 Here is a video walk through with some additional explanation: https://youtu.be/_9C7bDPveMg
