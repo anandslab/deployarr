@@ -36,5 +36,3 @@ Here are the recommended migration steps:
 </ol>
 
 Here is a video walk through with some additional explanation: https://youtu.be/_9C7bDPveMg
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_9C7bDPveMg?si=OyEzc6SAcMANH7-5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
