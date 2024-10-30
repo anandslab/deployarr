@@ -1,5 +1,16 @@
 <h3>Releases</h3>
 
+<h5>v5.1 - October 30, 2024</h5>
+Total Supported Apps: 91
+<ul>
+<li>NEW: Added DweebUI, Cloud Commander, Double Commander, Theme Park, Notifiarr, Flaresolverr, ESPHome, Emby, Dockwatch, Lollypop, qBittorrent without VPN, Transmission without VPN, Tailscale, What's Up Docker (WUD), and ZeroTier.</li>
+<li>NEW: Changed Plex transcode folder path to match Jellyfin/Emby.</li>
+<li>NEW: qBittorrent is now without VPN by default. There is a separate menu item to install it with VPN.</li>
+<li>FIX: Bash Aliases was not working with custom Docker Folder.</li>
+<li>FIX: Messages after app installation was showing wrong port number in certain situations.</li>
+<li>ENHANCEMENT: Improved port availability check. On top of occupied ports on the system, .env will now be checked for ports already defined for other apps.</li>
+</ul>
+
 <h5>v5.0.1 - September 30, 2024</h5>
 <ul>
 <li>FIX: System checks was not being marked as done after completion. Required exiting and relaunching Deployarr.</li>
@@ -19,7 +30,7 @@ Total Supported Apps: 76
 <li>NEW: Local mode for installing apps for local access only (no reverse proxy). This should now remove the Traefik requirement and allow multi-server setups.</li>
 <li>NEW: Traefik Exposure Modes. Simple - all apps behind Traefik accessible internally and externally. Advanced - control over exposing apps internally, externally, or both. </li>
 <li>NEW: By default Traefik will use file providers to expose apps via reverse proxy. Previously this was done using Docker labels. Some apps (e.g. Traefik, OAuth, and Authelia), will continue to use labels. </li>
-<li>NEW: Autopager - New Homepage based dashboard that auto-populates as you install new apps. It works but will evolve over time.</li>
+<li>NEW: Deployarr Dashboard - New Homepage based dashboard that auto-populates as you install new apps. It works but will evolve over time.</li>
 <li>NEW: Recommended order of steps for various setups.</li>
 <li>NEW: License changes. There are now 3 license types: Basic, Plus, and Pro. Basic allows local-only installs. See License Types description in About menu.</li>
 <li>NEW: Deployarr pin reset feature.</li>

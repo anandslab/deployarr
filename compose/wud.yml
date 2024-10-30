@@ -1,0 +1,22 @@
+services:
+  # WUD (What's Up Docker) - Docker Image Update Notification
+  wud:
+    image: fmartinou/whats-up-docker
+    container_name: wud
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - socket_proxy
+    ports:
+      - "$WUD_PORT:3000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      # - WUD_TRIGGER_DISCORD_1_URL=https://discord.com/api/webhooks/123/456
+      # - WUD_TRIGGER_DISCORD_1_BOTUSERNAME=WUD
+      - WUD_WATCHER_LOCAL_CRON=0 1 * * *
+      - WUD_WATCHER_LOCAL_WATCHALL=true
+      # - WUD_WATCHER_MYREMOTEHOST_HOST=<remote host>
+    # DOCKER-LABELS-PLACEHOLDER

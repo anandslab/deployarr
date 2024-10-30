@@ -1,0 +1,27 @@
+services:
+  # Lollypop - Music Player
+  lollypop:
+    image: lscr.io/linuxserver/lollypop:latest
+    container_name: lollypop
+    security_opt:
+      - no-new-privileges:true
+      - seccomp:unconfined #optional
+    restart: "unless-stopped"
+    profiles: ["apps", "media", "all"]
+    networks:
+      - default
+      # - t3_proxy
+    ports:
+      - "$LOLLYPOP_PORT:3000" # HTTP
+    #   - 3001:3001 # HTTPS
+    # DEVICES-GPU-PLACEHOLDER-DO-NOT-DELETE
+    volumes:
+      - $DOCKERDIR/appdata/lollypop:/config
+      # - $MEDIADIR1:/data/media1
+      # - $MEDIADIR2:/data/media2
+      # - $MEDIADIR3:/data/media3
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+    # DOCKER-LABELS-PLACEHOLDER

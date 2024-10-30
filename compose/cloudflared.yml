@@ -1,0 +1,23 @@
+services:
+  # Cloudflared - Cloudflare Tunnel
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["core", "all"]    
+    network_mode: host
+    command: tunnel run
+    healthcheck:
+      test: ["CMD", "cloudflared", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - $DOCKERDIR/appdata/cloudflared/hosts:/etc/hosts
+    environment:
+      - TUNNEL_TOKEN=$CLOUDFLARE_TUNNEL_TOKEN
+    # DOCKER-LABELS-PLACEHOLDER

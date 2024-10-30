@@ -1,0 +1,17 @@
+services:
+  # ESPHome - Custom Smart Home with ESP Microcontrollers
+  esphome:
+    image: esphome/esphome
+    container_name: esphome
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$ESPHOME_PORT:6052"
+    volumes:  
+      - $DOCKERDIR/appdata/esphome/config:/config:rw
+      # Use local time for logging timestamps
+    # DOCKER-LABELS-PLACEHOLDER

@@ -1,0 +1,34 @@
+services:
+  # Transmission - Torrent downloader
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "downloads", "all"]
+    networks:
+      - default
+      # - t3_proxy
+    ports:
+      - "$TRANSMISSION_PORT:9091"
+      - "51413:51413"
+      - "51413:51413/udp"
+    volumes:
+      - $DOCKERDIR/appdata/transmission:/config
+      - $DOWNLOADSDIR/torrents:/downloads
+      - $DOWNLOADSDIR:/watch
+    environment:
+      - PUID=$PUID
+      - PGID=$PGID
+      - TZ=$TZ
+      - FILE__USER=/run/secrets/transmission_user
+      - FILE__PASS=/run/secrets/transmission_pass
+      # - TRANSMISSION_WEB_HOME= #optional
+      # - WHITELIST= #optional
+      # - PEERPORT= #optional
+      # - HOST_WHITELIST= #optional
+    secrets:
+      - transmission_user
+      - transmission_pass  
+    # DOCKER-LABELS-PLACEHOLDER

@@ -27,7 +27,7 @@ services:
       # - $MEDIADIR1:/data/media1
       # - $MEDIADIR2:/data/media2
       # - $MEDIADIR3:/data/media3
-      - /dev/shm:/transcode
+      - /dev/shm:/data/transcode
     environment:
       TZ: $TZ
       HOSTNAME: $PLEX_SERVER_NAME

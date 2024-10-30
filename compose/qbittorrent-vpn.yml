@@ -7,11 +7,7 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["apps", "downloads", "all"]
-    networks:
-      - default
-      # - t3_proxy
-    ports:
-      - "$QBITTORRENT_PORT:8080"
+    network_mode: "service:gluetun"
     volumes:
       - $DOCKERDIR/appdata/qbittorrent:/config
       - $DOWNLOADSDIR:/data/downloads # Ensure that downloads folder is set to /data/downloads in qBittorrent
@@ -20,4 +16,10 @@ services:
       PUID: $PUID
       PGID: $PGID
       UMASK_SET: 002
-    # DOCKER-LABELS-PLACEHOLDER
+    healthcheck: # https://github.com/qdm12/gluetun/issues/641#issuecomment-933856220
+      test: "curl -sf https://example.com  || exit 1"
+      interval: 1m
+      timeout: 10s
+      retries: 1
+    labels: # Traefik labels added via file provider app-qbittorrent.yml in rules folder
+      - "deunhealth.restart.on.unhealthy=true"

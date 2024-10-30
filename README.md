@@ -7,7 +7,7 @@ Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificat
 
 [Full List of Apps](APPS.md)
 
-## Supported Apps - 75 (and increasing)
+## Supported Apps - 91 (and increasing)
 ![Apps Supported by Deployarr](images/v5/Deployarr%20v5%20with%2075%20Apps.png)
 
 As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.
@@ -36,13 +36,13 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.0.1.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.1.app
 ```
 ```
-chmod +x deployarr_v5.0.1.app
+chmod +x deployarr_v5.1.app
 ```
 ```
-./deployarr_v5.0.1.app
+./deployarr_v5.1.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
@@ -68,9 +68,11 @@ More information on Deployarr and how to use it:
 # Support
 Please do not open issues on GitHub. There is a dedicated Auto-Traefik/Deployarr support channel on our [Discord server](https://www.smarthomebeginner.com/discord/) for Supporters.
 
-# Licenses Types
+# Cost / Licenses Types
 
-Any one can download the use the free features in Deployarr without registration. If you decide to support my work and purchase a license, then there are 3 different options: Basic, Plus, and Pro. 
+Any one can download the use the <u>free</u> features in Deployarr without registration. 
+
+Optionally, if you decide to sponsor my work, then there are 3 different options; Basic, Plus, and Pro, which will open up additional features. In addition, all [**annual** memberships](https://www.smarthomebeginner.com/membership-account/join-the-geek-army/) on my website include Deployarr access.
 
 More Details: [Detailed Version Comparison](https://www.smarthomebeginner.com/deployarr/#Cost)
 
@@ -85,11 +87,13 @@ Deployarr is primarily developed and tested on Ubuntu. But it should work on oth
 At this point, Deployarr only works on Linux in Barebones, VM, and LXC environments. I do plan to include Synology devices in future. I am just waiting for Synology to update their Docker Package, which is several years old. 
 
 ### Why not Free?
-Deployarr is meant to be a perk for followers and supporters of SmartHomeBeginner.com. But keep in mind that everything that the script does can be learned using the guides on SmartHomeBeginner.com.
+Deployarr is meant to be a perk for followers and supporters of SmartHomeBeginner.com. But keep in mind that everything that the script does can be learned using the guides on SmartHomeBeginner.com or my [Docker-Traefik GitHub Repo](https://github.com/anandslab/docker-traefik).
 
 Parts of the script are free to use without registration (see License Types).
 
 Any support received via the purchase of the script goes towards publishing more videos guides on my [Youtube Channel](https://www.youtube.com/@anandslab). At this point, I spend 15x more on editing costs compared to Youtube Ad income. This also does not include 1000s of hours spent on writing guides, making videos, maintaining the community, and developing the script.
+
+In addition, Deployarr also allows me to [contribute to he open-source projects](https://opencollective.com/deployarr) we all love.
 
 ### Why not Open-Source?
 Paid supporters receive full access to the script's functionalities. Implementing this requires license checks with some sensitive information. Unfortunately, this requires compiling the source. 
@@ -99,9 +103,9 @@ Paid supporters receive full access to the script's functionalities. Implementin
 With a bit of knowledge, the basic framework created by Deployarr can be adapted to any situation. With that said, here are some limitations and known issues. 
 
 <ul>
-<li>DNS Challenge Provider: Cloudflare (only supported provider at this point).</li>
+<li>DNS Challenge Provider: Cloudflare (only supported provider at this point). You may have you domain registered with any registrar, but you will have to use Cloudflare for DNS (its free).</li>
 <li>Port Forwarding is required (80/443).</li>
-<li>Some apps (Guacamole, Speedtest-Tracker) that depend on databases may fail upon reinstallation form scratch. This will be fixed at some point. Clean installation should work.</li>
+<li>Some apps (Guacamole, Speedtest-Tracker) that depend on databases may fail upon reinstallation from scratch. This will be fixed at some point. Clean installation should work.</li>
 </ul>
 
 # Screenshots
