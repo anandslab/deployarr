@@ -17,7 +17,7 @@ services:
     devices:
       - /dev/net/tun
     # ports:
-      # - $QBITTORRENT_PORT:8080 # qBittorrent available at http://DOCKER-HOST-IP:$GLUETUN_PORT
+      # - $QBITTORRENTVPN_PORT:8080 # qBittorrent available at http://DOCKER-HOST-IP:$QBITTORRENTVPN_PORT
       # - 8888:8888/tcp # HTTP proxy
       # - 8388:8388/tcp # Shadowsocks
       # - 8388:8388/udp # Shadowsocks
