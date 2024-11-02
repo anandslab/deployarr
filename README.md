@@ -1,6 +1,6 @@
 Deployarr automates Homelab setup using Docker and Docker Compose. Below you will find more information its features and what it can/cannot do.
 
-![Deployarr 5](images/v5/Deployarr%20Version%205%20Intro.png)
+![Deployarr 5](images/v5/Deployarr%20v5%20with%2090%20Apps%20Thumbnail.png)
 
 # What Apps are Supported by Deployarr?
 Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificates), Authelia, Portainer, Plex, Jellyfin, Starr Apps, Gluetun, Dozzle, Uptime-Kuma, Homepage, and other apps. 
@@ -27,7 +27,7 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 <li>Multi-server Setup</li>
 <li>Domain passthrough for multi-domain multi-Traefik setups</li>
 <li>Google OAuth and Authelia for Authentication layer</li>
-<li>75+ Total Apps</li>
+<li>90+ Total Apps</li>
 <li>Stack Manager: Update Apps, Enable Apps, Disable Apps, Delete Apps, Up/Down Stack, Recreate/Start/Stop containers, etc.</li>
 <li>Backups, Restore, and Migration of whole setup</li>
 <li>Expert Mode for advanced users</li>

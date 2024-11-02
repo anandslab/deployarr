@@ -1,8 +1,8 @@
 services:
   # qBittorrent - Torrent downloader
-  qbittorrent:
+  qbittorrent-vpn:
     image: lscr.io/linuxserver/qbittorrent:latest
-    container_name: qbittorrent
+    container_name: qbittorrent-vpn
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
