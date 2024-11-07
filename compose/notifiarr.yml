@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$NOTIFIARR_PORT:5454" 
     volumes:

@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$CADVISOR_PORT:8080"
     # privileged: true # Only needed for CentOS, Fedora, Red Hat, etc.

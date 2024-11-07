@@ -10,7 +10,6 @@ services:
     profiles: ["apps", "media", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$LOLLYPOP_PORT:3000" # HTTP
     #   - 3001:3001 # HTTPS

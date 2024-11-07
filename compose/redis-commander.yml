@@ -1,0 +1,17 @@
+services:
+  # Redis Commander - Redis Management Tool
+  redis-commander:
+    container_name: redis-commander
+    image: rediscommander/redis-commander:latest
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$REDISCOMMANDER_PORT:8081"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=$REDIS_PASSWORD
+    # DOCKER-LABELS-PLACEHOLDER

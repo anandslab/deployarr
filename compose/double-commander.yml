@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$DOUBLECOMMANDER_PORT:3000" # HTTP
     #   - 3001:3001 # HTTPS

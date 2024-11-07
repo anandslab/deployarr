@@ -1,0 +1,46 @@
+mode: iptables
+pid_dir: /var/run/
+update_frequency: 10s
+daemonize: true
+log_mode: file
+log_dir: /var/log/
+log_level: info
+log_compression: true
+log_max_size: 100
+log_max_backups: 3
+log_max_age: 30
+api_url: http://localhost:CROWDSEC-PORT-PLACEHOLDER/
+api_key: CROWDSEC-API-KEY-PLACEHOLDER
+insecure_skip_verify: false
+disable_ipv6: true
+deny_action: DROP
+deny_log: true
+supported_decisions_types:
+  - ban
+#to change log prefix
+deny_log_prefix: "[CSFB_BLOCK] "
+#to change the blacklists name
+blacklists_ipv4: crowdsec-blacklists
+blacklists_ipv6: crowdsec6-blacklists
+#if present, insert rule in those chains
+iptables_chains:
+  - INPUT
+#  - FORWARD
+  - DOCKER-USER
+
+## nftables
+nftables:
+  ipv4:
+    enabled: true
+    set-only: false
+    table: crowdsec
+    chain: crowdsec-chain
+  ipv6:
+    enabled: true
+    set-only: false
+    table: crowdsec6
+    chain: crowdsec6-chain
+# packet filter
+pf:
+  # an empty string disables the anchor
+  anchor_name: ""

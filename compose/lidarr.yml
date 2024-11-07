@@ -9,7 +9,6 @@ services:
     profiles: ["media", "starr", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$LIDARR_PORT:8686"
     volumes:

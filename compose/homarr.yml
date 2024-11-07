@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
       - socket_proxy
     ports:
       - "$HOMARR_PORT:7575"

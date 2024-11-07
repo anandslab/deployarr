@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
       - socket_proxy
     ports:
      - "$HOMEPAGE_PORT:3000" 

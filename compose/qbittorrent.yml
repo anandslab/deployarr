@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "downloads", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$QBITTORRENT_PORT:8080"
     volumes:

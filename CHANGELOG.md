@@ -1,5 +1,15 @@
 <h3>Releases</h3>
 
+<h5>v5.2 - November 7, 2024</h5>
+Total Supported Apps: 101
+<ul>
+<li>NEW: Added DigiKam, Redis Commander, PHotoshow, Node Exporter, Funkwhale, Gonic, GPTWOL, CrowdSec, and CrowdSec Firewall Bouncer.</li>
+<li>ENHANCEMENT: Deployarr PIN now saved locally and shown in About menu, in case you forget. To change it, just reset it.</li>
+<li>FIX: DWEEBUI_SECRET not found error.</li>
+<li>Other minor improvements and fixes.</li>
+<li>Next few releases will focus on stability (e.g. on Debian 12) and improvements (e.g. Guacamole).</li>
+</ul>
+
 <h5>v5.1 - October 30, 2024</h5>
 Total Supported Apps: 91
 <ul>

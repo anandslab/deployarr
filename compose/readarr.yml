@@ -9,7 +9,6 @@ services:
     profiles: ["media", "starr", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$READARR_PORT:8787"
     volumes:

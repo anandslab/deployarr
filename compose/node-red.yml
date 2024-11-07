@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$NODERED_PORT:1880"
     volumes:

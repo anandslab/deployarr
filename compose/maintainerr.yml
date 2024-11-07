@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
      - "$MAINTAINERR_PORT:6246"
     user: $PUID:$PGID

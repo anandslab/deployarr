@@ -8,8 +8,7 @@ services:
     restart: unless-stopped
     profiles: ["apps", "all"]
     networks:
-      - default
-      # - t3_proxy    
+      - default    
     ports:
       - "$THEMEPARK_PORT:80" 
     volumes:

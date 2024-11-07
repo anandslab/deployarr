@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$HOMEBRIDGE_PORT:8581"
     volumes:

@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "starr", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$PROWLARR_PORT:9696"
     volumes:

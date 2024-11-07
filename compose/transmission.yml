@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "downloads", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$TRANSMISSION_PORT:9091"
       - "51413:51413"

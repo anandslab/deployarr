@@ -9,7 +9,6 @@ services:
     profiles: ["core", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - $SCRUTINY_PORT:8080
     volumes:

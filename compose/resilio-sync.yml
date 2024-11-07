@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - $RESILIOSYNC_PORT:8888
       - 55555:55555

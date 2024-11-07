@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$EMBY_PORT:8096/tcp"
       - "8920:8920/tcp"

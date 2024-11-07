@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
      - "$KAVITA_PORT:5000" 
     volumes:

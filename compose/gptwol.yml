@@ -1,0 +1,23 @@
+services:
+  # GPTWOL - Wake On LAN Docker GUI
+  gptwol:
+    container_name: gptwol
+    image: misterbabou/gptwol:latest
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    network_mode: host
+    stdin_open: true
+    tty: true
+    environment:
+      - PUID=$PUID
+      - PGID=$PGID
+      - TZ=$TZ
+      - PORT=$GPTWOL_PORT # default port is 5000
+      - REFRESH_PING=60 # in seconds
+      # - PING_TIMEOUT=200 # in milliseconds
+    volumes:
+      - $DOCKERDIR/appdata/gptwol/computers.txt:/app/computers.txt
+      - $DOCKERDIR/appdata/gptwol/cron:/etc/cron.d      
+    # DOCKER-LABELS-PLACEHOLDER

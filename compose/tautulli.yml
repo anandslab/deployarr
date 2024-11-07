@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$TAUTULLI_PORT:8181"
     volumes:

@@ -1,0 +1,21 @@
+services:
+  # Digikam - Photo Management
+  digikam:
+    image: ghcr.io/linuxserver/digikam
+    container_name: digikam
+    security_opt:
+      - no-new-privileges:true
+    restart: "unless-stopped"
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$DIGIKAM_PORT:3000" # HTTP
+    volumes:
+      - $DOCKERDIR/appdata/digikam:/config
+      - $PHOTOSDIR:/data/photos
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+    # DOCKER-LABELS-PLACEHOLDER

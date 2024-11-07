@@ -1,0 +1,22 @@
+services:
+  # Photoshow - Simple Photo Viewer
+  photoshow:
+    image: lscr.io/linuxserver/photoshow
+    container_name: photoshow
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$PHOTOSHOW_PORT:80"
+    volumes:
+      - $DOCKERDIR/appdata/photoshow/config:/config
+      - $DOCKERDIR/appdata/photoshow/thumbs:/Thumbs
+      - $PHOTOSDIR:/Pictures
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+    # DOCKER-LABELS-PLACEHOLDER

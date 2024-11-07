@@ -1,4 +1,4 @@
-# Deployarr Apps - 91
+ # Deployarr Apps - 101 (and increasing)
 
 ## Reverse Proxy
 - **Traefik**: A modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
@@ -13,6 +13,8 @@
 - **Airsonic-Advanced**: A free, web-based media streamer providing ubiquitous access to your music.
 - **Navidrome**: A self-hosted music server and streamer.
 - **Lollypop**: A modern music player for GNOME.
+- **Funkwhale**: A modern, self-hosted, web-based music server.
+- **Gonic**: A self-hosted music server.
 
 ## Media Management
 - **Radarr**: A movie collection manager for Usenet and BitTorrent users.
@@ -56,11 +58,14 @@
 - **Smokeping**: A latency monitoring tool.
 - **Glances**: A cross-platform monitoring tool for systems.
 - **Change Detection**: A tool for monitoring web pages for changes.
+- **Node Exporter**: A Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.
 
 ## Security 
 - **Authelia**: An authentication and authorization server providing 2-factor authentication and single sign-on (SSO).
 - **Socket Proxy**: A configurable proxy for Docker Socket.
 - **OAuth**: OAuth login from several providers, including Google OAuth 2.0.
+- **CrowdSec**: An open-source and collaborative security solution.
+- **CrowdSec Firewall Bouncer**: A CrowdSec bouncer for blocking IPs in your firewall.
 
 ## Dashboards
 - **Homepage**: A simple, standalone homepage for your server.
@@ -82,6 +87,7 @@
 - **Adminer**: A full-featured database management tool written in PHP.
 - **PgAdmin**: A web-based administration tool for PostgreSQL.
 - **phpMyAdmin**: A free software tool written in PHP, intended to handle the administration of MySQL over the web.
+- **Redis Commander**: A web-based management tool for Redis.
 
 ## Smart Home and Automation
 - **Homebridge**: A lightweight Node.js server that emulates the iOS HomeKit API.
@@ -92,6 +98,8 @@
 
 ## Photo Management
 - **Piwigo**: A photo gallery software for the web.
+- **DigiKam**: A professional photo management application.
+- **Photoshow**: A simple photo gallery application.
 
 ## Docker Management
 - **Portainer**: A lightweight management UI which allows you to easily manage your Docker environments.
@@ -111,6 +119,7 @@
 - **IT-Tools**: A collection of useful tools for IT professionals.
 - **ShellInABox**: HTML5 web-based Linux Terminal.
 - **CyberChef**: A web app for encryption, encoding, compression, and data analysis.
+- **GPTWOL**: Wake On LAN Docker GUI.
 
 ## Remote Access
 - **Guacamole**: A clientless remote desktop gateway.
