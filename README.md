@@ -52,8 +52,8 @@ Use the <strong>-arm.app</strong> version of the file for Raspberry Pi.
 
 [How to Migrate from v4.6.1 to v5?](v4-to-v5-migration.md)
 
-## Deployarr Stats - Jan to Sep 2024
-![Jan to Sep, 2024](images/v5/deployarr%20stats%20sep%202024.png)
+## Deployarr Stats - Jan to Nov 2024
+![Jan to Nov, 2024](images/v5/deployarr%20stats%20nov%202024.png)
 
 # References
 More information on Deployarr and how to use it:
