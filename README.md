@@ -14,6 +14,7 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Features
 <ul>
+<li>100+ Total Apps</li>
 <li>Docker Environment Setup (FREE) - as in my guides</li>
 <li>System Checks (FREE)</li>
 <li>Domain Checks to prepare for Traefik (FREE)</li>
@@ -28,7 +29,6 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 <li>Domain passthrough for multi-domain multi-Traefik setups</li>
 <li>Google OAuth and Authelia for Authentication layer</li>
 <li>CrowdSec and various bouncers for Security</li>
-<li>100+ Total Apps</li>
 <li>Stack Manager: Update Apps, Enable Apps, Disable Apps, Delete Apps, Up/Down Stack, Recreate/Start/Stop containers, etc.</li>
 <li>Backups, Restore, and Migration of whole setup</li>
 <li>Expert Mode for advanced users</li>
