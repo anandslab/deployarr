@@ -9,7 +9,6 @@ services:
     profiles: ["dbs", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$INFLUXDB_PORT:8086"
     volumes:

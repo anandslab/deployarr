@@ -1,0 +1,31 @@
+services:
+  # Dockwatch - Docker Management and Notification
+  dockwatch:
+    image: ghcr.io/notifiarr/dockwatch:main
+    container_name: dockwatch
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    ports:
+      - "$DOCKWATCH_PORT:80"
+    networks:
+      - socket_proxy
+    environment:
+      - DOCKER_HOST=tcp://socket-proxy:2375 # Uncomment and adjust accordingly if you use a socket proxy
+      - PUID=$PUID
+      - PGID=$PGID
+      - TZ=$TZ
+      - ALLOW_START=1
+      - ALLOW_STOP=1
+      - ALLOW_RESTARTS=1
+      - CONTAINERS=1
+      - IMAGES=1
+      - PORTS=1
+      - NETWORKS=1
+      - POST=1
+      - VOLUMES=1
+    volumes:
+      - $DOCKERDIR/appdata/dockwatch/config:/config
+      #- /var/run/docker.sock:/var/run/docker.sock # Comment this line if you use a socket proxy
+    # DOCKER-LABELS-PLACEHOLDER

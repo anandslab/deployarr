@@ -1,0 +1,43 @@
+http:
+  routers:
+    guacamole-rtr:
+      rule: "Host(`guacamole.{{env "DOMAINNAME_1"}}`)" 
+      entryPoints:
+        - websecure-external
+        - websecure-internal
+      middlewares:
+        - guacamole-add-guacamole
+        - chain-oauth
+      service: guacamole-svc
+      tls:
+        certResolver: dns-cloudflare
+        options: tls-opts@file
+  middlewares:
+    guacamole-add-guacamole:
+      addPrefix: 
+        prefix: "/guacamole"
+  services:
+    guacamole-svc:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.1.160:8081" # http://IP-ADDRESS:PORT
+
+
+http:
+  routers:
+    APPNAME-PLACEHOLDER-rtr:
+      rule: "Host(`APP-SUBDOMAIN-PLACEHOLDER.{{env "DOMAINNAME_1"}}`)" 
+      entryPoints:
+        # - websecure-external
+        # - websecure-internal
+      middlewares:
+        - CHAIN-PLACEHOLDER
+      service: APPNAME-PLACEHOLDER-svc
+      tls:
+        certResolver: dns-cloudflare
+        options: tls-opts@file
+  services:
+    APPNAME-PLACEHOLDER-svc:
+      loadBalancer:
+        servers:
+          - url: "APP-URL-PLACEHOLDER" # http://IP-ADDRESS:PORT

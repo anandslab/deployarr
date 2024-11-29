@@ -9,7 +9,6 @@ services:
     profiles: ["dbs", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$PROMETHEUS_PORT:9090"
     volumes:

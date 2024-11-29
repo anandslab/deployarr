@@ -1,0 +1,24 @@
+services:
+  # Notifiarr - Client for Notifiarr.com
+  notifiarr:
+    image: golift/notifiarr
+    container_name: notifiarr
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+    profiles: ["media", "all"]
+    networks:
+      - default
+    ports:
+      - "$NOTIFIARR_PORT:5454" 
+    volumes:
+      - $DOCKERDIR/appdata/notifiarr:/config
+      - /var/run/utmp:/var/run/utmp
+      - /etc/machine-id:/etc/machine-id
+    environment:
+      DN_API_KEY: $NOTIFIARR_API_KEY
+      #DN_AUTO_UPDATE: off
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+    # DOCKER-LABELS-PLACEHOLDER

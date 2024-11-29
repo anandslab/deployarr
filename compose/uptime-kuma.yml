@@ -9,7 +9,6 @@ services:
     profiles: ["core", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
      - "$UPTIMEKUMA_PORT:3001" 
     volumes:

@@ -9,7 +9,6 @@ services:
     profiles: ["media", "starr", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$BAZARR_PORT:6767"
     volumes:

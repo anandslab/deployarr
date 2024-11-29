@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     volumes:
       - $DOCKERDIR/appdata/airsonic-advanced/podcasts:/data/podcasts
       - $DOCKERDIR/appdata/airsonic-advanced/playlists:/data/playlists

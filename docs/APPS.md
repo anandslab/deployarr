@@ -1,4 +1,4 @@
-# Deployarr Apps - 75
+ # Deployarr Apps - 101 (and increasing)
 
 ## Reverse Proxy
 - **Traefik**: A modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
@@ -6,11 +6,15 @@
 - **Traefik Error Logs**: Pass Traefik Error Logs to Dozzle
 - **Traefik Certs Dumper**: A tool to dump Traefik's certificates to disk.
 
-## Media Servers
+## Media Servers and Players
 - **Plex**: A media server that organizes video, music, and photos from personal media libraries and streams them to smart TVs, streaming boxes, and mobile devices.
 - **Jellyfin**: An open-source media server that allows you to manage and stream your media.
+- **Emby**: A media server to organize and stream your personal media.
 - **Airsonic-Advanced**: A free, web-based media streamer providing ubiquitous access to your music.
 - **Navidrome**: A self-hosted music server and streamer.
+- **Lollypop**: A modern music player for GNOME.
+- **Funkwhale**: A modern, self-hosted, web-based music server.
+- **Gonic**: A self-hosted music server.
 
 ## Media Management
 - **Radarr**: A movie collection manager for Usenet and BitTorrent users.
@@ -25,18 +29,23 @@
 - **Overseerr**: A request management and media discovery tool for your media server.
 - **Tautulli**: A monitoring and tracking tool for Plex Media Server.
 - **Prowlarr**: An indexer manager/proxy for managing your indexers across various applications.
--- **Kometa**: Plex Meta Manager that can create automatic collections based on defined criteria. 
+- **Kometa**: Plex Meta Manager that can create automatic collections based on defined criteria. 
+- **Notifiarr**: A notification service for media server applications. Client for Notifiarr.com.
 
 ## Downloaders
 - **NZBGet**: A Usenet downloader optimized for performance and efficiency.
 - **SABnzbd**: A Usenet downloader optimized for performance and efficiency.
-- **qBittorrent**: An open-source BitTorrent client with a polished user interface.
+- **qBittorrent**: An open-source BitTorrent client without VPN integration.
+- **Transmission**: A fast, easy, and free BitTorrent client without VPN integration.
+- **qBittorrent with VPN**: An open-source BitTorrent client with Gluetun VPN Client integration.
 
 ## Network Tools
 - **Wireguard**: A simple, fast, and modern VPN that utilizes state-of-the-art cryptography.
 - **Gluetun**: A VPN client in a thin Docker container for multiple VPN providers.
 - **WG-Easy**: A web UI for WireGuard.
 - **DDNS Updater**: A tool to update dynamic DNS records.
+- **Tailscale**: A zero-config VPN that connects your devices using WireGuard.
+- **ZeroTier**: A zero-config VPN that connects your devices using WireGuard.
 
 ## Monitoring
 - **Uptime-Kuma**: A self-hosted monitoring tool like "Uptime Robot".
@@ -49,11 +58,14 @@
 - **Smokeping**: A latency monitoring tool.
 - **Glances**: A cross-platform monitoring tool for systems.
 - **Change Detection**: A tool for monitoring web pages for changes.
+- **Node Exporter**: A Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.
 
 ## Security 
 - **Authelia**: An authentication and authorization server providing 2-factor authentication and single sign-on (SSO).
 - **Socket Proxy**: A configurable proxy for Docker Socket.
 - **OAuth**: OAuth login from several providers, including Google OAuth 2.0.
+- **CrowdSec**: An open-source and collaborative security solution.
+- **CrowdSec Firewall Bouncer**: A CrowdSec bouncer for blocking IPs in your firewall.
 
 ## Dashboards
 - **Homepage**: A simple, standalone homepage for your server.
@@ -62,8 +74,9 @@
 - **Heimdall**: An application dashboard for organizing your web applications.
 - **Homarr**: A sleek, modern dashboard for managing your home server.
 
-## Books and Comics
+## Reading
 - **Kavita**: A self-hosted digital library management system.
+- **FreshRSS**: A self-hosted RSS feed aggregator.
 
 ## Databases
 - **Prometheus**: A monitoring system and time series database.
@@ -74,36 +87,53 @@
 - **Adminer**: A full-featured database management tool written in PHP.
 - **PgAdmin**: A web-based administration tool for PostgreSQL.
 - **phpMyAdmin**: A free software tool written in PHP, intended to handle the administration of MySQL over the web.
+- **Redis Commander**: A web-based management tool for Redis.
 
-## Smart Home
+## Smart Home and Automation
 - **Homebridge**: A lightweight Node.js server that emulates the iOS HomeKit API.
 - **Mosquitto**: An open-source message broker that implements the MQTT protocol.
 - **MQTTX Web**: A web-based MQTT 5.0 client tool.
+- **ESPHome**: A system to control ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.
+- **Node-RED**: A flow-based development tool for visual programming.
 
 ## Photo Management
 - **Piwigo**: A photo gallery software for the web.
+- **DigiKam**: A professional photo management application.
+- **Photoshow**: A simple photo gallery application.
 
 ## Docker Management
 - **Portainer**: A lightweight management UI which allows you to easily manage your Docker environments.
 - **Docker Garbage Collection**: A tool for cleaning up unused Docker containers, images, and volumes.
 - **DeUnhealth**: A tool to monitor and manage the health of your Docker containers.
+- **Dockwatch**: A monitoring tool for Docker containers.
+- **What's Up Docker (WUD)**: A tool to monitor and update your Docker containers.
+- **DweebUI**: A customizable web-based user interface for managing various Docker applications.
 
 ## File Management
 - **Nextcloud**: A suite of client-server software for creating and using file hosting services.
 - **Visual Studio Code Server**: A cloud-hosted version of Visual Studio Code.
+- **Cloud Commander**: A web-based file manager with console and editor.
+- **Double Commander**: A cross-platform open-source file manager with two panels side by side.
 
 ## Admin Tools
-- **Guacamole**: A clientless remote desktop gateway.
 - **IT-Tools**: A collection of useful tools for IT professionals.
 - **ShellInABox**: HTML5 web-based Linux Terminal.
 - **CyberChef**: A web app for encryption, encoding, compression, and data analysis.
+- **GPTWOL**: Wake On LAN Docker GUI.
+
+## Remote Access
+- **Guacamole**: A clientless remote desktop gateway.
+- **Chromium**: An open-source web browser project.
+
+## Social 
+- **The Lounge**: A self-hosted web IRC client.
+
+## Password Management
+- **Vaultwarden**: A lightweight, self-hosted password manager.
 
 ## Other Utilities
 - **Resilio Sync**: A fast, reliable file and folder synchronization tool.
 - **Baikal**: A lightweight CalDAV+CardDAV server.
-- **Chromium**: An open-source web browser project.
-- **FreshRSS**: A self-hosted RSS feed aggregator.
-- **The Lounge**: A self-hosted web IRC client.
-- **Node-RED**: A flow-based development tool for visual programming.
 - **Grocy**: A web-based self-hosted groceries and household management solution.
-- **Vaultwarden**: A lightweight, self-hosted password manager.
+- **Flaresolverr**: A proxy server to bypass Cloudflare protection.
+- **Theme Park**: A tool for creating and managing themes for various applications.

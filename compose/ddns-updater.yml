@@ -9,7 +9,6 @@ services:
     profiles: ["core", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$DDNSUPDATER_PORT:8000"
     volumes:

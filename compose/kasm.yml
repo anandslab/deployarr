@@ -8,7 +8,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "3000:3000"
       - "$KASM_PORT:443"

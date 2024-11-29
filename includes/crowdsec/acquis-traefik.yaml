@@ -1,0 +1,4 @@
+filenames:
+  - /logs/HOSTNAME-PLACEHOLDER/traefik/*.log
+labels:
+  type: traefik

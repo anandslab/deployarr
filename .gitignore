@@ -1,26 +1,23 @@
 *
 */
 
+!deployarr_v5.3.app 
+!deployarr_v5.3-arm.app 
+
 !.gitignore
-!README.md
-!CHANGELOG.md
-!LICENSE
 !announcement
+!CHANGELOG.md
 !latest-version
-!deployarr_v4.6.1.app
-!deployarr_v4.6.1-arm.app
-!deployarr_v5.0.app 
-!deployarr_v5.0-arm.app 
-!APPS.md
-!v4-to-v5-migration.md
+!LICENSE
+!README.md
 
 !compose
 compose/*
 !compose/*.yml
 
-!scripts
-scripts/*
-!scripts/*.sh
+!docs
+docs/*
+!docs/*.md
 
 !images
 !images/*
@@ -29,6 +26,10 @@ scripts/*
 !includes
 !includes/*
 !includes/*/*
+
+!scripts
+scripts/*
+!scripts/*.sh
 
 !archives
 archives/*
@@ -43,4 +44,3 @@ archives/deployarr_v4/compose/*
 !archives/deployarr_v4/scripts
 archives/deployarr_v4/scripts/*
 !archives/deployarr_v4/scripts/*.sh
-

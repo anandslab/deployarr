@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     user: $PUID:$PGID
     # DEVICES-GPU-PLACEHOLDER-DO-NOT-DELETE
     ports:

@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$NAVIDROME_PORT:4533"
     user: $PUID:$PGID

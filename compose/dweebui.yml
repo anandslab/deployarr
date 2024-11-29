@@ -1,0 +1,21 @@
+services:
+  # DweebUI - WebUI for Docker Management
+  dweebui:
+    image: lllllllillllllillll/dweebui
+    container_name: dweebui
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$DWEEBUI_PORT:8000"
+    volumes:
+      - $DOCKERDIR/appdata/dweebui:/app/config
+      # Docker socket
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      PORT: 8000 # Leave it as-is
+      SECRET: $DWEEBUI_SECRET
+    # DOCKER-LABELS-PLACEHOLDER

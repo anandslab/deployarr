@@ -7,8 +7,8 @@ After=network-online.target
 Type=notify
 ExecStart=/usr/bin/rclone mount REMOTE-NAME-PLACEHOLDER: REMOTE-MOUNTPOINT-PLACEHOLDER \
 #--read-only \
---config /home/USERNAME-PLACEHOLDER/docker/appdata/rclone/rclone.conf \
---log-file=/home/USERNAME-PLACEHOLDER/docker/logs/HOSTNAME-PLACEHOLDER/rclone-REMOTE-NAME-PLACEHOLDER.log \
+--config DOCKER-FOLDER-PLACEHOLDER/appdata/rclone/rclone.conf \
+--log-file=DOCKER-FOLDER-PLACEHOLDER/logs/HOSTNAME-PLACEHOLDER/rclone-REMOTE-NAME-PLACEHOLDER.log \
 --log-level NOTICE \
 --allow-other \
 --no-modtime \

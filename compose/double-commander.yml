@@ -1,0 +1,26 @@
+services:
+  # Double Commander - File Manager
+  double-commander:
+    image: lscr.io/linuxserver/doublecommander:latest
+    container_name: double-commander
+    security_opt:
+      - no-new-privileges:true
+    restart: "unless-stopped"
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$DOUBLECOMMANDER_PORT:3000" # HTTP
+    #   - 3001:3001 # HTTPS
+    # DEVICES-GPU-PLACEHOLDER-DO-NOT-DELETE
+    volumes:
+      - $DOCKERDIR/appdata/double-commander:/config
+      - $USERDIR:/data/$PRIMARY_USERNAME
+      # - $MEDIADIR1:/data/media1
+      # - $MEDIADIR2:/data/media2
+      # - $MEDIADIR3:/data/media3
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+    # DOCKER-LABELS-PLACEHOLDER

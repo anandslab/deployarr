@@ -1,4 +1,37 @@
 <h3>Releases</h3>
+
+<h5>v5.2 - November 7, 2024</h5>
+Total Supported Apps: 101
+<ul>
+<li>NEW: Added DigiKam, Redis Commander, PHotoshow, Node Exporter, Funkwhale, Gonic, GPTWOL, CrowdSec, and CrowdSec Firewall Bouncer.</li>
+<li>ENHANCEMENT: Deployarr PIN now saved locally and shown in About menu, in case you forget. To change it, just reset it.</li>
+<li>FIX: DWEEBUI_SECRET not found error.</li>
+<li>Other minor improvements and fixes.</li>
+<li>Next few releases will focus on stability (e.g. on Debian 12) and improvements (e.g. Guacamole).</li>
+</ul>
+
+<h5>v5.1 - October 30, 2024</h5>
+Total Supported Apps: 91
+<ul>
+<li>NEW: Added DweebUI, Cloud Commander, Double Commander, Theme Park, Notifiarr, Flaresolverr, ESPHome, Emby, Dockwatch, Lollypop, qBittorrent without VPN, Transmission without VPN, Tailscale, What's Up Docker (WUD), and ZeroTier.</li>
+<li>NEW: Changed Plex transcode folder path to match Jellyfin/Emby.</li>
+<li>NEW: qBittorrent is now without VPN by default. There is a separate menu item to install it with VPN.</li>
+<li>FIX: Bash Aliases was not working with custom Docker Folder.</li>
+<li>FIX: Messages after app installation was showing wrong port number in certain situations.</li>
+<li>ENHANCEMENT: Improved port availability check. On top of occupied ports on the system, .env will now be checked for ports already defined for other apps.</li>
+</ul>
+
+<h5>v5.0.1 - September 30, 2024</h5>
+<ul>
+<li>FIX: System checks was not being marked as done after completion. Required exiting and relaunching Deployarr.</li>
+<li>FIX: Better Rclone remotes detection.</li>
+<li>FIX: Rclone installation was failing due to unzip requirement.</li>
+<li>FIX: Running the script with sudo failed on Debian due to lack of sudo package by default.</li>
+<li>FIX: All apps that required MariaDB databases (Speedtest Tracker, NextCloud, and Gaucamole) failed on migration. Existing databases will now be recognized instead of force creating new ones.</li>
+<li>FIX: Traefik will respect existing acme.json file upon migration/reinstallation.</li>
+<li>FIX: SSL certificates (acme.json) were being emptied unnecessarily.</li>
+</ul>
+
 <h5>v5.0 - September 29, 2024</h5>
 Total Supported Apps: 76
 
@@ -7,7 +40,7 @@ Total Supported Apps: 76
 <li>NEW: Local mode for installing apps for local access only (no reverse proxy). This should now remove the Traefik requirement and allow multi-server setups.</li>
 <li>NEW: Traefik Exposure Modes. Simple - all apps behind Traefik accessible internally and externally. Advanced - control over exposing apps internally, externally, or both. </li>
 <li>NEW: By default Traefik will use file providers to expose apps via reverse proxy. Previously this was done using Docker labels. Some apps (e.g. Traefik, OAuth, and Authelia), will continue to use labels. </li>
-<li>NEW: Autopager - New Homepage based dashboard that auto-populates as you install new apps. It works but will evolve over time.</li>
+<li>NEW: Deployarr Dashboard - New Homepage based dashboard that auto-populates as you install new apps. It works but will evolve over time.</li>
 <li>NEW: Recommended order of steps for various setups.</li>
 <li>NEW: License changes. There are now 3 license types: Basic, Plus, and Pro. Basic allows local-only installs. See License Types description in About menu.</li>
 <li>NEW: Deployarr pin reset feature.</li>

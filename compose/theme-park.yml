@@ -1,0 +1,21 @@
+services:
+  # Theme Park - Themes for various Docker Apps
+  theme-park:
+    image: ghcr.io/themepark-dev/theme.park
+    container_name: theme-park
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default    
+    ports:
+      - "$THEMEPARK_PORT:80" 
+    volumes:
+      - $DOCKERDIR/appdata/theme-park:/config #optional
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+      # - TP_URLBASE=themepark #optional
+    # DOCKER-LABELS-PLACEHOLDER

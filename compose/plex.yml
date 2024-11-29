@@ -9,7 +9,6 @@ services:
     profiles: ["media", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$PLEX_PORT:32400/tcp"
       - "3005:3005/tcp"
@@ -27,7 +26,7 @@ services:
       # - $MEDIADIR1:/data/media1
       # - $MEDIADIR2:/data/media2
       # - $MEDIADIR3:/data/media3
-      - /dev/shm:/transcode
+      - /dev/shm:/data/transcode
     environment:
       TZ: $TZ
       HOSTNAME: $PLEX_SERVER_NAME

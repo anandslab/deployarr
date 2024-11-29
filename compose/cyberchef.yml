@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$CYBERCHEF_PORT:8000"
     # DOCKER-LABELS-PLACEHOLDER

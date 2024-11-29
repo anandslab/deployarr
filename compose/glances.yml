@@ -10,7 +10,6 @@ services:
     # privileged: true # Only for VM
     networks:
       - default
-      # - t3_proxy
       - socket_proxy
     ports:
       - "$GLANCES_PORT:61208"

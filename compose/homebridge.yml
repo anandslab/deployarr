@@ -7,11 +7,7 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["apps", "all"]
-    networks:
-      - default
-      # - t3_proxy
-    ports:
-      - "$HOMEBRIDGE_PORT:8581"
+    network_mode: host
     volumes:
       - $DOCKERDIR/appdata/homebridge:/homebridge
     # DOCKER-LABELS-PLACEHOLDER

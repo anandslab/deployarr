@@ -1,0 +1,26 @@
+services:
+  # Gonic - Music Server
+  gonic:
+    container_name: gonic
+    image: sentriz/gonic:latest
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+    profiles: ["media", "all"]
+    networks:
+      - default
+    ports:
+      - "$GONIC_PORT:80"
+    volumes:
+      - $DOCKERDIR/appdata/gonic/data:/data
+      - $DOCKERDIR/appdata/gonic/podcasts:/podcasts
+      - $DOCKERDIR/appdata/gonic/cache:/cache
+      - $DOCKERDIR/appdata/gonic/playlists:/playlists
+      # - $MEDIADIR1:/data/media1
+      # - $MEDIADIR2:/data/media2
+      # - $MEDIADIR3:/data/media3
+    environment:
+      - PUID=$PUID
+      - PGID=$PGID
+      - TZ=$TZ
+    # DOCKER-LABELS-PLACEHOLDER

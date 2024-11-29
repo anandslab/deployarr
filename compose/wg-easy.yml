@@ -9,7 +9,6 @@ services:
     profiles: ["core", "all"]
     networks:
       - default
-      # - t3_proxy
     cap_add:
       - NET_ADMIN
       - SYS_MODULE

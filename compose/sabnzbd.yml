@@ -10,7 +10,6 @@ services:
     profiles: ["apps", "downloads", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$SABNZBD_PORT:8080" 
     volumes:

@@ -9,7 +9,6 @@ services:
     profiles: ["apps", "downloads", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$NZBGET_PORT:6789" 
     volumes:

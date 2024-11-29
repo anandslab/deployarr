@@ -1,0 +1,25 @@
+services:
+  # Cloud Commander - web file manager
+  cloud-commander:
+    image: coderaiser/cloudcmd
+    container_name: cloud-commander
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$CLOUDCOMMANDER_PORT:8000"
+    volumes:
+      - $DOCKERDIR/appdata/cloud-commander:/root
+      - $USERDIR:/data/$PRIMARY_USERNAME
+      # - $MEDIADIR1:/data/media1
+      # - $MEDIADIR2:/data/media2
+      # - $MEDIADIR3:/data/media3
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    # DOCKER-LABELS-PLACEHOLDER
+  

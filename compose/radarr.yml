@@ -9,7 +9,6 @@ services:
     profiles: ["media", "starr", "all"]
     networks:
       - default
-      # - t3_proxy
     ports:
       - "$RADARR_PORT:7878"
     volumes:

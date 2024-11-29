@@ -1,0 +1,29 @@
+services:
+  # Emby - Media Server
+  emby:
+    image: emby/embyserver:latest
+    container_name: emby
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+    profiles: ["media", "all"]
+    networks:
+      - default
+    ports:
+      - "$EMBY_PORT:8096/tcp"
+      - "8920:8920/tcp"
+    # DEVICES-GPU-PLACEHOLDER-DO-NOT-DELETE
+    volumes:
+      - $DOCKERDIR/appdata/emby:/config
+      - $DOWNLOADSDIR:/data/downloads
+      # - $MEDIADIR1:/data/media1
+      # - $MEDIADIR2:/data/media2
+      # - $MEDIADIR3:/data/media3
+      - /dev/shm:/data/transcode
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      TZ: $TZ
+      HOSTNAME: "$EMBY_SERVER_NAME"
+      UID: $PUID
+      GID: $PGID    
+    # DOCKER-LABELS-PLACEHOLDER

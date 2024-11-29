@@ -1,0 +1,13 @@
+name: crowdsecurity/whitelists
+description: "Whitelist events from own/known IP addresses"
+whitelist:
+  reason: "Trusted IPs"
+  ip:
+    - "WAN-IP-PLACEHOLDER" # WAN IP
+    - "127.0.0.1" # Local Host
+  cidr:
+    - "192.168.0.0/16" # Local IPs 
+    - "10.0.0.0/8" # Local IPs
+    - "172.16.0.0/12" # Local/Docker IPs
+    - "fe80::/10" # Local IPs
+    - "fc00::/7" # Local IPs
