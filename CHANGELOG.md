@@ -6,7 +6,7 @@ Total Supported Apps: 111
 <li>NEW: Added Dozzle Agent, Kasm, Komga, Calibre, Calibre-Web, Organizr, Home Assistant Core, Mylar3, Remmina, and Stirling PDF.</li>
 <li>ENHANCEMENT: Made the wait time for Traefik SSL certs a bit interesting (rerun Traefik setup to find out).</li>
 <li>ENHANCEMENT: Traefik wait time now includes DNS propagation check messages.</li>
-<li>ENCHANCEMENT: Improved Traefik support for existing SSL certificates and get user to confirm if they want to use them.</li>
+<li>ENHANCEMENT: Improved Traefik support for existing SSL certificates and get user to confirm if they want to use them.</li>
 <li>ENHANCEMENT: License status is now intelligently extended, without having to reverify every few days.</li>
 <li>NEW: Comics folder to suppor the new Komga, Calibre and Calibre-Web apps.</li>
 <li>NEW: Traefik dashboard is now exposed on port 8080 by default.</li>
@@ -14,7 +14,7 @@ Total Supported Apps: 111
 <li>ENHANCEMENT: Some path changes to be consistent. e.g Books folder is now /data/books in Kavita. Changed VSCode mount point inside the container. </li>
 <li>ENHANCEMENT: When required now "[POST-INSTALL NOTES]" are now displayed after an app is installed. Be sure to read them.</li>
 <li>ENHANCEMENT: Numerous AI-suggested syntax and logic improvements.</li>
-<li>ENCHANCEMENT: Reliability of apps dependent on MariaDB (e.g. Nextcloud, Guacamole, Speedtest-Tracker) improved.</li>
+<li>ENHANCEMENT: Reliability of apps dependent on MariaDB (e.g. Nextcloud, Guacamole, Speedtest-Tracker) improved.</li>
 <li>FIX: Inconsistencies with MariaDB root password, causing issues. Renamed mysql_root_password to mariadb_root_password. May require manual updates to some app compose files.</li>
 <li>FIX: Some Docker bash aliases were not working when using custom Docker folder.</li>
 <li>FIX: secrets defintion in main docker compose was not working as expected, causing yaml syntax errors. Few other minor reliability improvements with secrets.</li>
