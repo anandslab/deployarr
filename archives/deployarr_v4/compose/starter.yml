@@ -1,0 +1,25 @@
+########################### NETWORKS
+# You may customize the network subnets (192.168.x.0/24) below as you please.
+networks:
+  default:
+    driver: bridge
+  socket_proxy:
+    name: socket_proxy
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.91.0/24
+  # NETWORKS-PLACEHOLDER-DO-NOT-DELETE
+
+########################### SECRETS
+# secrets:
+  # basic_auth_credentials:
+    # file: $DOCKERDIR/secrets/basic_auth_credentials
+  # SECRETS-PLACEHOLDER-DO-NOT-DELETE
+
+include:
+  ########################### SERVICES
+  # HOSTNAME defined in .env file
+
+  # - compose/$HOSTNAME/custom.yml
+  # SERVICE-PLACEHOLDER-DO-NOT-DELETE

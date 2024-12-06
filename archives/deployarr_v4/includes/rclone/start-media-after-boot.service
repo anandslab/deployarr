@@ -1,0 +1,9 @@
+[Unit]
+Description=start-media-after-boot
+After=network.target
+
+[Service]
+ExecStart=SMAB-PATH-PLACEHOLDER
+
+[Install]
+WantedBy=default.target
