@@ -16,9 +16,9 @@ services:
       MYSQL_HOSTNAME: mariadb
       MYSQL_PORT: 3306
       MYSQL_DATABASE: guacamole
-      MYSQL_USER_FILE: /run/secrets/guac_mysql_user
-      MYSQL_PASSWORD_FILE: /run/secrets/guac_mysql_password
+      MYSQL_USER_FILE: /run/secrets/guac_mariadb_user
+      MYSQL_PASSWORD_FILE: /run/secrets/guac_mariadb_password
     secrets:
-      - guac_mysql_user
-      - guac_mysql_password
+      - guac_mariadb_user
+      - guac_mariadb_password
     # DOCKER-LABELS-PLACEHOLDER

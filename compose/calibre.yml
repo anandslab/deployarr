@@ -1,0 +1,26 @@
+services:
+  # Calibre - Ebook Manager
+  calibre:
+    image: lscr.io/linuxserver/calibre:latest
+    container_name: calibre
+    security_opt:
+      - seccomp:unconfined #optional
+      - no-new-privileges:true
+    restart: "no"
+    profiles: ["media", "all"]
+    networks:
+      - default
+    ports:
+      - "$CALIBRE_PORT:8080" # Desktop GUI HTTP
+      # - "8181:8181" # Desktop GUI HTTPS
+      - "$CALIBRE_WEBSERVER_PORT:8081" # Web Server GUI
+    volumes:
+      - $DOCKERDIR/appdata/calibre:/config
+      - $BOOKSDIR:/data/books
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      # PASSWORD: $CALIBRE_PASSWORD #optional
+      # CLI_ARGS: #optional
+    # DOCKER-LABELS-PLACEHOLDER

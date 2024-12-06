@@ -14,9 +14,9 @@ services:
       - $DOCKERDIR/appdata/mariadb/data:/var/lib/mysql
       - $DOCKERDIR/appdata/mariadb/config:/etc/mysql
     environment:
-      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/mariadb_root_password
     secrets:
-      - mysql_root_password
+      - mariadb_root_password
     healthcheck:
       test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
       start_period: 1m

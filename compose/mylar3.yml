@@ -1,0 +1,22 @@
+services:
+  # Mylar3 - Automated Comic Book Downloader (cbr/cbz)
+  mylar3:
+    image: lscr.io/linuxserver/mylar3:latest
+    container_name: mylar3
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+    profiles: ["media", "all"]
+    networks:
+      - default
+    ports:
+     - "$MYLAR3_PORT:8090" 
+    volumes:
+      - $DOCKERDIR/appdata/mylar3:/config
+      - $COMICSDIR:/comics
+      - $DOWNLOADSDIR:/data/downloads 
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    # DOCKER-LABELS-PLACEHOLDER

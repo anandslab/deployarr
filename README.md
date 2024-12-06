@@ -7,14 +7,14 @@ Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificat
 
 [Full List of Apps](docs/APPS.md)
 
-## Supported Apps - 101 (and increasing)
+## Supported Apps - 111 (and increasing)
 ![Apps Supported by Deployarr](images/v5/Deployarr%20App%20Logos%20100%20Supported%20Apps.png)
 
 As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.
 
 # Features
 <ul>
-<li>100+ Total Apps</li>
+<li>110+ Total Apps</li>
 <li>Docker Environment Setup (FREE) - as in my guides</li>
 <li>System Checks (FREE)</li>
 <li>Domain Checks to prepare for Traefik (FREE)</li>
@@ -37,13 +37,13 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.2.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.3.app
 ```
 ```
-chmod +x deployarr_v5.2.app
+chmod +x deployarr_v5.3.app
 ```
 ```
-./deployarr_v5.2.app
+./deployarr_v5.3.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
@@ -52,8 +52,8 @@ Use the <strong>-arm.app</strong> version of the file for Raspberry Pi.
 
 [How to Migrate from v4.6.1 to v5?](docs/v4-to-v5-migration.md)
 
-## Deployarr Stats - Jan to Nov 2024
-![Jan to Nov, 2024](images/v5/deployarr%20stats%20nov%202024.png)
+## Deployarr Stats - Jan to Dec 2024
+![Jan to Dec, 2024](images/v5/deployarr%20stats%20dec%202024.png)
 
 # References
 More information on Deployarr and how to use it:

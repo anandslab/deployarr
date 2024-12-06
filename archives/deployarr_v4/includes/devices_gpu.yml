@@ -1,2 +1,0 @@
-    devices:
-      - /dev/dri:/dev/dri # for harware transcoding

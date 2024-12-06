@@ -1,5 +1,0 @@
-
-# Anand's Docker Bash Aliases added by Deployarr
-if [ -f ~/docker/shared/config/docker_aliases ]; then
-    . ~/docker/shared/config/docker_aliases
-fi

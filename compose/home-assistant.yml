@@ -1,0 +1,19 @@
+services:
+  # Home Assistant Core - Home Automation
+  home-assistant:
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    container_name: home-assistant
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["core", "all"]
+    network_mode: host
+    # devices:
+    #   - /dev/ttyUSB0:/dev/ttyUSB0 # Uncomment if you have USB devices
+    #   - /dev/ttyUSB1:/dev/ttyUSB1 # Uncomment if you have USB devices
+    #   - /dev/ttyACM0:/dev/ttyACM0 # Uncomment if you have USB devices
+    privileged: true
+    volumes:
+      - $DOCKERDIR/appdata/home-assistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    # DOCKER-LABELS-PLACEHOLDER

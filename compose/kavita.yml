@@ -13,7 +13,7 @@ services:
      - "$KAVITA_PORT:5000" 
     volumes:
       - $DOCKERDIR/appdata/kavita:/config
-      - $BOOKSDIR:/data
+      - $BOOKSDIR:/data/books
     environment:
       PUID: $PUID
       PGID: $PGID

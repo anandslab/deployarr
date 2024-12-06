@@ -1,0 +1,23 @@
+services:
+  # Stirling PDF - Self-hosted PDF Manipulation
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:latest
+    container_name: stirling-pdf
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default    
+    ports:
+      - "$STIRLINGPDF_PORT:8080" 
+    volumes:
+      - $DOCKERDIR/appdata/stirling-pdf/trainingData:/usr/share/tessdata # Required for extra OCR languages
+      - $DOCKERDIR/appdata/stirling-pdf/extraConfigs:/configs
+#      - $DOCKERDIR/appdata/stirling-pdf/customFiles:/customFiles/
+#      - $DOCKERDIR/appdata/stirling-pdf/logs:/logs/
+    environment:
+      DOCKER_ENABLE_SECURITY: false
+      INSTALL_BOOK_AND_ADVANCED_HTML_OPS: false
+      LANGS: en_US
+    # DOCKER-LABELS-PLACEHOLDER

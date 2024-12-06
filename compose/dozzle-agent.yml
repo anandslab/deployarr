@@ -1,0 +1,26 @@
+services:
+  # Dozzle Agent - Remote Docker Log Monitoring
+  dozzle-agent:
+    image: amir20/dozzle:latest
+    container_name: dozzle-agent
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+      - socket_proxy
+    ports:
+      - "$DOZZLEAGENT_PORT:7007"
+    command: agent
+    healthcheck:
+      test: ["CMD", "/dozzle", "healthcheck"]
+      interval: 5s
+      retries: 5
+      start_period: 5s
+      start_interval: 5s
+    environment:
+      DOCKER_HOST: tcp://socket-proxy:2375
+    # volumes:
+    #  - /var/run/docker.sock:/var/run/docker.sock # Use Docker Socket Proxy instead for improved security
+    # DOCKER-LABELS-PLACEHOLDER

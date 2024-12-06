@@ -13,7 +13,7 @@ services:
       - "$VSCODE_PORT:8443"
     volumes:
       - $DOCKERDIR/appdata/vscode:/config
-      - $USERDIR:/data/docker
+      - $USERDIR:/data/$PRIMARY_USERNAME
     environment:
       TZ: $TZ
       PUID: $PUID

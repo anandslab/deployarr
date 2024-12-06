@@ -1,5 +1,11 @@
 export PS1="[\[\e[32m\]\u\[\e[m\]@\[\e[33m\]\h\[\e[m\]: \\$\[\e[36m\]\w\[\e[m\]]\\$ "
 
+if [[ -f "$DEPLOYARR_CONFIG/deployarr_constants" ]]; then
+    source <(sudo cat $DEPLOYARR_CONFIG/deployarr_constants)
+else
+    DOCKER_FOLDER=$HOME/docker
+fi
+
 # DOCKER - All Docker commands start with "d" AND Docker Compose commands start with "dc"
 alias dstop='sudo docker stop $(sudo docker ps -a -q)' # usage: dstop container_name
 alias dstopall='sudo docker stop $(sudo docker ps -aq)' # stop all containers
@@ -18,7 +24,7 @@ alias dlogsize='sudo du -ch $(sudo docker inspect --format='{{.LogPath}}' $(sudo
 alias dips="sudo docker ps -q | xargs -n 1 sudo docker inspect -f '{{.Name}}%tab%{{range .NetworkSettings.Networks}}{{.IPAddress}}%tab%{{end}}' | sed 's#%tab%#\t#g' | sed 's#/##g' | sort | column -t -N NAME,IP\(s\) -o $'\t'"
 
 # DOCKER COMPOSE TRAEFIK - All docker-compose commands start with "dc" 
-alias dcrun='sudo docker compose --profile all -f $HOME/docker/docker-compose-$HOSTNAME.yml'
+alias dcrun='sudo docker compose --profile all -f $DOCKER_FOLDER/docker-compose-$HOSTNAME.yml'
 alias dclogs='dcrun logs -tf --tail="50" ' # usage: dclogs container_name
 alias dcup='dcrun up -d --build --remove-orphans' # up the stack
 alias dcdown='dcrun down --remove-orphans' # down the stack
@@ -27,7 +33,7 @@ alias dcstop='dcrun stop' # usage: dcstop container_name
 alias dcrestart='dcrun restart ' # usage: dcrestart container_name
 alias dcstart='dcrun start ' # usage: dcstart container_name
 alias dcpull='dcrun pull' # usage: dcpull to pull all new images or dcpull container_name
-alias traefiklogs='tail -f $HOME/docker/logs/$HOSTNAME/traefik/traefik.log' # tail traefik logs
+alias traefiklogs='tail -f $DOCKER_FOLDER/logs/$HOSTNAME/traefik/traefik.log' # tail traefik logs
 
 # CROWDSEC
 alias cscli='dcrun exec -t crowdsec cscli'

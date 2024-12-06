@@ -16,7 +16,7 @@ services:
       - PMA_HOST=mariadb
       - PMA_PORT=3306
       #- PMA_ARBITRARY=1
-      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql_root_password
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mariadb_root_password
     secrets:
-      - mysql_root_password
+      - mariadb_root_password
     # DOCKER-LABELS-PLACEHOLDER

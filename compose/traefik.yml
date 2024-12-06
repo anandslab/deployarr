@@ -20,7 +20,7 @@ services:
       - --entrypoints.web-internal.address=:80
       - --entrypoints.websecure-external.address=:444
       - --entrypoints.websecure-internal.address=:443
-      # - --entrypoints.traefik.address=:8080
+      - --entrypoints.traefik.address=:8080
       - --entrypoints.web-external.http.redirections.entrypoint.to=websecure-external
       - --entrypoints.web-external.http.redirections.entrypoint.scheme=https
       - --entrypoints.web-external.http.redirections.entrypoint.permanent=true
@@ -29,7 +29,7 @@ services:
       - --entrypoints.web-internal.http.redirections.entrypoint.permanent=true
       - --api=true
       - --api.dashboard=true
-      # - --api.insecure=true
+      - --api.insecure=true
       # - --serversTransport.insecureSkipVerify=true
       # Allow these IPs to set the X-Forwarded-* headers - Cloudflare IPs: https://www.cloudflare.com/ips/
       - --entrypoints.websecure-external.forwardedHeaders.trustedIPs=$CLOUDFLARE_IPS,$LOCAL_IPS
@@ -74,7 +74,7 @@ services:
       - "81:81"
       - "443:443"
       - "444:444"
-      # - "8080:8080"
+      - "8080:8080"
     volumes:
       - $DOCKERDIR/appdata/traefik3/rules/$HOSTNAME:/rules 
       # - /var/run/docker.sock:/var/run/docker.sock:ro # Use Docker Socket Proxy instead for improved security

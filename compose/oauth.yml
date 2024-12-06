@@ -33,7 +33,6 @@ services:
     labels:
       - "traefik.enable=true"
       # HTTP Routers
-      - "traefik.http.routers.oauth-rtr.tls=true"
       - "traefik.http.routers.oauth-rtr.entrypoints=websecure-internal,websecure-external"
       - "traefik.http.routers.oauth-rtr.rule=Host(`oauth.$DOMAINNAME_1`)"
       # Middlewares

@@ -1,4 +1,4 @@
- # Deployarr Apps - 101 (and increasing)
+ # Deployarr Apps - 111 (and increasing)
 
 ## Reverse Proxy
 - **Traefik**: A modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
@@ -53,6 +53,7 @@
 - **Grafana**: An open-source platform for monitoring and observability.
 - **cAdvisor**: Analyzes and exposes resource usage and performance data from running containers.
 - **Dozzle**: A real-time log viewer for Docker containers.
+- **Dozzle Agent**: Enable remote log viewing for Docker containers.
 - **Scrutiny**: A web UI for smartd S.M.A.R.T monitoring.
 - **Speedtest-Tracker**: A self-hosted internet speed tracking application.
 - **Smokeping**: A latency monitoring tool.
@@ -73,9 +74,14 @@
 - **Dashy**: A self-hosted dashboard for managing your server.
 - **Heimdall**: An application dashboard for organizing your web applications.
 - **Homarr**: A sleek, modern dashboard for managing your home server.
+- **Organizr**: A web-based tool that makes organizing your server applications simple.
 
 ## Reading
 - **Kavita**: A self-hosted digital library management system.
+- **Calibre-Web**: A web app providing a clean interface for browsing, reading, and downloading eBooks.
+- **Calibre**: A powerful and easy-to-use e-book manager.
+- **Komga**: A media server for comics/mangas/BDs with a web-based reader.
+- **Mylar3**: An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet, and torrents.
 - **FreshRSS**: A self-hosted RSS feed aggregator.
 
 ## Databases
@@ -90,6 +96,7 @@
 - **Redis Commander**: A web-based management tool for Redis.
 
 ## Smart Home and Automation
+- **Home Assistant Core**: An open-source home automation platform. Core version (no Add-on support).
 - **Homebridge**: A lightweight Node.js server that emulates the iOS HomeKit API.
 - **Mosquitto**: An open-source message broker that implements the MQTT protocol.
 - **MQTTX Web**: A web-based MQTT 5.0 client tool.
@@ -124,6 +131,8 @@
 ## Remote Access
 - **Guacamole**: A clientless remote desktop gateway.
 - **Chromium**: An open-source web browser project.
+- **Kasm**: A web-based workspace / remote desktop solution.
+- **Remmina**: A remote desktop client written in GTK.
 
 ## Social 
 - **The Lounge**: A self-hosted web IRC client.
@@ -137,3 +146,4 @@
 - **Grocy**: A web-based self-hosted groceries and household management solution.
 - **Flaresolverr**: A proxy server to bypass Cloudflare protection.
 - **Theme Park**: A tool for creating and managing themes for various applications.
+- **Stirling PDF**: A self-hosted PDF manipulation tool.

@@ -1,8 +1,0 @@
-# Enable the following for Duo Push Notification support
-#duo_api:
-#  disable: false
-#  hostname: 
-#  integration_key: 
-#  enable_self_enrollment: true
-#  # This secret can also be set using the env variables AUTHELIA_DUO_API_SECRET_KEY_FILE
-#  # secret_key: SECRET_KEY_GOES_HERE # use docker secret file instead AUTHELIA_DUO_API_SECRET_KEY_FILE

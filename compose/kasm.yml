@@ -9,8 +9,8 @@ services:
     networks:
       - default
     ports:
-      - "3000:3000"
-      - "$KASM_PORT:443"
+      - "$KASM_INSTALLATION_PORT:3000" # Installation Wizard HTTPS
+      - "$KASM_PORT:443" # Web HTTPS
     volumes:
       - $DOCKERDIR/appdata/kasm/data:/opt
       - $DOCKERDIR/appdata/kasm/profiles:/profiles #optional
