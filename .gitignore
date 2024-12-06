@@ -10,6 +10,8 @@
 !latest-version
 !LICENSE
 !README.md
+dpf*
+*.sh 
 
 !compose
 compose/*
