@@ -1,5 +1,10 @@
 <h3>Releases</h3>
 
+<h5>v5.3.1 - December 18, 2024</h5>
+<ul>
+<li>FIX: syntax error: operand expected (error token is "+").</li>
+</ul>
+
 <h5>v5.3 - December 6, 2024</h5>
 Total Supported Apps: 111
 <ul>
