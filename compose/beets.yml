@@ -1,0 +1,24 @@
+services:
+  # Beets - Music Manager and MusicBrainz Tagger
+  beets:
+    image: lscr.io/linuxserver/beets:latest
+    container_name: beets
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+    profiles: ["media", "all"]
+    networks:
+      - default
+    volumes:
+      - /path/to/beets/config:/config
+      - $DOWNLOADSDIR:/downloads
+      # - $MEDIADIR1:/data/media1
+      # - $MEDIADIR2:/data/media2
+      # - $MEDIADIR3:/data/media3
+    ports:
+      - "$BEETS_PORT:8337"
+    environment:
+      TZ: $TZ
+      PUID: $PUID
+      PGID: $PGID
+    # DOCKER-LABELS-PLACEHOLDER

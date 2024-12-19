@@ -1,0 +1,42 @@
+services:
+  authentik-worker:
+    image: ghcr.io/goauthentik/server:2024.12.0
+    container_name: authentik-worker
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["core", "all"]
+    networks:
+      - default
+      - t3_proxy
+      - socket_proxy
+    command: worker
+    user: ${PUID}:${PGID}
+    depends_on:
+      postgresql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - DOCKER_HOST
+      - AUTHENTIK_REDIS__HOST
+      - AUTHENTIK_POSTGRESQL__HOST
+      - AUTHENTIK_POSTGRESQL__NAME
+      - AUTHENTIK_POSTGRESQL__USER
+      - AUTHENTIK_POSTGRESQL__PASSWORD
+      - AUTHENTIK_SECRET_KEY
+      - AUTHENTIK_LOG_LEVEL=info # debug, info, warning, error, trace
+      - AUTHENTIK_DISABLE_STARTUP_ANALYTICS=true
+      - AUTHENTIK_DISABLE_UPDATE_CHECK=false
+      - AUTHENTIK_ERROR_REPORTING__ENABLED=false
+      # - AUTHENTIK_COOKIE_DOMAIN
+    secrets:
+      - authentik_postgresql_user
+      - authentik_postgresql_password
+      - authentik_secret_key
+    volumes:
+      - $DOCKERDIR/appdata/authentik/media:/media
+      - $DOCKERDIR/appdata/authentik/custom-templates:/templates
+      # - $DOCKERDIR/appdata/authentik/geoip/data:/geoip # requires geoipupdate
+      # - /var/run/docker.sock:/var/run/docker.sock # Uncomment if NOT using socket-proxy
+      # - $DOCKERDIR/appdata/traefik3/cert_export:/certs:ro # If NOT using reverse proxy, manually map in certificates

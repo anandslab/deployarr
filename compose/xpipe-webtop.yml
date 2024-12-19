@@ -1,0 +1,20 @@
+services:
+  # XPipe Webtop - Web Desktop Environment
+  xpipe-webtop:
+    image: ghcr.io/xpipe-io/xpipe-webtop:latest
+    container_name: xpipe-webtop
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["core", "all"]
+    networks:
+      - default
+    ports:
+      - "$WEBTOP_PORT:3000" # HTTP
+      # - "3001:3001" # HTTPS
+    volumes:
+      - $DOCKERDIR/appdata/xpipe-webtop:/config
+      - /var/run/docker.sock:/var/run/docker.sock #optional
+    # environment:
+      # SUBFOLDER: / #optional
+    # DOCKER-LABELS-PLACEHOLDER

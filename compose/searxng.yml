@@ -1,0 +1,30 @@
+services:
+  # SearxNG - Privacy-respecting Metasearch Engine
+  searxng:
+    container_name: searxng
+    image: docker.io/searxng/searxng:latest
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - "$SEARXNG_PORT:8080"
+    volumes:
+      - $DOCKERDIR/appdata/searxng:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
+      - UWSGI_WORKERS=${SEARXNG_UWSGI_WORKERS:-4}
+      - UWSGI_THREADS=${SEARXNG_UWSGI_THREADS:-4}
+      - SEARXNG_REDIS_URL=redis://redis:6379/0
+      - SEARXNG_SECRET=${SEARXNG_SECRET}
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID

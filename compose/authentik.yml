@@ -1,0 +1,54 @@
+services:
+  authentik:
+    image: ghcr.io/goauthentik/server:2024.12.0
+    container_name: authentik
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["core", "all"]
+    networks:
+      - default
+      - t3_proxy
+    ports:
+      - "9000:9000"
+      - "9443:9443"
+    command: server
+    user: ${PUID}:${PGID}
+    depends_on:
+      postgresql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - AUTHENTIK_REDIS__HOST
+      - AUTHENTIK_POSTGRESQL__HOST
+      - AUTHENTIK_POSTGRESQL__NAME
+      - AUTHENTIK_POSTGRESQL__USER
+      - AUTHENTIK_POSTGRESQL__PASSWORD
+      - AUTHENTIK_SECRET_KEY
+      - AUTHENTIK_LOG_LEVEL=info # debug, info, warning, error, trace
+      - AUTHENTIK_DISABLE_STARTUP_ANALYTICS=true
+      - AUTHENTIK_DISABLE_UPDATE_CHECK=false
+      - AUTHENTIK_ERROR_REPORTING__ENABLED=false
+      # - AUTHENTIK_COOKIE_DOMAIN
+      # - AUTHENTIK_LISTEN__TRUSTED_PROXY_CIDRS=192.168.0.0/16,$SERVER_LAN_IP/32
+    secrets:
+      - authentik_postgresql_user
+      - authentik_postgresql_password
+      - authentik_secret_key
+    volumes:
+      - $DOCKERDIR/appdata/authentik/media:/media
+      - $DOCKERDIR/appdata/authentik/custom-templates:/templates
+      # - $DOCKERDIR/appdata/authentik/geoip/data:/geoip # requires geoipupdate
+    labels:
+      - "traefik.enable=true"
+      # HTTP Routers
+      - "traefik.http.routers.authentik-rtr.entrypoints=websecure-internal,websecure-external"
+      - "traefik.http.routers.authentik-rtr.rule=Host(`authentik.$DOMAINNAME_1`)"
+      # # Middlewares
+      - "traefik.http.routers.authentik-rtr.middlewares=chain-no-auth@file"
+      ## Individual Application forwardAuth regex (catch any subdomain using individual application forwardAuth)  
+      - "traefik.http.routers.authentik-output-rtr.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.${DOMAINNAME_1}`) && PathPrefix(`/outpost.goauthentik.io/`)"
+      # HTTP Services
+      - "traefik.http.routers.authentik-rtr.service=authentik-svc"
+      - "traefik.http.services.authentik-svc.loadbalancer.server.port=9000"

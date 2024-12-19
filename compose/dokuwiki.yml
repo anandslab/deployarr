@@ -1,0 +1,21 @@
+services:
+  # DokuWiki - Wiki Software
+  dokuwiki:
+    image: lscr.io/linuxserver/dokuwiki:latest
+    container_name: dokuwiki
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$DOKUWIKI_PORT:80"
+      # - "443:443" # optional HTTPS
+    volumes:
+      - $DOCKERDIR/appdata/dokuwiki:/config
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    # DOCKER-LABELS-PLACEHOLDER
