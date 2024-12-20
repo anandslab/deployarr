@@ -1,12 +1,13 @@
 services:
   # Redis - Key-value Store
   redis:
+    image: docker.io/library/redis:alpine
     container_name: redis
-    image: redis:latest
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["core", "all"]
+    command: --save 60 1 --loglevel warning
     healthcheck:
       test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
       start_period: 20s
@@ -15,10 +16,8 @@ services:
       timeout: 3s
     networks:
       - default
-    entrypoint: redis-server --appendonly yes --requirepass $REDIS_PASSWORD --save 60 1 --loglevel warning
     ports:
       - "$REDIS_PORT:6379"
     volumes:
-      - $DOCKERDIR/appdata/redis/data:/data
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
+      - $DOCKERDIR/appdata/redis:/data
+

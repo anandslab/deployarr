@@ -7,12 +7,12 @@ services:
       - no-new-privileges:true
     restart: unless-stopped
     profiles: ["core", "all"]
-    # healthcheck:
-    #   test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
-    #   start_period: 20s
-    #   interval: 30s
-    #   retries: 5
-    #   timeout: 5s
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d postgres -U $${POSTGRES_USER}"]
+      start_period: 20s
+      interval: 30s
+      retries: 5
+      timeout: 5s
     networks:
       - default
     ports:
