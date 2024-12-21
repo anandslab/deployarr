@@ -1,7 +1,7 @@
 services:
   # Deployarr Dashboard - Homepage based Dashboard for Deployarr
   deployarr-dashboard:
-    image: ghcr.io/gethomepage/homepage:latest
+    image: ghcr.io/gethomepage/homepage:v0.9.13
     container_name: deployarr-dashboard
     security_opt:
       - no-new-privileges:true
@@ -11,7 +11,7 @@ services:
       - default
       - socket_proxy
     ports:
-     - "$DEPLOYARRDASHBOARD_PORT:3000" 
+      - "$DEPLOYARRDASHBOARD_PORT:3000" 
     volumes:
       - $DOCKERDIR/appdata/deployarr-dashboard/config:/app/config
       - $DOCKERDIR/appdata/deployarr-dashboard/images:/app/public/images
