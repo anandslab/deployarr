@@ -4,6 +4,7 @@
             "provider": "cloudflare",
             "zone_identifier": "CLOUDFLARE-ZONE-IDENTIFIER-PLACEHOLDER",
             "domain": "CLOUDFLARE-DOMAIN-PLACEHOLDER",
+            "proxied": true,
             "host": "@",
             "ttl": 600,
             "token": "CLOUDFLARE-API-TOKEN-PLACEHOLDER",

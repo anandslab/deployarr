@@ -1,6 +1,0 @@
-  redis:
-    host: redis
-    port: 6379
-    database_index: 0
-    maximum_active_connections: 10
-    minimum_idle_connections: 0
