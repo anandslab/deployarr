@@ -13,6 +13,7 @@ services:
       - "$PROWLARR_PORT:9696"
     volumes:
       - $DOCKERDIR/appdata/prowlarr:/config
+      - $DOWNLOADSDIR:/data/downloads
       - "/etc/localtime:/etc/localtime:ro"
     environment:
       TZ: $TZ

@@ -13,7 +13,7 @@ services:
       - default
     ports:
       - "$CHROMIUM_PORT:3000" # HTTP
-    #   - 3001:3001 # HTTPS
+      # - 3001:3001 # HTTPS
     volumes:
       - $DOCKERDIR/appdata/chromium:/config
     environment:

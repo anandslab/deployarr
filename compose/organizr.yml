@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$ORGANIZR_PORT:80" 
+      - "$ORGANIZR_PORT:80" 
     volumes:
       - $DOCKERDIR/appdata/organizr:/config
     environment:

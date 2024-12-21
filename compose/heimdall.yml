@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$HEIMDALL_PORT:80" 
+      - "$HEIMDALL_PORT:80" 
     volumes:
       - $DOCKERDIR/appdata/heimdall:/config
     environment:

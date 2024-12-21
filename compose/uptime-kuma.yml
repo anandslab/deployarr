@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$UPTIMEKUMA_PORT:3001" 
+      - "$UPTIMEKUMA_PORT:3001" 
     volumes:
       - $DOCKERDIR/appdata/uptime-kuma:/app/data
     # DOCKER-LABELS-PLACEHOLDER

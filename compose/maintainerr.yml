@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$MAINTAINERR_PORT:6246"
+      - "$MAINTAINERR_PORT:6246"
     user: $PUID:$PGID
     volumes:
       - $DOCKERDIR/appdata/maintainerr:/opt/data

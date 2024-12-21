@@ -18,5 +18,5 @@ services:
       - $DOCKERDIR/appdata/homarr/icons:/app/public/icons
       - $DOCKERDIR/appdata/homarr/data:/data
     environment:
-      DOCKER_HOST: tcp://socket-proxy:2375
+      - DOCKER_HOST
     # DOCKER-LABELS-PLACEHOLDER

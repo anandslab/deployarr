@@ -9,9 +9,12 @@ services:
     profiles: ["apps", "all"]
     networks:
       - default
+    depends_on:
+      redis:
+        condition: service_healthy
     ports:
       - "$REDISCOMMANDER_PORT:8081"
     environment:
       - REDIS_HOST=redis
-      - REDIS_PASSWORD=$REDIS_PASSWORD
+      # - REDIS_PASSWORD=$REDIS_PASSWORD
     # DOCKER-LABELS-PLACEHOLDER

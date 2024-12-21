@@ -10,7 +10,7 @@ services:
     networks:
       - socket_proxy
     environment:
-      LOG_LEVEL: info
-      HEALTH_SERVER_ADDRESS: 127.0.0.1:9999
-      TZ: $TZ
-      DOCKER_HOST: tcp://socket-proxy:2375
+      - LOG_LEVEL=info
+      - HEALTH_SERVER_ADDRESS=127.0.0.1:9999
+      - TZ=$TZ
+      - DOCKER_HOST

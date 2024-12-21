@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$CALIBREWEB_PORT:8083" 
+      - "$CALIBREWEB_PORT:8083" 
     volumes:
       - $DOCKERDIR/appdata/calibre-web:/config
       - $BOOKSDIR:/data/books

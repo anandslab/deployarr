@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$SMOKEPING_PORT:80"
+      - "$SMOKEPING_PORT:80"
     volumes:
       - $DOCKERDIR/appdata/smokeping/config:/config
       - $DOCKERDIR/appdata/smokeping/data:/data

@@ -29,7 +29,6 @@ services:
       - AUTHENTIK_DISABLE_STARTUP_ANALYTICS=true
       - AUTHENTIK_DISABLE_UPDATE_CHECK=false
       - AUTHENTIK_ERROR_REPORTING__ENABLED=false
-      # - AUTHENTIK_COOKIE_DOMAIN
     secrets:
       - authentik_postgresql_user
       - authentik_postgresql_password

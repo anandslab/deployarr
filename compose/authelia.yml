@@ -10,6 +10,9 @@ services:
     networks:
       - default
       - t3_proxy
+    depends_on:
+      redis:
+        condition: service_healthy
     # ports:
     #   - "$AUTHELIA_PORT:9091"
     volumes:

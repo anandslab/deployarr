@@ -11,7 +11,7 @@ services:
     networks:
       - default
     ports:
-     - "$KOMGA_PORT:25600" 
+      - "$KOMGA_PORT:25600" 
     volumes:
       - $DOCKERDIR/appdata/komga/data:/data
       - $DOCKERDIR/appdata/komga/config:/config

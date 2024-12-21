@@ -11,8 +11,8 @@ services:
       - default
     # DEVICES-GPU-PLACEHOLDER-DO-NOT-DELETE
     ports:
-     - "$REMMINA_PORT:3000" 
-     # - "3001:3001" # HTTPS
+      - "$REMMINA_PORT:3000" 
+      # - "3001:3001" # HTTPS
     volumes:
       - $DOCKERDIR/appdata/remmina:/config
     environment:

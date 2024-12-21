@@ -12,7 +12,7 @@ services:
     networks:
       - socket_proxy
     environment:
-      - DOCKER_HOST=tcp://socket-proxy:2375 # Uncomment and adjust accordingly if you use a socket proxy
+      - DOCKER_HOST # Uncomment and adjust accordingly if you use a socket proxy
       - PUID=$PUID
       - PGID=$PGID
       - TZ=$TZ

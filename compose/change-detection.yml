@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$CHANGEDETECTION_PORT:5000"
+      - "$CHANGEDETECTION_PORT:5000"
     volumes:
       - $DOCKERDIR/appdata/change-detection:/config
     environment:

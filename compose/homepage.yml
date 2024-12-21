@@ -11,7 +11,7 @@ services:
       - default
       - socket_proxy
     ports:
-     - "$HOMEPAGE_PORT:3000" 
+      - "$HOMEPAGE_PORT:3000" 
     volumes:
       - $DOCKERDIR/appdata/homepage:/app/config
     environment:

@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$MYLAR3_PORT:8090" 
+      - "$MYLAR3_PORT:8090" 
     volumes:
       - $DOCKERDIR/appdata/mylar3:/config
       - $COMICSDIR:/comics

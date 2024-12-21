@@ -13,5 +13,8 @@ services:
       - "$ESPHOME_PORT:6052"
     volumes:  
       - $DOCKERDIR/appdata/esphome/config:/config:rw
-      # Use local time for logging timestamps
+      - /etc/localtime:/etc/localtime:ro
+    # environment:
+    #   - USERNAME=test
+    #   - PASSWORD=ChangeMe
     # DOCKER-LABELS-PLACEHOLDER

@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$FRESHRSS_PORT:80"
+      - "$FRESHRSS_PORT:80"
     volumes:
       - $DOCKERDIR/appdata/freshrss:/config
     environment:

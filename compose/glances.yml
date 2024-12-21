@@ -19,8 +19,8 @@ services:
       - $DOCKERDIR:/data/docker:ro
       # - /var/run/docker.sock:/var/run/docker.sock:ro # Use Docker Socket Proxy instead for improved security
     environment:
-      # GLANCES_OPT: "-C /glances/conf/glances.conf --quiet --export influxdb"
-      # GLANCES_OPT: "--export influxdb"
-      GLANCES_OPT: "-w"
-      DOCKER_HOST: tcp://socket-proxy:2375
+      # - GLANCES_OPT="-C /glances/conf/glances.conf --quiet --export influxdb"
+      # - GLANCES_OPT="--export influxdb"
+      - GLANCES_OPT="-w"
+      - DOCKER_HOST
     # DOCKER-LABELS-PLACEHOLDER

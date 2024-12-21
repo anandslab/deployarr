@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$KAVITA_PORT:5000" 
+      - "$KAVITA_PORT:5000" 
     volumes:
       - $DOCKERDIR/appdata/kavita:/config
       - $BOOKSDIR:/data/books

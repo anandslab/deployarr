@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-     - "$OMBI_PORT:3579"
+      - "$OMBI_PORT:3579"
     volumes:
       - $DOCKERDIR/appdata/ombi:/config
     environment:

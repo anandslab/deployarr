@@ -20,7 +20,7 @@ services:
       start_period: 5s
       start_interval: 5s
     environment:
-      DOCKER_HOST: tcp://socket-proxy:2375
+      - DOCKER_HOST
     # volumes:
     #  - /var/run/docker.sock:/var/run/docker.sock # Use Docker Socket Proxy instead for improved security
     # DOCKER-LABELS-PLACEHOLDER

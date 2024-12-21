@@ -11,7 +11,7 @@ services:
       - t3_proxy
     ports:
       - "9000:9000"
-      - "9443:9443"
+      # - "9443:9443"
     command: server
     user: ${PUID}:${PGID}
     depends_on:
@@ -30,8 +30,6 @@ services:
       - AUTHENTIK_DISABLE_STARTUP_ANALYTICS=true
       - AUTHENTIK_DISABLE_UPDATE_CHECK=false
       - AUTHENTIK_ERROR_REPORTING__ENABLED=false
-      # - AUTHENTIK_COOKIE_DOMAIN
-      # - AUTHENTIK_LISTEN__TRUSTED_PROXY_CIDRS=192.168.0.0/16,$SERVER_LAN_IP/32
     secrets:
       - authentik_postgresql_user
       - authentik_postgresql_password
@@ -45,9 +43,9 @@ services:
       # HTTP Routers
       - "traefik.http.routers.authentik-rtr.entrypoints=websecure-internal,websecure-external"
       - "traefik.http.routers.authentik-rtr.rule=Host(`authentik.$DOMAINNAME_1`)"
-      # # Middlewares
+      # Middlewares
       - "traefik.http.routers.authentik-rtr.middlewares=chain-no-auth@file"
-      ## Individual Application forwardAuth regex (catch any subdomain using individual application forwardAuth)  
+      # Individual Application forwardAuth regex (catch any subdomain using individual application forwardAuth)  
       - "traefik.http.routers.authentik-output-rtr.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.${DOMAINNAME_1}`) && PathPrefix(`/outpost.goauthentik.io/`)"
       # HTTP Services
       - "traefik.http.routers.authentik-rtr.service=authentik-svc"

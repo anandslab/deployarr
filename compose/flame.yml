@@ -16,6 +16,6 @@ services:
       - $DOCKERDIR/appdata/flame:/app/data
       # - /var/run/docker.sock:/var/run/docker.sock # optional but required for Docker integration
     environment:
-      PASSWORD: $FLAME_PASSWORD # optional but required for (1)
-      DOCKER_HOST: tcp://socket-proxy:2375
+      - PASSWORD=$FLAME_PASSWORD # optional but required for (1)
+      - DOCKER_HOST
     # DOCKER-LABELS-PLACEHOLDER

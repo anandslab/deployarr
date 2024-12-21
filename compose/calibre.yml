@@ -17,6 +17,7 @@ services:
     volumes:
       - $DOCKERDIR/appdata/calibre:/config
       - $BOOKSDIR:/data/books
+      # - $COMICSDIR:/data/comics
     environment:
       PUID: $PUID
       PGID: $PGID
