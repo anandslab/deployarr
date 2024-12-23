@@ -94,7 +94,7 @@ Parts of the script are free to use without registration (see License Types).
 
 Any support received via the purchase of the script goes towards publishing more videos guides on my [Youtube Channel](https://www.youtube.com/@anandslab). At this point, I spend 15x more on editing costs compared to Youtube Ad income. This also does not include 1000s of hours spent on writing guides, making videos, maintaining the community, and developing the script.
 
-In addition, Deployarr also allows me to [contribute to he open-source projects](https://opencollective.com/deployarr) we all love.
+In addition, Deployarr also allows me to [contribute to the open-source projects](https://opencollective.com/deployarr) we all love.
 
 ### Why not Open-Source?
 Paid supporters receive full access to the script's functionalities. Implementing this requires license checks with some sensitive information. Unfortunately, this requires compiling the source. 
