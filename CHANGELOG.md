@@ -1,5 +1,26 @@
 <h3>Releases</h3>
 
+<h5>v5.4 - January 10, 2025</h5>
+Total Supported Apps: 115
+<ul>
+<li>NEW: Authentik, SearXNG, Beets, and DokuWiki.</li>
+<li>ENHANCEMENT: Redis added by default to Authelia, SearXNG, Nextcloud. Redis switched to alpine image and removed password.</li>
+<li>ENHANCEMENT: Improved menu to pick available authentication methods. Simplified background logic.</li>
+<li>ENHANCEMENT: DOCKER_HOST variable is now automatically set after installing socket proxy and used by several containers that depend on it.</li>
+<li>ENHANCEMENT: Added PostgreSQL health check.</li>
+<li>ENHANCEMENT: Authelia, Guacamole, Nextcloud, Redis-commander, and SearXNG now have depends_on key to enhance reliability.</li>
+<li>ENHANCEMENT: Service recreation stepsnow does not suppress messages so error messages are visible.</li>
+<li>ENCHANCEMENT: Updated disclaimer to clarify data collection.</li>
+<li>ENHANCEMENT: Option to reset "already setup/running" error and force install an app.</li>
+<li>FIX: Socket proxy was running/requirement check was failing. </li>
+<li>FIX: Internet connectivity check improved and now with an option to override.</li>
+<li>FIX: Permissions fixed for Komga.</li>
+<li>FIX: DDNS-Updater container always unhealthy for proxied domains.</li>
+<li>FIX: Recreate option was not working in Stack Manager.</li>
+<li>DON'T CARE: Signficant standardization and simplification underneath to app installation workflow.</li>
+<li>Several other minor UI/UX improvements.</li>
+</ul>
+
 <h5>v5.3.1 - December 18, 2024</h5>
 <ul>
 <li>FIX: syntax error: operand expected (error token is "+").</li>

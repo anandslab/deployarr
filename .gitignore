@@ -1,8 +1,8 @@
 *
 */
 
-!deployarr_v5.3.app 
-!deployarr_v5.3-arm.app 
+!deployarr_v5.4.app 
+!deployarr_v5.4-arm.app 
 
 !.gitignore
 !announcement

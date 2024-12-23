@@ -27,23 +27,23 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 <li>Traefik Reverse Proxy App Exposure Modes: Internal Only, External Only, or Both</li>
 <li>Multi-server Setup</li>
 <li>Domain passthrough for multi-domain multi-Traefik setups</li>
-<li>Google OAuth and Authelia for Authentication layer</li>
+<li>Authentik, Authelia, and Google OAuth for Authentication layer</li>
 <li>CrowdSec and various bouncers for Security</li>
 <li>Stack Manager: Update Apps, Enable Apps, Disable Apps, Delete Apps, Up/Down Stack, Recreate/Start/Stop containers, etc.</li>
 <li>Backups, Restore, and Migration of whole setup</li>
 <li>Expert Mode for advanced users</li>
-<li>PLANNED: Several more apps including Authentik, Cloudflared, etc.</li>
+<li>PLANNED: Cloudflared, etc.</li>
 </ul>
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.3.1.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.4.app
 ```
 ```
-chmod +x deployarr_v5.3.1.app
+chmod +x deployarr_v5.4.app
 ```
 ```
-./deployarr_v5.3.1.app
+./deployarr_v5.4.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
