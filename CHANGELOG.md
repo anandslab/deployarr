@@ -1,6 +1,12 @@
 <h3>Releases</h3>
 
-<h5>v5.4 - January 10, 2025</h5>
+<h5>v5.4.1 - December 24, 2024</h5>
+<ul>
+<li>ENHANCEMENT: Disabled ports in Authentik docker compose. Not needed. Was causing conflict with Portainer.</li>
+<li>Changed postgres_default_passwd to postgres_default_password. Manual change PostgreSQL docker compose required.</li>
+</ul>
+
+<h5>v5.4 - December 23, 2024</h5>
 Total Supported Apps: 115
 <ul>
 <li>NEW: Authentik, SearXNG, Beets, and DokuWiki.</li>
@@ -10,7 +16,7 @@ Total Supported Apps: 115
 <li>ENHANCEMENT: Added PostgreSQL health check.</li>
 <li>ENHANCEMENT: Authelia, Guacamole, Nextcloud, Redis-commander, and SearXNG now have depends_on key to enhance reliability.</li>
 <li>ENHANCEMENT: Service recreation stepsnow does not suppress messages so error messages are visible.</li>
-<li>ENCHANCEMENT: Updated disclaimer to clarify data collection.</li>
+<li>ENHANCEMENT: Updated disclaimer to clarify data collection.</li>
 <li>ENHANCEMENT: Option to reset "already setup/running" error and force install an app.</li>
 <li>FIX: Socket proxy was running/requirement check was failing. </li>
 <li>FIX: Internet connectivity check improved and now with an option to override.</li>
@@ -96,8 +102,8 @@ Total Supported Apps: 76
 <li>NEW: All apps are now exposed to Docker host using ports. Deployarr will suggest ports during installation.</li>
 <li>NEW: Deployarr will now call Cloudflare API to check the validity of the DNS API token for Traefik.</li>
 <li>NEW: Included v4 to v5 migration instructions.</li>
-<li>ENCHANCEMENT: Description error messages when requirements are not met for a specific step.</li>
-<li>ENCHANCEMENT: Signficant improvement in speed/responsiveness.</li>
+<li>ENHANCEMENT: Description error messages when requirements are not met for a specific step.</li>
+<li>ENHANCEMENT: Signficant improvement in speed/responsiveness.</li>
 <li>ENHANCEMENT: Menu reorganized based on past feedback. </li>
 <li>REMOVED: Traefik v2 to v3 migration.</li>
 <li>REMOVED: Auto-Traefik to Deployarr migration.</li>

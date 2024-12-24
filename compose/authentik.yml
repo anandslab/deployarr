@@ -9,9 +9,9 @@ services:
     networks:
       - default
       - t3_proxy
-    ports:
-      - "9000:9000"
-      # - "9443:9443"
+    # ports:
+    #   - "$AUTHENTIK_PORT:9000"
+    #   # - "9443:9443"
     command: server
     user: ${PUID}:${PGID}
     depends_on:

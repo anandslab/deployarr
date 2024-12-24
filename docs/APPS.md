@@ -1,4 +1,4 @@
- # Deployarr Apps - 111 (and increasing)
+# Deployarr Apps - 115 (and increasing)
 
 ## Reverse Proxy
 - **Traefik**: A modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
@@ -31,6 +31,7 @@
 - **Prowlarr**: An indexer manager/proxy for managing your indexers across various applications.
 - **Kometa**: Plex Meta Manager that can create automatic collections based on defined criteria. 
 - **Notifiarr**: A notification service for media server applications. Client for Notifiarr.com.
+- **Beets**: A music library manager and MusicBrainz tagger.
 
 ## Downloaders
 - **NZBGet**: A Usenet downloader optimized for performance and efficiency.
@@ -62,6 +63,7 @@
 - **Node Exporter**: A Prometheus exporter for hardware and OS metrics exposed by *NIX kernels.
 
 ## Security 
+- **Authentik**: A self-hosted identity provider that can be used to secure applications and services with Single Sign-On (SSO).
 - **Authelia**: An authentication and authorization server providing 2-factor authentication and single sign-on (SSO).
 - **Socket Proxy**: A configurable proxy for Docker Socket.
 - **OAuth**: OAuth login from several providers, including Google OAuth 2.0.
@@ -121,6 +123,7 @@
 - **Visual Studio Code Server**: A cloud-hosted version of Visual Studio Code.
 - **Cloud Commander**: A web-based file manager with console and editor.
 - **Double Commander**: A cross-platform open-source file manager with two panels side by side.
+- **Stirling PDF**: A self-hosted PDF manipulation tool.
 
 ## Admin Tools
 - **IT-Tools**: A collection of useful tools for IT professionals.
@@ -140,10 +143,13 @@
 ## Password Management
 - **Vaultwarden**: A lightweight, self-hosted password manager.
 
+## Notes and Documentation
+- **DokuWiki**: A simple to use and highly versatile open-source wiki software.
+
 ## Other Utilities
 - **Resilio Sync**: A fast, reliable file and folder synchronization tool.
 - **Baikal**: A lightweight CalDAV+CardDAV server.
 - **Grocy**: A web-based self-hosted groceries and household management solution.
 - **Flaresolverr**: A proxy server to bypass Cloudflare protection.
 - **Theme Park**: A tool for creating and managing themes for various applications.
-- **Stirling PDF**: A self-hosted PDF manipulation tool.
+- **SearXNG**: A privacy-respecting, hackable metasearch engine.
