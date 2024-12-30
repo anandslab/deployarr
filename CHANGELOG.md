@@ -1,5 +1,15 @@
 <h3>Releases</h3>
 
+<h5>v5.4.2 - December 30, 2024</h5>
+<ul>
+<li>FIX: Icons of some apps were not being set on Deployarr Dashboard.</li>
+<li>FIX: qBittorrent VPN required manually adding stuff to configuration to allow initial login with admin/adminadmin.</li>
+<li>ENHANCEMENT: Modified internet connectivity check. Expert mode will allow overriding this step. </li>
+<li>ENHANCEMENT: Remove yq requirement. Implemented an alternate method to manage secrets in master docker compose file.</li>
+<li>ENHANCEMENT: More descriptive messages when requirements for a step are not met.</li>
+<li>A few other minor improvements.</li>
+</ul>
+
 <h5>v5.4.1 - December 24, 2024</h5>
 <ul>
 <li>ENHANCEMENT: Disabled ports in Authentik docker compose. Not needed. Was causing conflict with Portainer.</li>
