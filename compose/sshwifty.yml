@@ -1,0 +1,19 @@
+services:
+  # Sshwifty - Web SSH & Telnet Client
+  sshwifty:
+    image: niruix/sshwifty:latest
+    container_name: sshwifty
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["core", "all"]
+    network_mode: "host"
+    # user: "$PUID:$PGID"
+    volumes:
+      - $DOCKERDIR/appdata/sshwifty/conf.json:/sshwifty.conf.json
+    environment:
+      - TZ=$TZ
+      - SSHWIFTY_LISTENPORT=$SSHWIFTY_PORT
+      - SSHWIFTY_SHAREDKEY=$SSHWIFTY_PASSWORD
+      - SSHWIFTY_CONFIG=/sshwifty.conf.json
+    # DOCKER-LABELS-PLACEHOLDER

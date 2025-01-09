@@ -1,0 +1,35 @@
+services:
+  # Bookstack - Simple and Free Wiki Software
+  bookstack:
+    image: lscr.io/linuxserver/bookstack:latest
+    container_name: bookstack
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    ports:
+      - "$BOOKSTACK_PORT:80"
+    volumes:
+      - $DOCKERDIR/appdata/bookstack:/config
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - APP_URL=http://${SERVER_LAN_IP}:${BOOKSTACK_PORT}
+      - FILE__APP_KEY=/run/secrets/bookstack_app_key
+      - DB_HOST=mariadb
+      - DB_PORT=${MARIADB_PORT}
+      - FILE__DB_USERNAME=/run/secrets/bookstack_mariadb_username
+      - FILE__DB_PASSWORD=/run/secrets/bookstack_mariadb_password
+      - DB_DATABASE=bookstack
+      - QUEUE_CONNECTION=database #optional
+    secrets:
+      - bookstack_mariadb_username
+      - bookstack_mariadb_password
+      - bookstack_app_key
+    # DOCKER-LABELS-PLACEHOLDER

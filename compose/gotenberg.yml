@@ -1,0 +1,17 @@
+services:
+  # Gotenberg - Document conversion server for Paperless-NGX
+  gotenberg:
+    image: docker.io/gotenberg/gotenberg:8.7
+    container_name: gotenberg
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    # The gotenberg chromium route is used to convert .eml files. We do not
+    # want to allow external content like tracking pixels or even javascript.
+    command:
+      - "gotenberg"
+      - "--chromium-disable-javascript=true"
+      - "--chromium-allow-list=file:///tmp/.*"

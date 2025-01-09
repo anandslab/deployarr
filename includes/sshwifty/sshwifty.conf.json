@@ -1,0 +1,38 @@
+{
+    "HostName": "",
+    "SharedKey": "WEB_ACCESS_PASSWORD",
+    "DialTimeout": 5,
+    "Socks5": "",
+    "Socks5User": "",
+    "Socks5Password": "",
+    "Servers": [
+      {
+        "ListenInterface": "0.0.0.0",
+        "ListenPort": 9182,
+        "InitialTimeout": 3,
+        "ReadTimeout": 60,
+        "WriteTimeout": 60,
+        "HeartbeatTimeout": 20,
+        "ReadDelay": 10,
+        "WriteDelay": 10,
+        "TLSCertificateFile": "",
+        "TLSCertificateKeyFile": "",
+        "ServerMessage": "Programmers in China launched an online campaign against [implicitly forced overtime work](https://en.wikipedia.org/wiki/996_working_hour_system) in pursuit of balanced work-life relationship. Sshwifty wouldn't exist if its author must work such extreme hours. If you're benefiting from hobbyist projects like this one, please consider to support the action."
+      }
+    ],
+    "Presets": [
+      {
+        "Title": "HOSTNAME-PLACEHOLDER",
+        "Type": "SSH",
+        "Host": "localhost:PORT-PLACEHOLDER",
+        "Meta": {
+          "User": "USER-PLACEHOLDER",
+          "Encoding": "utf-8",
+          "Private Key": "-----BEGIN RSA Will be sent to client-END RSA PRI...\n",
+          "Authentication": "Password",
+          "Fingerprint": "SHA256:bgO...."
+        }
+      }
+    ],
+    "OnlyAllowPresetRemotes": false
+  }

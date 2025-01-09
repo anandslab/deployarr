@@ -1,0 +1,30 @@
+services:
+  # PdfDing - PDF Viewing/Editing Tool
+  pdfding:
+    container_name: pdfding
+    image: mrmn/pdfding:latest
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    networks:
+      - default
+    profiles: ["apps", "all"]
+    depends_on:
+      postgresql:
+        condition: service_healthy
+    ports:
+      - "$PDFDING_PORT:8000"
+    volumes:
+      - $DOCKERDIR/appdata/pdfding:/home/nonroot/pdfding/media
+    environment:
+      DEFAULT_THEME: dark
+      DEFAULT_THEME_COLOR: blue
+      SECRET_KEY: $PDFDING_SECRET_KEY
+      HOST_NAME: PDFDING-SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1
+      DATABASE_TYPE: POSTGRES
+      POSTGRES_PASSWORD: $PDFDING_POSTGRESQL_PASSWORD
+      POSTGRES_HOST: postgresql 
+      # In production set the following values to True
+      CSRF_COOKIE_SECURE: 'TRUE'
+      SESSION_COOKIE_SECURE: 'TRUE'
+    # DOCKER-LABELS-PLACEHOLDER

@@ -1,0 +1,16 @@
+services:
+ # Paperless AI - Doc Analyzer for Paperless-NGX
+  paperless-ai:
+    image: clusterzx/paperless-ai
+    container_name: paperless-ai
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks: 
+      - default
+    ports:
+      - "$PAPERLESSAI_PORT:3000"
+    volumes:
+      - $DOCKERDIR/appdata/paperless-ai:/app/data
+    # DOCKER-LABELS-PLACEHOLDER

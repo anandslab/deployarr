@@ -1,0 +1,59 @@
+
+services:
+  # Paperless-NGX - Document Management System
+  paperless-ngx:
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    container_name: paperless-ngx
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      gotenberg:
+        condition: service_started
+      tika:
+        condition: service_started
+    networks: 
+      - default
+    ports:
+      - "$PAPERLESSNGX_PORT:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - $DOCKERDIR/appdata/paperless-ngx/data:/usr/src/paperless/data # customize this
+      - $DOCKERDIR/appdata/paperless-ngx/media:/usr/src/paperless/media # customize this
+      - $DOCKERDIR/appdata/paperless-ngx/export:/usr/src/paperless/export # customize this 
+      - $DOCKERDIR/appdata/paperless-ngx/trash:/usr/src/paperless/trash # customize this
+      - $DOCKERDIR/appdata/paperless-ngx/consume:/usr/src/paperless/consume # customize this
+    environment:
+      PAPERLESS_REDIS: redis://redis:6379
+      PAPERLESS_DBENGINE: mariadb
+      PAPERLESS_DBNAME: paperless
+      PAPERLESS_DBHOST: mariadb
+      PAPERLESS_DBUSER_FILE: /run/secrets/paperlessngx_mariadb_username
+      PAPERLESS_DBPASS_FILE: /run/secrets/paperlessngx_mariadb_password
+      PAPERLESS_DBPORT: 3306
+      PAPERLESS_SECRET_KEY_FILE: /run/secrets/paperlessngx_secret_key
+      PAPERLESS_TIKA_ENABLED: 1
+      PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
+      PAPERLESS_TIKA_ENDPOINT: http://tika:9998
+      PAPERLESS_FILENAME_FORMAT: "{created_year}/{created_month}/{correspondent}/{title} {asn}"
+      PAPERLESS_URL: https://PAPERLESS-NGX-SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1
+      PAPERLESS_TRUSTED_PROXIES: $SERVER_LAN_IP
+      PAPERLESS_ADMIN_USER_FILE: /run/secrets/paperlessngx_admin_username
+      PAPERLESS_ADMIN_PASSWORD_FILE: /run/secrets/paperlessngx_admin_password
+      # PAPERLESS_CONSUMER_POLLING: 60
+    secrets:
+      - paperlessngx_mariadb_username
+      - paperlessngx_mariadb_password
+      - paperlessngx_secret_key
+      - paperlessngx_admin_username
+      - paperlessngx_admin_password
+    # DOCKER-LABELS-PLACEHOLDER

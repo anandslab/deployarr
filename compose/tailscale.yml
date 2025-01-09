@@ -19,4 +19,5 @@ services:
       - TS_AUTH_KEY=$TS_AUTH_KEY
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_USERSPACE=false
+      - TS_ACCEPT_DNS=false
     # DOCKER-LABELS-PLACEHOLDER

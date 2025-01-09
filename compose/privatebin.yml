@@ -1,0 +1,20 @@
+services:
+  # PrivateBin - Self-hosted Pastebin
+  privatebin:
+    image: privatebin/nginx-fpm-alpine
+    container_name: privatebin
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    ports:
+      - "$PRIVATEBIN_PORT:8080"
+    volumes:
+      - $DOCKERDIR/appdata/privatebin/data:/srv/data # data volume for pastes allows pastes
+      - $DOCKERDIR/appdata/privatebin/conf.php:/srv/cfg/conf.php:ro # second volume for custom configuration file
+    environment:
+      TZ: $TZ
+      PHP_TZ: $TZ
+    # DOCKER-LABELS-PLACEHOLDER

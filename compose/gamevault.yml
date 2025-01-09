@@ -1,0 +1,25 @@
+services:
+  # GameVault - A simple game library manager
+  gamevault:
+    image: phalcode/gamevault-backend:latest
+    container_name: gamevault
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    profiles: ["apps", "all"]
+    networks:
+      - default
+    depends_on:
+      postgresql:
+        condition: service_healthy
+    ports:
+      - $GAMEVAULT_PORT:8080/tcp
+    volumes:
+      # Mount the folder where your games are
+      - $GAMESDIR:/files
+      # Mount the folder where GameVault should store its media
+      - $DOCKERDIR/appdata/gamevault:/media
+    environment:
+      DB_HOST: postgresql
+      DB_USERNAME: $GAMEVAULT_POSTGRESQL_USERNAME
+      DB_PASSWORD: $GAMEVAULT_POSTGRESQL_PASSWORD
