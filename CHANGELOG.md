@@ -1,5 +1,22 @@
 <h3>Releases</h3>
 
+<h5>v5.5 - January 12, 2025</h5>
+Total Supported Apps: 123
+<ul>
+<li>NEW: Added Paperless-NGX (+ support services Paperless-AI, Gotenberg, and Tika), Bookstack, PdfDing, Privatebin, and SSHwifty.</li>
+<li>NEW: Tool to create PostgreSQL database from within Deployarr.</li>
+<li>ENHANCEMENT: Switched Deployarr Dashboard to use selfh.st icons.</li>
+<li>ENHANCEMENT: Socket proxy install will now to check for malformed docker compose and error out. </li>
+<li>ENHANCEMENT: Improved handling of rclone config folder missing in some distros.</li>
+<li>ENCHANCEMENT: Log messages improved to share details on databases being created.</li>
+<li>REMOVED: Photoshow (domain compromised) and not maintained.</li>
+<li>ENHANCEMENT: Added a note on MagicDNS and added accept-dns false option by default.</li>
+<li>FIX: Xpipe-Webtop port environment variable name was wrongly specified as WEBTOP_PORT in the compose file.</li>
+<li>FIX: CrowdSec repo error fix.</li>
+<li>ENHANCEMENT: Under the hood, significant improvements to database management.</li>
+<li>A few other minor improvements.</li>
+</ul>
+
 <h5>v5.4.2 - December 30, 2024</h5>
 <ul>
 <li>FIX: Icons of some apps were not being set on Deployarr Dashboard.</li>

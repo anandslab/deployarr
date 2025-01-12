@@ -1,4 +1,4 @@
-# Deployarr Apps - 115 (and increasing)
+# Deployarr Apps - 123 (and increasing)
 
 ## Reverse Proxy
 - **Traefik**: A modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
@@ -108,7 +108,7 @@
 ## Photo Management
 - **Piwigo**: A photo gallery software for the web.
 - **DigiKam**: A professional photo management application.
-- **Photoshow**: A simple photo gallery application.
+- <del>**Photoshow**: A simple photo gallery application</del> (Not maintained. Domain compromised).
 
 ## Docker Management
 - **Portainer**: A lightweight management UI which allows you to easily manage your Docker environments.
@@ -124,12 +124,19 @@
 - **Cloud Commander**: A web-based file manager with console and editor.
 - **Double Commander**: A cross-platform open-source file manager with two panels side by side.
 - **Stirling PDF**: A self-hosted PDF manipulation tool.
+- **Paperless-NGX**: A document management system.
+- **Paperless-AI**: AI Doc Analyzer for Paperless-NGX
+- **Gotenberg**: A document conversion server for Paperless-NGX.
+- **Tika**: A document text extraction tool for Paperless-NGX.
+- **PdfDing**: PDF Viewing/Editing Tool
+- **Privatebin**: A minimalist, open-source online pastebin.
 
 ## Admin Tools
 - **IT-Tools**: A collection of useful tools for IT professionals.
 - **ShellInABox**: HTML5 web-based Linux Terminal.
 - **CyberChef**: A web app for encryption, encoding, compression, and data analysis.
 - **GPTWOL**: Wake On LAN Docker GUI.
+- **SSHwifty**: A web-based SSH client.
 
 ## Remote Access
 - **Guacamole**: A clientless remote desktop gateway.
@@ -145,6 +152,7 @@
 
 ## Notes and Documentation
 - **DokuWiki**: A simple to use and highly versatile open-source wiki software.
+- **Bookstack**: A platform to create documentation/wiki content built with PHP & Laravel.
 
 ## Other Utilities
 - **Resilio Sync**: A fast, reliable file and folder synchronization tool.
@@ -153,3 +161,4 @@
 - **Flaresolverr**: A proxy server to bypass Cloudflare protection.
 - **Theme Park**: A tool for creating and managing themes for various applications.
 - **SearXNG**: A privacy-respecting, hackable metasearch engine.
+- **GameVault**: A self-hosted video game library manager.

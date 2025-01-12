@@ -44,7 +44,7 @@ services:
       PAPERLESS_TIKA_ENABLED: 1
       PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
       PAPERLESS_TIKA_ENDPOINT: http://tika:9998
-      PAPERLESS_FILENAME_FORMAT: "{created_year}/{created_month}/{correspondent}/{title} {asn}"
+      PAPERLESS_FILENAME_FORMAT: "{{created_year}}/{{created_month}}/{{correspondent}}/{{title}} {{asn}}"     
       PAPERLESS_URL: https://PAPERLESS-NGX-SUBDOMAIN-PLACEHOLDER.$DOMAINNAME_1
       PAPERLESS_TRUSTED_PROXIES: $SERVER_LAN_IP
       PAPERLESS_ADMIN_USER_FILE: /run/secrets/paperlessngx_admin_username

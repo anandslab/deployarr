@@ -10,7 +10,7 @@ services:
     networks:
       - default
     ports:
-      - "$WEBTOP_PORT:3000" # HTTP
+      - "$XPIPEWEBTOP_PORT:3000" # HTTP
       # - "3001:3001" # HTTPS
     volumes:
       - $DOCKERDIR/appdata/xpipe-webtop:/config

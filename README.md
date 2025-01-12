@@ -5,21 +5,21 @@ Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificat
 
 [Full List of Apps](docs/APPS.md)
 
-## Supported Apps - 115 (and increasing)
+## Supported Apps - 123 (and increasing)
 ![Apps Supported by Deployarr](images/v5/Deployarr%20App%20Logos%20115.png)
 
 As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.
 
 # Features
 <ul>
-<li>110+ Total Apps</li>
+<li>120+ Total Apps</li>
 <li>Docker Environment Setup (FREE) - as in my guides</li>
 <li>System Checks (FREE)</li>
 <li>Domain Checks to prepare for Traefik (FREE)</li>
 <li>Full control over all apps and files</li>
 <li>Descriptive error messages for troubleshooting</li>
 <li>Socket-Proxy to protect Docker Socket from compromised apps</li>
-<li>Deployarr Dashboard - Auto-populating Homelab Dashboard</li>
+<li>Deployarr Dashboard - Auto-populating Homelab Dashboard with icons from <a href="https://selfh.st/icons" target="_blank">selfh.st</a></li>
 <li>Bash Aliases for Linux, Docker, and Docker Compose</li>
 <li>Local-only Setup without reverse proxy or port forwarding</li>
 <li>Traefik Reverse Proxy App Exposure Modes: Internal Only, External Only, or Both</li>
@@ -35,13 +35,13 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.4.2.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.5.app
 ```
 ```
-chmod +x deployarr_v5.4.2.app
+chmod +x deployarr_v5.5.app
 ```
 ```
-./deployarr_v5.4.2.app
+./deployarr_v5.5.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 
@@ -50,8 +50,8 @@ Use the <strong>-arm.app</strong> version of the file for Raspberry Pi.
 
 [How to Migrate from v4.6.1 to v5?](docs/v4-to-v5-migration.md)
 
-## Deployarr Stats - Jan to Dec 2024
-![Jan to Dec, 2024](images/v5/deployarr%20stats%20dec%202024-2.png)
+## Deployarr Stats - As of January 2025
+![As of January 2025](images/v5/deployarr%20stats%20jan%202025.png)
 
 # References
 More information on Deployarr and how to use it:
