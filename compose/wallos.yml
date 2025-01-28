@@ -1,0 +1,18 @@
+services:
+  # Wallos - Open-source Subscription Tracker
+  wallos:
+    container_name: wallos
+    image: bellamy/wallos:latest
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    networks: 
+      - default
+    ports:
+      - "$WALLOS_PORT:80"
+    volumes:
+      - '$DOCKERDIR/appdata/wallos/db:/var/www/html/db'
+      - '$DOCKERDIR/appdata/wallos/logos:/var/www/html/images/uploads/logos'
+    environment:
+      TZ: $TZ
+    # DOCKER-LABELS-PLACEHOLDER

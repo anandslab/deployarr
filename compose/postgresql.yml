@@ -25,3 +25,4 @@ services:
       - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_default_password
     secrets:
       - postgres_default_password
+    # DOCKER-LABELS-PLACEHOLDER

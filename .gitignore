@@ -3,6 +3,8 @@
 
 !deployarr_v5.5.app 
 !deployarr_v5.5-arm.app 
+!deployarr_v5.6.app 
+!deployarr_v5.6-arm.app 
 
 !.gitignore
 !announcement

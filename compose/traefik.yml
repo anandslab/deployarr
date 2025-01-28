@@ -2,7 +2,7 @@ services:
   # Traefik 3 - Reverse Proxy
   traefik:
     container_name: traefik
-    image: traefik:3.1
+    image: traefik:3.3
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
@@ -54,9 +54,9 @@ services:
       - --entrypoints.websecure-internal.http.tls.options=tls-opts@file
       # Add dns-cloudflare as default certresolver for all services. Also enables TLS and no need to specify on individual services
       - --entrypoints.websecure-external.http.tls.certresolver=dns-cloudflare
+      - --entrypoints.websecure-internal.http.tls.certresolver=dns-cloudflare
       - --entrypoints.websecure-external.http.tls.domains[0].main=$DOMAINNAME_1
       - --entrypoints.websecure-external.http.tls.domains[0].sans=*.$DOMAINNAME_1
-      - --entrypoints.websecure-internal.http.tls.certresolver=dns-cloudflare
       - --entrypoints.websecure-internal.http.tls.domains[0].main=$DOMAINNAME_1
       - --entrypoints.websecure-internal.http.tls.domains[0].sans=*.$DOMAINNAME_1
       # - DOMAINS-PLACEHOLDER-DO-NOT-DELETE
@@ -66,7 +66,7 @@ services:
       - --certificatesResolvers.dns-cloudflare.acme.storage=/acme.json
       - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.provider=cloudflare
       - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.resolvers=1.1.1.1:53,1.0.0.1:53
-      - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.delayBeforeCheck=120 # To delay DNS check and reduce LE hitrate
+      - --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.propagation.delayBeforeChecks=120 # To delay DNS check and reduce LE hitrate
       #- --certificatesResolvers.dns-cloudflare.acme.dnsChallenge.disablePropagationCheck=true
       # - METRICS-PLACEHOLDER-DO-NOT-DELETE
     ports:

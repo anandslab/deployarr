@@ -12,7 +12,7 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Features
 <ul>
-<li>120+ Total Apps</li>
+<li>125+ Total Apps</li>
 <li>Docker Environment Setup (FREE) - as in my guides</li>
 <li>System Checks (FREE)</li>
 <li>Domain Checks to prepare for Traefik (FREE)</li>
@@ -35,13 +35,13 @@ As Deployarr simplifies setup of several homelab apps, and not just Traefik, it 
 
 # Downloading and Running Deployarr
 ```
-wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.5.app
+wget https://raw.githubusercontent.com/anandslab/deployarr/main/deployarr_v5.6.app
 ```
 ```
-chmod +x deployarr_v5.5.app
+chmod +x deployarr_v5.6.app
 ```
 ```
-./deployarr_v5.5.app
+./deployarr_v5.6.app
 ```
 
 Use the <strong>-arm.app</strong> version of the file for Raspberry Pi. 

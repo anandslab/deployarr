@@ -5,13 +5,13 @@
 - Anand's Lab:
     - Website:
         - icon: mdi-web
-          href: https://www.smarthomebeginner.com.com/
+          href: https://www.smarthomebeginner.com/
     - Youtube Channel:
         - icon: si-youtube
-          href: https://www.youtube.com/@anandslab
+          href: https://www.youtube.com/@Simple-Homelab
     - Docker-Traefik GitHub Repo:
         - icon: si-github
-          href: https://github.com/anandslab/docker-traefik
+          href: https://github.com/SimpleHomelab/docker-traefik
     - Discord Server:
         - icon: si-discord
           href: https://discord.gg/wtmqgd4GpX
@@ -21,17 +21,17 @@
           href: https://deployarr.app/
     - Your Account:
         - icon: mdi-account-box
-          href: https://www.smarthomebeginner.com/membership-account/
+          href: https://www.smarthomebeginner.com/geek-army/
     - Deployarr GitHub:
         - icon: si-github
-          href: https://github.com/anandslab/deployarr
+          href: https://github.com/SimpleHomelab/deployarr
 - Support My Work:
-    - Become a Member:
+    - Join the Geek Army:
         - icon: mdi-wallet-membership
-          href: https://www.smarthomebeginner.com/membership-account/memberships-products-services/
+          href: https://www.smarthomebeginner.com/geek-army/join/
     - BuyMeACoffee:
         - icon: si-buymeacoffee
-          href: https://www.buymeacoffee.com/anandslab
+          href: https://www.buymeacoffee.com/SimpleHomelab
     - Ko-Fi:
         - icon: si-kofi
-          href: https://ko-fi.com/anandslab
+          href: https://ko-fi.com/SimpleHomelab

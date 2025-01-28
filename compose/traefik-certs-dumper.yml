@@ -2,7 +2,7 @@ services:
   # Traefik Certs Dumper - Extract LetsEncrypt Certificates - Traefik2 Compatible
   traefik-certs-dumper:
     container_name: traefik-certs-dumper
-    image: humenius/traefik-certs-dumper:latest
+    image: ghcr.io/kereis/traefik-certs-dumper:latest
     security_opt:
       - no-new-privileges:true
     restart: unless-stopped
