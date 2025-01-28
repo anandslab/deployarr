@@ -1,4 +1,4 @@
-# Deployarr Apps - 123 (and increasing)
+# Deployarr Apps - 125 (and increasing)
 
 ## Reverse Proxy
 - **Traefik**: A modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
@@ -104,6 +104,7 @@
 - **MQTTX Web**: A web-based MQTT 5.0 client tool.
 - **ESPHome**: A system to control ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.
 - **Node-RED**: A flow-based development tool for visual programming.
+- **n8n**: A workflow automation tool.
 
 ## Photo Management
 - **Piwigo**: A photo gallery software for the web.
@@ -162,3 +163,4 @@
 - **Theme Park**: A tool for creating and managing themes for various applications.
 - **SearXNG**: A privacy-respecting, hackable metasearch engine.
 - **GameVault**: A self-hosted video game library manager.
+- **Wallos**: A open-Source Personal Subscription Tracker.

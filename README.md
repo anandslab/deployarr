@@ -5,7 +5,7 @@ Deployarr can automatically setup Socket Proxy, Traefik (fetch LE SSL certificat
 
 [Full List of Apps](docs/APPS.md)
 
-## Supported Apps - 123 (and increasing)
+## Supported Apps - 125 (and increasing)
 ![Apps Supported by Deployarr](images/v5/Deployarr%20App%20Logos%20115.png)
 
 As Deployarr simplifies setup of several homelab apps, and not just Traefik, it was recently renamed from Auto-Traefik to Deployarr. You may still find references to Auto-Traefik until the rebrand is complete.

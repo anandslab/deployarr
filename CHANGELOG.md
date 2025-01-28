@@ -1,5 +1,21 @@
 <h3>Releases</h3>
 
+<h5>v5.6 - January 28, 2025</h5>
+Total Supported Apps: 125
+<ul>
+<li>NEW: Added Wallos and n8n.</li>
+<li>NEW: .env Editor in Tools menu to edit environment variables.</li>
+<li>NEW: Secrets Editor in Tools menu to edit secrets using nano editor.</li>
+<li>NEW: Un-Traefikify to remove Traefik file providers.</li>
+<li>ENHANCEMENT: Updated Traefik to v3.3.</li>
+<li>ENHANCEMENT: Changed traefik certs dumper image to: ghcr.io/kereis/traefik-certs-dumper:latest.</li>
+<li>FIX: CrowdSec installation issues due to journalctl. Replaced journalctl with rsyslog.</li>
+<li>FIX: Some deployarr dashboard links were obsolete.</li>
+<li>DON'T CARE: Rebranded SmartHomeBeginner to SimpleHOmelab.</li>
+<li>CARE: Moved Deployarr resources and dependencies to www.deployarr.app. Hopefully it does not cause any issues.</li>
+<li>A few other minor improvements.</li>
+</ul>
+
 <h5>v5.5 - January 12, 2025</h5>
 Total Supported Apps: 123
 <ul>
@@ -8,7 +24,7 @@ Total Supported Apps: 123
 <li>ENHANCEMENT: Switched Deployarr Dashboard to use selfh.st icons.</li>
 <li>ENHANCEMENT: Socket proxy install will now to check for malformed docker compose and error out. </li>
 <li>ENHANCEMENT: Improved handling of rclone config folder missing in some distros.</li>
-<li>ENCHANCEMENT: Log messages improved to share details on databases being created.</li>
+<li>ENHANCEMENT: Log messages improved to share details on databases being created.</li>
 <li>REMOVED: Photoshow (domain compromised) and not maintained.</li>
 <li>ENHANCEMENT: Added a note on MagicDNS and added accept-dns false option by default.</li>
 <li>FIX: Xpipe-Webtop port environment variable name was wrongly specified as WEBTOP_PORT in the compose file.</li>
