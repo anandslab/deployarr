@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     profiles: ["core", "all"]
     healthcheck:
-      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      test: ["CMD-SHELL", "redis-cli -a $REDIS_PASSWORD ping | grep PONG"]
       start_period: 20s
       interval: 30s
       retries: 5
